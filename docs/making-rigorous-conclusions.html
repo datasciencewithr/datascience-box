@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 9 Making rigorous conclusions | Data Science in a Box</title>
+<meta name="author" content="Mine Çetinkaya-Rundel">
+<meta name="description" content="In this part we introduce modelling and statistical inference for making data-based conclusions. We discuss building, interpreting, and selecting models, visualizing interaction effects, and...">
+<meta name="generator" content="bookdown 0.26 with bs4_book()">
+<meta property="og:title" content="Chapter 9 Making rigorous conclusions | Data Science in a Box">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://datasciencebox.org/making-rigorous-conclusions.html">
+<meta property="og:image" content="https://datasciencebox.org//dsbox.png">
+<meta property="og:description" content="In this part we introduce modelling and statistical inference for making data-based conclusions. We discuss building, interpreting, and selecting models, visualizing interaction effects, and...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 9 Making rigorous conclusions | Data Science in a Box">
+<meta name="twitter:site" content="@minebocek">
+<meta name="twitter:description" content="In this part we introduce modelling and statistical inference for making data-based conclusions. We discuss building, interpreting, and selecting models, visualizing interaction effects, and...">
+<meta name="twitter:image" content="https://datasciencebox.org//dsbox.png">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><script src="libs/viz-1.8.2/viz.js"></script><link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
+<script src="libs/grViz-binding-1.0.9/grViz.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="css/dsbox.css">
+<link rel="stylesheet" href="css/fontawesome/css/all.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Data Science in a Box</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">Hello #dsbox!</li>
+<li><a class="" href="overview.html"><span class="header-section-number">1</span> Overview</a></li>
+<li><a class="" href="design-principles.html"><span class="header-section-number">2</span> Design principles</a></li>
+<li><a class="" href="topics.html"><span class="header-section-number">3</span> Topics</a></li>
+<li><a class="" href="tech-stack.html"><span class="header-section-number">4</span> Tech stack</a></li>
+<li><a class="" href="community.html"><span class="header-section-number">5</span> Community</a></li>
+<li class="book-part">Course content</li>
+<li><a class="" href="hello-world.html"><span class="header-section-number">6</span> Hello world</a></li>
+<li><a class="" href="exploring-data.html"><span class="header-section-number">7</span> Exploring data</a></li>
+<li><a class="" href="ethics.html"><span class="header-section-number">8</span> Data science ethics</a></li>
+<li><a class="active" href="making-rigorous-conclusions.html"><span class="header-section-number">9</span> Making rigorous conclusions</a></li>
+<li><a class="" href="looking-forward.html"><span class="header-section-number">10</span> Looking further</a></li>
+<li><a class="" href="interactive-tutorials.html"><span class="header-section-number">11</span> Interactive tutorials</a></li>
+<li><a class="" href="project.html"><span class="header-section-number">12</span> Project</a></li>
+<li><a class="" href="exams.html"><span class="header-section-number">13</span> Exams</a></li>
+<li class="book-part">Infrastructure</li>
+<li><a class="" href="access-r.html"><span class="header-section-number">14</span> Accessing R</a></li>
+<li><a class="" href="version-control.html"><span class="header-section-number">15</span> Version control</a></li>
+<li><a class="" href="discussion.html"><span class="header-section-number">16</span> Discussion</a></li>
+<li><a class="" href="sharing.html"><span class="header-section-number">17</span> Sharing</a></li>
+<li><a class="" href="alternative-setups.html"><span class="header-section-number">18</span> Alternative setups</a></li>
+<li class="book-part">Pedagogy</li>
+<li><a class="" href="pedagogy.html"><span class="header-section-number">19</span> Pedagogy</a></li>
+<li><a class="" href="schedule.html"><span class="header-section-number">20</span> Schedule</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/rstudio-education/datascience-box/">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="making-rigorous-conclusions" class="section level1" number="9">
+<h1>
+<span class="header-section-number">9</span> Making rigorous conclusions<a class="anchor" aria-label="anchor" href="#making-rigorous-conclusions"><i class="fas fa-link"></i></a>
+</h1>
+<p>In this part we introduce modelling and statistical inference for making data-based conclusions.
+We discuss building, interpreting, and selecting models, visualizing interaction effects, and prediction and model validation.
+Statistical inference is introduced from a simulation based perspective, and the Central Limit Theorem is discussed very briefly to lay the foundation for future coursework in statistics.</p>
+<div class="rstudio-cloud">
+<p>The RStudio Cloud workspace for Data Science Course in a Box project is <a href="https://rstudio.cloud/spaces/1655/join?access_code=5rdjusfIYF5iI0Gum2vNsBDLdtdnIEELBkf2EivK">here</a>.
+You can join the workspace and play around with the sample application exercises.</p>
+</div>
+<div id="slides-videos-and-application-exercises-3" class="section level2" number="9.1">
+<h2>
+<span class="header-section-number">9.1</span> Slides, videos, and application exercises<a class="anchor" aria-label="anchor" href="#slides-videos-and-application-exercises-3"><i class="fas fa-link"></i></a>
+</h2>
+<div id="modelling-data" class="section level3" number="9.1.1">
+<h3>
+<span class="header-section-number">9.1.1</span> Modelling data<a class="anchor" aria-label="anchor" href="#modelling-data"><i class="fas fa-link"></i></a>
+</h3>
+<div class="slide-deck">
+<p><strong>Unit 4 - Deck 1: The language of models</strong></p>
+<div class="slides">
+<p><a href="https://rstudio-education.github.io/datascience-box/course-materials/slides/u4-d01-language-of-models/u4-d01-language-of-models.html#1">Slides</a></p>
+</div>
+<div class="source">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/slides/u4-d01-language-of-models">Source</a></p>
+</div>
+<div class="video">
+<p><a href="https://youtu.be/MWkkvDopBKc">Video</a></p>
+</div>
+</div>
+<div class="slide-deck">
+<p><strong>Unit 4 - Deck 2: Fitting and interpreting models</strong></p>
+<div class="slides">
+<p><a href="https://rstudio-education.github.io/datascience-box/course-materials/slides/u4-d02-fitting-interpreting-models/u4-d02-fitting-interpreting-models.html#1">Slides</a></p>
+</div>
+<div class="source">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/slides/u4-d02-fitting-interpreting-models">Source</a></p>
+</div>
+<div class="video">
+<p><a href="https://youtu.be/69U92Q3pwnA">Video</a></p>
+</div>
+<div class="reading">
+<p>IMS :: <a href="https://openintro-ims.netlify.app/model-slr.html">Chp 7 - Linear regression with a single predictor</a></p>
+</div>
+</div>
+<div class="slide-deck">
+<p><strong>Unit 4 - Deck 3: Modelling nonlinear relationships</strong></p>
+<div class="slides">
+<p><a href="https://rstudio-education.github.io/datascience-box/course-materials/slides/u4-d03-modeling-nonlinear-relationships/u4-d03-modeling-nonlinear-relationships.html#1">Slides</a></p>
+</div>
+<div class="source">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/slides/u4-d03-modeling-nonlinear-relationships">Source</a></p>
+</div>
+<div class="video">
+<p><a href="https://youtu.be/j4MZ6ZdHnHg">Video</a></p>
+</div>
+</div>
+<div class="slide-deck">
+<p><strong>Unit 4 - Deck 4: Models with multiple predictors</strong></p>
+<div class="slides">
+<p><a href="https://rstudio-education.github.io/datascience-box/course-materials/slides/u4-d04-model-multiple-predictors/u4-d04-model-multiple-predictors.html#1">Slides</a></p>
+</div>
+<div class="source">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/slides/u4-d04-model-multiple-predictors">Source</a></p>
+</div>
+<div class="video">
+<p><a href="https://youtu.be/mjkNabD4oi4">Video</a></p>
+</div>
+<div class="reading">
+<p>IMS :: <a href="https://openintro-ims.netlify.app/model-mlr.html">Chp 8 - Linear regression with multiple predictors</a></p>
+</div>
+</div>
+<div class="slide-deck">
+<p><strong>Unit 4 - Deck 5: More models with multiple predictors</strong></p>
+<div class="slides">
+<p><a href="https://rstudio-education.github.io/datascience-box/course-materials/slides/u4-d05-more-model-multiple-predictors/u4-d05-more-model-multiple-predictors.html#1">Slides</a></p>
+</div>
+<div class="source">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/slides/u4-d05-more-model-multiple-predictors">Source</a></p>
+</div>
+<div class="video">
+<p><a href="https://youtu.be/nJAYRnLPb10">Video</a></p>
+</div>
+</div>
+</div>
+<div id="classification-and-model-building" class="section level3" number="9.1.2">
+<h3>
+<span class="header-section-number">9.1.2</span> Classification and model building<a class="anchor" aria-label="anchor" href="#classification-and-model-building"><i class="fas fa-link"></i></a>
+</h3>
+<div class="slide-deck">
+<p><strong>Unit 4 - Deck 6: Logistic regression</strong></p>
+<div class="slides">
+<p><a href="https://rstudio-education.github.io/datascience-box/course-materials/slides/u4-d06-logistic-reg/u4-d06-logistic-reg.html#1">Slides</a></p>
+</div>
+<div class="source">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/slides/u4-d06-logistic-reg">Source</a></p>
+</div>
+<div class="video">
+<p><a href="https://youtu.be/AidXFYSYfJg">Video</a></p>
+</div>
+<div class="reading">
+<p>IMS :: <a href="https://openintro-ims.netlify.app/model-logistic.html">Chp 9 - Logistic regression</a></p>
+</div>
+</div>
+<div class="slide-deck">
+<p><strong>Unit 4 - Deck 7: Prediction and overfitting</strong></p>
+<div class="slides">
+<p><a href="https://rstudio-education.github.io/datascience-box/course-materials/slides/u4-d07-prediction-overfitting/u4-d07-prediction-overfitting.html#1">Slides</a></p>
+</div>
+<div class="source">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/slides/u4-d07-prediction-overfitting">Source</a></p>
+</div>
+<div class="video">
+<p><a href="https://youtu.be/Qd4lu_Lmwi0">Video</a></p>
+</div>
+<div class="reading">
+<p>tidymodels :: <a href="https://www.tidymodels.org/start/models/">Build a model</a></p>
+</div>
+</div>
+<div class="slide-deck">
+<p><strong>Unit 4 - Deck 8: Feature engineering</strong></p>
+<div class="slides">
+<p><a href="https://rstudio-education.github.io/datascience-box/course-materials/slides/u4-d08-feature-engineering/u4-d08-feature-engineering.html#1">Slides</a></p>
+</div>
+<div class="source">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/slides/u4-d08-feature-engineering">Source</a></p>
+</div>
+<div class="video">
+<p><a href="https://youtu.be/wZt9ab4jBZ4">Video</a></p>
+</div>
+<div class="reading">
+<p>tidymodels :: <a href="https://www.tidymodels.org/start/recipes/">Preprocess your data with recipes</a></p>
+</div>
+</div>
+</div>
+<div id="model-validation" class="section level3" number="9.1.3">
+<h3>
+<span class="header-section-number">9.1.3</span> Model validation<a class="anchor" aria-label="anchor" href="#model-validation"><i class="fas fa-link"></i></a>
+</h3>
+<div class="slide-deck">
+<p><strong>Unit 4 - Deck 9: Cross validation</strong></p>
+<div class="slides">
+<p><a href="https://rstudio-education.github.io/datascience-box/course-materials/slides/u4-d09-cross-validation/u4-d09-cross-validation.html#1">Slides</a></p>
+</div>
+<div class="source">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/slides/u4-d09-cross-validation">Source</a></p>
+</div>
+<div class="video">
+<p><a href="https://youtu.be/L1KfIISmUT4">Video</a></p>
+</div>
+<div class="reading">
+<p>tidymodels :: <a href="https://www.tidymodels.org/start/resampling/">Evaluate your model with resampling</a></p>
+</div>
+</div>
+<div class="application-exercise">
+<p><strong>The Office + Feature engineering, Pt. 1</strong></p>
+<div class="source">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/application-exercises/ae-09-feat-eng-cv/theoffice.Rmd">Source</a></p>
+</div>
+<div class="video">
+<p><a href="https://youtu.be/qsUYstdN4LQ">Video</a></p>
+</div>
+</div>
+<div class="application-exercise">
+<p><strong>The Office + Cross validation, Pt. 2</strong></p>
+<div class="source">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/application-exercises/ae-09-feat-eng-cv/theoffice.Rmd">Source</a></p>
+</div>
+<div class="video">
+<p><a href="https://youtu.be/WstIr94Fdjc">Video</a></p>
+</div>
+</div>
+</div>
+<div id="uncertainty-quantification" class="section level3" number="9.1.4">
+<h3>
+<span class="header-section-number">9.1.4</span> Uncertainty quantification<a class="anchor" aria-label="anchor" href="#uncertainty-quantification"><i class="fas fa-link"></i></a>
+</h3>
+<div class="slide-deck">
+<p><strong>Unit 4 - Deck 10: Quantifying uncertainty</strong></p>
+<div class="slides">
+<p><a href="https://rstudio-education.github.io/datascience-box/course-materials/slides/u4-d10-quantify-uncertainty/u4-d10-quantify-uncertainty.html#1">Slides</a></p>
+</div>
+<div class="source">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/slides/u4-d10-quantify-uncertainty">Source</a></p>
+</div>
+<div class="video">
+<p><a href="https://youtu.be/LYpKrtZmQtI">Video</a></p>
+</div>
+</div>
+<div class="slide-deck">
+<p><strong>Unit 4 - Deck 11: Bootstrapping</strong></p>
+<div class="slides">
+<p><a href="https://rstudio-education.github.io/datascience-box/course-materials/slides/u4-d11-bootstrap/u4-d11-bootstrap.html#1">Slides</a></p>
+</div>
+<div class="source">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/slides/u4-d11-bootstrap">Source</a></p>
+</div>
+<div class="video">
+<p><a href="https://youtu.be/bdqpI3iVOso">Video</a></p>
+</div>
+<div class="reading">
+<p>IMS :: <a href="https://openintro-ims.netlify.app/foundations-bootstrapping.html">Chp 12 - Confidence intervals with bootstrapping</a></p>
+</div>
+</div>
+<div class="slide-deck">
+<p><strong>Unit 4 - Deck 12: Hypothesis testing</strong></p>
+<div class="slides">
+<p><a href="https://rstudio-education.github.io/datascience-box/course-materials/slides/u4-d12-hypothesis-testing/u4-d12-hypothesis-testing.html#1">Slides</a></p>
+</div>
+<div class="source">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/slides/u4-d12-hypothesis-testing">Source</a></p>
+</div>
+<div class="reading">
+<p><a href="https://openintro-ims.netlify.app/foundations-randomization.html">IMS :: Chp 11 - Hypothesis testing with randomization</a></p>
+</div>
+</div>
+<div class="slide-deck">
+<p><strong>Unit 4 - Deck 13: Inference overview</strong></p>
+<div class="slides">
+<p><a href="https://rstudio-education.github.io/datascience-box/course-materials/slides/u4-d13-inference-overview/u4-d13-inference-overview.html#1">Slides</a></p>
+</div>
+<div class="source">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/slides/u4-d13-inference-overview">Source</a></p>
+</div>
+</div>
+</div>
+</div>
+<div id="labs-2" class="section level2" number="9.2">
+<h2>
+<span class="header-section-number">9.2</span> Labs<a class="anchor" aria-label="anchor" href="#labs-2"><i class="fas fa-link"></i></a>
+</h2>
+<div class="lab">
+<p><strong>Lab 10: Grading the professor, Pt. 1</strong></p>
+<p>Fitting and interpreting simple linear regression models</p>
+<div class="instructions">
+<p><a href="https://rstudio-education.github.io/datascience-box/course-materials/lab-instructions/lab-10/lab-10-slr-course-evals.html">Instructions</a></p>
+</div>
+<div class="source">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/lab-instructions/lab-10">Source</a></p>
+</div>
+<div class="starter">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/starters/lab/lab-10-slr-course-evals">Starter</a></p>
+</div>
+</div>
+<div class="lab">
+<p><strong>Lab 11: Grading the professor, Pt. 2</strong></p>
+<p>Fitting and interpreting multiple linear regression models</p>
+<div class="instructions">
+<p><a href="https://rstudio-education.github.io/datascience-box/course-materials/lab-instructions/lab-11/lab-11-mlr-course-evals.html">Instructions</a></p>
+</div>
+<div class="source">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/lab-instructions/lab-11">Source</a></p>
+</div>
+<div class="starter">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/starters/lab/lab-11-mlr-course-evals">Starter</a></p>
+</div>
+</div>
+<div class="lab">
+<p><strong>Lab 12: Smoking while pregnant</strong></p>
+<p>Constructing confidence intervals, conducting hypothesis tests, and interpreting results in context of the data</p>
+<div class="instructions">
+<p><a href="https://rstudio-education.github.io/datascience-box/course-materials/lab-instructions/lab-12/lab-12-inference-smoking.html">Instructions</a></p>
+</div>
+<div class="source">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/lab-instructions/lab-12">Source</a></p>
+</div>
+<div class="starter">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/starters/lab/lab-12-inference-smoking">Starter</a></p>
+</div>
+</div>
+</div>
+<div id="homework-assignments-1" class="section level2" number="9.3">
+<h2>
+<span class="header-section-number">9.3</span> Homework assignments<a class="anchor" aria-label="anchor" href="#homework-assignments-1"><i class="fas fa-link"></i></a>
+</h2>
+<div class="homework">
+<p><strong>HW 7: Bike rentals in DC</strong></p>
+<p>Exploratory data analysis and fitting and interpreting models</p>
+<div class="instructions">
+<p><a href="https://rstudio-education.github.io/datascience-box/course-materials/hw-instructions/hw-07/hw-07-bike-rentals-dc.html">Instructions</a></p>
+</div>
+<div class="source">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/hw-instructions/hw-07">Source</a></p>
+</div>
+<div class="starter">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/starters/hw/hw-07-bike-rentals-dc">Starter</a></p>
+</div>
+</div>
+<div class="homework">
+<p><strong>HW 8: Exploring the GSS</strong></p>
+<p>Fitting and interpreting models</p>
+<div class="instructions">
+<p><a href="https://rstudio-education.github.io/datascience-box/course-materials/hw-instructions/hw-08/hw-08-exploring-gss.html">Instructions</a></p>
+</div>
+<div class="source">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/hw-instructions/hw-08">Source</a></p>
+</div>
+<div class="starter">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/starters/hw/hw-08-exploring-gss">Starter</a></p>
+</div>
+</div>
+<div class="homework">
+<p><strong>HW 9: Modelling the GSS</strong></p>
+<p>Model validation and inference</p>
+<div class="instructions">
+<p><a href="https://rstudio-education.github.io/datascience-box/course-materials/hw-instructions/hw-09/hw-09-modeling-gss.html">Instructions</a></p>
+</div>
+<div class="source">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/hw-instructions/hw-09">Source</a></p>
+</div>
+<div class="starter">
+<p><a href="https://github.com/rstudio-education/datascience-box/tree/master/course-materials/starters/hw/hw-09-modeling-gss">Starter</a></p>
+</div>
+</div>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="ethics.html"><span class="header-section-number">8</span> Data science ethics</a></div>
+<div class="next"><a href="looking-forward.html"><span class="header-section-number">10</span> Looking further</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#making-rigorous-conclusions"><span class="header-section-number">9</span> Making rigorous conclusions</a></li>
+<li>
+<a class="nav-link" href="#slides-videos-and-application-exercises-3"><span class="header-section-number">9.1</span> Slides, videos, and application exercises</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#modelling-data"><span class="header-section-number">9.1.1</span> Modelling data</a></li>
+<li><a class="nav-link" href="#classification-and-model-building"><span class="header-section-number">9.1.2</span> Classification and model building</a></li>
+<li><a class="nav-link" href="#model-validation"><span class="header-section-number">9.1.3</span> Model validation</a></li>
+<li><a class="nav-link" href="#uncertainty-quantification"><span class="header-section-number">9.1.4</span> Uncertainty quantification</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#labs-2"><span class="header-section-number">9.2</span> Labs</a></li>
+<li><a class="nav-link" href="#homework-assignments-1"><span class="header-section-number">9.3</span> Homework assignments</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/rstudio-education/datascience-box//blob/master/02-making-rigorous-conclusions.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio-education/datascience-box//edit/master/02-making-rigorous-conclusions.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Data Science in a Box</strong>" was written by Mine Çetinkaya-Rundel. It was last built on 2022-04-22.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>
