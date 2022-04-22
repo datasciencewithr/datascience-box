@@ -1,0 +1,11 @@
+from https://bookdown.org/yihui/bookdown/github.html
+
+in datascience-box
+touch .nojekyll
+git add .nojekyll
+
+in _bookdown.yml
+add
+output_dir: "docs"
+
+then build, commit, push
