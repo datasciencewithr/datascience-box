@@ -43,6 +43,8 @@ Visit [here](https://github.com/rstudio-education/datascience-box/blob/master/LI
 
 ## Acknowledements {.unnumbered}
 
-Huge thanks to the \#rstats education community who have made numerous suggestions for this resource, to Lee Suddaby and Zeno Kujawa for converting the homework assignments to learnr tutorials, and to [Müge Çetinkaya](http://muge.fr/) for the hex logo!
+First, a huge thanks to Mine Çetinkaya-Rundel and Colin Rundel for putting this "box" together.
+It is amazing.
+Also, huge thanks to the #rstats education community who have made numerous suggestions for this resource, to Lee Suddaby and Zeno Kujawa for converting the homework assignments to learnr tutorials, and to [Müge Çetinkaya](http://muge.fr/) for the hex logo!
 
 This website is built with [bookdown](https://bookdown.org/), the lovely icons by [icons8](http://icons8.com/), and none of this would be possible without the [tidyverse](https://tidyverse.org/).
