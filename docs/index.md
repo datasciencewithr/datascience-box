@@ -1,40 +1,42 @@
 ---
 knit: bookdown::render_book
 site: bookdown::bookdown_site
-title: "Data Science in a Box"
-author: "Mine Çetinkaya-Rundel"
-description: "Data Science in a Box contains the materials required to teach (or learn from) the course described above, all of which are freely-available and open-source."
-date: "2022-04-22"
-github-repo: rstudio-education/datasciencebox
-twitter-handle: minebocek
-cover-image: dsbox.png
-url: 'https\://datasciencebox.org/'
+title: "datascienceandr"
+author: "Fritz Ebner"
+description: "Material inspired by Data Science in a Box , all of which are freely-available and open-source."
+date: "2022-04-23"
+github-repo: datasciencewithr/datascience-box
+twitter-handle: na
+cover-image: dsbox2.png
+url: 'https\://datasciencewithr.github.io/datascience-box/'
 documentclass: book
 link-citations: yes
 ---
 
 # Welcome {.unnumbered}
 
-<img src="dsbox.png" class="cover" width="240" height="240"/> How can we effectively and efficiently teach data science to students with little to no background in computing and statistical thinking?
-How can we equip them with the skills and tools for reasoning with various types of data and leave them wanting to learn more?
-This introductory data science course is our (working) answer to this question.
+<img src="dsbox2.png" class="cover" width="240" height="240"/> datascienceandr is an introductory course in Data Science, taught using the R language and RStudio.
+The core content of the course focuses on [data acquisition](https://wiki.atlan.com/data-acquisition/) and [data wrangling](https://en.wikipedia.org/wiki/Data_wrangling), [exploratory data analysis](https://en.wikipedia.org/wiki/Exploratory_data_analysis), [data visualization](https://en.wikipedia.org/wiki/Data_visualization), and [effective communication](https://en.wikipedia.org/wiki/Communication) of results.
 
-The source code for everything you see here can be found [on GitHub](https://github.com/rstudio-education/datascience-box).
+## Who is this course for? {.unnumbered}
 
-The core content of the course focuses on data acquisition and wrangling, exploratory data analysis, data visualization, inference, modelling, and effective communication of results.
-Time permitting, the course also introduces additional concepts and tools like interactive visualization and reporting, text analysis, and Bayesian inference.
-A heavy emphasis is placed on a consistent syntax (with tools from the [tidyverse](https://www.tidyverse.org/)), reproducibility (with [R Markdown](https://rmarkdown.rstudio.com/)), and version control and collaboration (with Git and GitHub).
-In addition, out-of-class learning is supplemented with interactive [tutorials](https://rstudio.github.io/learnr/).
-The goal of the course is to bring students from zero to being able to work in a team on a fully reproducible data science project analysing a dataset of their choice and answering questions they care about.
+If you are a learner who is interested in making sense of (sometimes messy) data and who
 
-Data Science in a Box contains the materials required to teach (or learn from) the course described above, all of which are [freely-available and open-source](https://github.com/rstudio-education/datascience-box/blob/master/LICENSE.md).
-They include course materials such as slide decks, lecture and live coding videos, homework assignments, guided labs, sample exams, a final project assignment, as well as materials for instructors such as pedagogical tips, information on computing infrastructure, technology stack, and course logistics.
+-   has little to no background in data science, statistics, or programming, or
+-   has been using R for a while but wants to modernize their skills,
 
-Majority of the materials linked live in the GitHub repo serving this website.
-You can access the repo [here](https://github.com/rstudio-education/datascience-box).
+the materials in this course are for you!
+The content is definitely newcomer friendly, however you should be willing to ask questions and dive into the documentation of the packages we introduce.
+The course is designed to be accessible to new learners at the undergraduate level and above, though adventurous learners at the high school level might also enjoy these materials.
 
-Please note that Data Science in a Box uses a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
-By contributing to this project, you agree to abide by its terms.
+## What tools will I use? {.unnumbered}
+
+-   [R](https://en.wikipedia.org/wiki/R_(programming_language)), which is a programming language. The name is derived from the S programming language, which was a statistical computing language created at Bell Labs during the golden age of computing (i.e. the 1970s). You can learn more about [R](https://en.wikipedia.org/wiki/R_(programming_language)) if you can't sleep some night.
+-   [RStudio](https://en.wikipedia.org/wiki/RStudio), which is a sweet GUI interface to R. You can do lots of cool things in RStudio. Check the link if counting sheep just isn't doing it for you.
+-   [GitHub](https://github.com/), which is a website which hosts the git version control system. We will make use of these tools to distribute and collect homework and labs. The mascot for GitHub is the [Octocat](https://en.wikipedia.org/wiki/GitHub#Mascot).
+
+Please see Getting started to learn about setting up for the course.
+Don't worry if you don't get it done before we start - we will go over it in class.
 
 ## License {.unnumbered}
 
@@ -43,4 +45,4 @@ Visit [here](https://github.com/rstudio-education/datascience-box/blob/master/LI
 
 ## Acknowledements {.unnumbered}
 
-Much of these materials have been adapted from [Data Science in a Box](https://https://datasciencebox.org/), by Mine Çetinkaya-Rundel under the Creative Commons Attribution Share Alike 4.0 International.
+Most of these materials have been adapted from [Data Science in a Box](https://https://datasciencebox.org/), by Mine Çetinkaya-Rundel under the Creative Commons Attribution Share Alike 4.0 International.
