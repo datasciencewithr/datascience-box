@@ -1,7 +1,6 @@
 # Getting started {.unnumbered}
 
-We will go over this in Lab 1, but if you want to start now, please go ahead.
-You'll need access to GitHub and a version of RStudio (either Cloud, or on your computer)
+Before the first day of class, please make sure you have an account on GitHub and access to a version of RStudio (either Cloud, or on your computer)
 
 ## GitHub {.unnumbered}
 
