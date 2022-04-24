@@ -27,7 +27,7 @@ You can join the workspace and play around with the sample application exercises
 **Unit 1 - Deck 1: Welcome**
 
 ::: slides
-[Slides](https://rstudio-education.github.io/datascience-box/course-materials/slides/u1-d01-welcome/u1-d01-welcome.html#1)
+[Slides](https://datascienceandr.netlify.app/course-materials/slides/u1-d01-welcome/u1-d01-welcome.html#1)
 :::
 
 ::: source

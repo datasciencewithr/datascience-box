@@ -9,3 +9,9 @@ add
 output_dir: "docs"
 
 then build, commit, push
+
+### That all goes out the window.  In order to host both the 'book' website and the course materials, i had
+to use Netlify, and stand up 2 websites.
+1) the 'book', which is the homepage of the course is at https://datascienceandrhome.netlify.app/
+2) the course materials site, which you can't navigate, but all the pages are there is at
+  https://datascienceandr.netlify.app/
