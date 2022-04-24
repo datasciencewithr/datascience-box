@@ -7,10 +7,10 @@ fig:rscloud-base-template
 fig:rscloud-git-project
 fig:alt-centralized-server
 fig:alt-docker
+week-schedule
 hello-world
-slides-videos-and-application-exercises
 exploring-data
-slides-videos-and-application-exercises-1
+slides-videos-and-application-exercises
 visualising-data
 wrangling-and-tidying-data
 importing-and-recoding-data
@@ -58,5 +58,5 @@ pedagogy
 course-design
 teaching-the-tidyverse
 schedule
-week-schedule
 week-schedule-1
+week-schedule-2

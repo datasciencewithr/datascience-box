@@ -9,7 +9,7 @@
   background-image: url("application-exercise.png");
 }
 .application-exercise:before {
-  content: "Application exercise: ";
+/*  content: "Application exercise: ";*/
   clear: right;
   display: block;
   font-weight: bold;

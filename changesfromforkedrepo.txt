@@ -10,8 +10,17 @@ output_dir: "docs"
 
 then build, commit, push
 
-### That all goes out the window.  In order to host both the 'book' website and the course materials, i had
-to use Netlify, and stand up 2 websites.
-1) the 'book', which is the homepage of the course is at https://datascienceandrhome.netlify.app/
+### The above all goes out the window.  In order to host both the 'book' website and the course materials, i had
+to use Netlify, and stand up 2 websites.  Just followed the instructions on Netlify.
+1) the 'book', which is the homepage of the course is at https://datascienceandrhome.netlify.app/ and it is a full fledged 'website', meaning that it has a landing page, and you can navigate to other pages.
 2) the course materials site, which you can't navigate, but all the pages are there is at
-  https://datascienceandr.netlify.app/
+  https://datascienceandr.netlify.app/  and this is not really a website, but a collection of pages, linked from other stuff.
+e.g.
+https://datascienceandr.netlify.app/course-materials/slides/u1-d01-welcome/u1-d01-welcome.html#1
+https://datascienceandr.netlify.app/course-materials/application-exercises/ae-01a-un-votes/unvotes.html#1
+
+But, there is still a build_pages GitHub action that was running and hosting - i disabled it.
+there is an install failure for stringi in build_book
+
+Plan:
+Sessions are roughly 4 hour chunks, corresponding to 1 day workshop or 1 week of normal class.

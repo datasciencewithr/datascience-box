@@ -1,77 +1,32 @@
 # (PART) Course content {.unnumbered}
 
-# Hello world {#hello-world}
+# Welcome to Data Science! {#hello-world}
 
-I recommend starting the class off right, devoting more of the class time to introducing the course content instead of the course policies.
-And get students doing something with data as quickly as possible!
-A personal goal of mine is to get students to produce their first data visualization within the first 10 minutes of class.
-The application exercise in this lecture is one way of achieving this goal.
-Slides for Day One of class are provided below.
+Welcome to the first session.
 
-Note that getting students computing on Day One in class requires that they come to class equipped with a laptop or that you're holding your course online or in a computer lab.
-If teaching online, this is resolved automatically, of course.
-They do not need to do any preparation ahead of time, just need internet access.
-As outlined in the slides, give them a link to your RStudio Cloud workspace and get them started working on the application exercise you put together for them.
-There are two options for a day one application exercise.
-Note that one of them uses COVID-19 data and depending on where, when, and to whom you're teaching, working with these data might not be the most pleasant experience for all students.
-Please make sure to consider this before using this activity.
-
-::: rstudio-cloud
-The RStudio Cloud workspace for Data Science Course in a Box project is [here](https://rstudio.cloud/spaces/1655/join?access_code=5rdjusfIYF5iI0Gum2vNsBDLdtdnIEELBkf2EivK).
-You can join the workspace and play around with the sample application exercises.
-:::
-
-## Slides, videos, and application exercises
+## Slides, application exercises, labs, homework {.unnumbered}
 
 ::: slide-deck
-**Unit 1 - Deck 1: Welcome**
+**Session 1 - Part 1: Welcome**
 
 ::: slides
 [Slides](https://datascienceandr.netlify.app/course-materials/slides/u1-d01-welcome/u1-d01-welcome.html#1)
 :::
-
-::: source
-[Source](https://github.com/rstudio-education/datascience-box/tree/master/course-materials/slides/u1-d01-welcome)
-:::
-
-::: video
-[Video](https://youtu.be/OJ1xR0ObhIw)
-:::
 :::
 
 ::: application-exercise
-**First dataviz**
+**Session 1 - Part 2: UN Votes**
 
-> **Option 1 - UN Votes**
+> **Application exercise**
 >
-> ::: source
-> [Source](https://github.com/rstudio-education/datascience-box/tree/master/course-materials/application-exercises/ae-01a-un-votes/unvotes.Rmd)
-> :::
->
-> ::: video
-> [Video](https://youtu.be/r-uTBEclM1E)
-> :::
-
-> **Option 2 - COVID-19**
->
-> ::: source
-> [Source](https://github.com/rstudio-education/datascience-box/blob/master/course-materials/application-exercises/ae-01b-covid/covid.Rmd)
-> :::
+> <https://github.com/datasciencewithr/ae-01a-un-votes.git>
 :::
 
 ::: slide-deck
-**Unit 1 - Deck 2: Meet the toolkit - Programming**
+**Session 1 - Part 3: Meet the toolkit - Programming**
 
 ::: slides
-[Slides](https://rstudio-education.github.io/datascience-box/course-materials/slides/u1-d02-toolkit-r/u1-d02-toolkit-r.html#1)
-:::
-
-::: source
-[Source](https://github.com/rstudio-education/datascience-box/tree/master/course-materials/slides/u1-d02-toolkit-r)
-:::
-
-::: video
-[Video](https://youtu.be/mTAZLFcpnLI)
+[Slides](https://datascienceandr.netlify.app/course-materials/slides/u1-d02-toolkit-r/u1-d02-toolkit-r.html#1)
 :::
 
 ::: reading
@@ -81,25 +36,53 @@ You can join the workspace and play around with the sample application exercises
 :::
 
 ::: application-exercise
-**Bechdel + R Markdown**
+**Session 1 - Part 4: Bechdel + R Markdown**
 
-::: source
-[Source](https://github.com/rstudio-education/datascience-box/tree/master/course-materials/application-exercises/ae-02-bechdel-rmarkdown/bechdel.Rmd)
-:::
+> **Application exercise**
+>
+> <https://github.com/datasciencewithr/ae-02-bechdel-rmarkdown.git>
 :::
 
 ::: slide-deck
-**Unit 1 - Deck 3: Meet the toolkit - Version control and collaboration**
+**Session 1 - Part 5: Meet the toolkit - Version control and collaboration**
 
 ::: slides
-[Slides](https://rstudio-education.github.io/datascience-box/course-materials/slides/u1-d03-toolkit-git/u1-d03-toolkit-git.html#1)
+[Slides](https://datascienceandr.netlify.app/course-materials/slides/u1-d03-toolkit-git/u1-d03-toolkit-git.html#1)
+:::
 :::
 
-::: source
-[Source](https://github.com/rstudio-education/datascience-box/tree/master/course-materials/slides/u1-d03-toolkit-git)
+::: lab
+**Session 1 - Part 6: Lab 1: Hello R**
+
+Introduction to R, R Markdown, Git, and GitHub
+
+::: instructions
+[Instructions](https://datascienceandr.netlify.app/course-materials/lab-instructions/lab-01/lab-01-hello-r.html)
 :::
 
-::: video
-[Video](https://youtu.be/124DQasLyNQ)
+```{=html}
+<!--
+::: starter
+[Starter](https://github.com/rstudio-education/datascience-box/tree/master/course-materials/starters/lab/lab-01-hello-r)
+::: 
+-->
+```
 :::
+
+::: homework
+**Session 1 - Part 7: HW 1: Pet names**
+
+Introduction to working with data in R with the tidyverse
+
+::: instructions
+[Instructions](https://datascienceandr.netlify.app/course-materials/hw-instructions/hw-01/hw-01-pet-names.html)
+:::
+
+```{=html}
+<!--
+::: starter
+[Starter](https://github.com/rstudio-education/datascience-box/tree/master/course-materials/starters/hw/hw-01-pet-names)
+:::
+-->
+```
 :::
