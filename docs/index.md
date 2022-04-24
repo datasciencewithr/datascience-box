@@ -15,7 +15,7 @@ link-citations: yes
 
 # Welcome {.unnumbered}
 
-<img src="dsbox2.png" class="cover" width="240" height="240"/> datascienceandr is an introductory course in Data Science, taught using the R language and RStudio.
+<img src="dsbox2.png" class="cover" width="240" height="240"/> [datascienceandr](https://datasciencewithr.github.io/datascience-box/index.html) is an introductory course in Data Science, taught using the R language and RStudio.
 The core content of the course focuses on [data acquisition](https://wiki.atlan.com/data-acquisition/) and [data wrangling](https://en.wikipedia.org/wiki/Data_wrangling), [exploratory data analysis](https://en.wikipedia.org/wiki/Exploratory_data_analysis), [data visualization](https://en.wikipedia.org/wiki/Data_visualization), and [effective communication](https://en.wikipedia.org/wiki/Communication) of results.
 
 ## Who is this course for? {.unnumbered}
@@ -33,10 +33,40 @@ The course is designed to be accessible to new learners at the undergraduate lev
 
 -   [R](https://en.wikipedia.org/wiki/R_(programming_language)), which is a programming language. The name is derived from the S programming language, which was a statistical computing language created at Bell Labs during the golden age of computing (i.e. the 1970s). You can learn more about [R](https://en.wikipedia.org/wiki/R_(programming_language)) if you can't sleep some night.
 -   [RStudio](https://en.wikipedia.org/wiki/RStudio), which is a sweet GUI interface to R. You can do lots of cool things in RStudio. Check the link if counting sheep just isn't doing it for you.
--   [GitHub](https://github.com/), which is a website which hosts the git version control system. We will make use of these tools to distribute and collect homework and labs. The mascot for GitHub is the [Octocat](https://en.wikipedia.org/wiki/GitHub#Mascot).
+-   [GitHub](https://github.com/), which is a website which hosts the git version control system. We will make use of these tools to distribute and collect homework and labs. Learn about the mascot for GitHub, the [Octocat](https://en.wikipedia.org/wiki/GitHub#Mascot).
 
 Please see Getting started to learn about setting up for the course.
 Don't worry if you don't get it done before we start - we will go over it in class.
+
+## What can I do with R and its related tools and packages? {.unnumbered}
+
+-   [Create awesome 'live' documents with R Markdown](https://rmarkdown.rstudio.com/). R Markdown documents let you tell a story with your data. This website and the course slides were made with R Markdown.
+-   [Make Shiny Apps](https://shiny.rstudio.com/). Shiny apps are little applications that help people understand the data you have prepared. It is an awesome communication tool.
+
+## Inspiration {.unnumbered}
+
+Below you will find some examples of Shiny Apps written in R.
+This is just a sampling of what you can do with R and its related tools.
+
+### Interested in Census data? {.unnumbered}
+
+[Analyzing US Census Data: Methods, Maps, and Models in R](https://walker-data.com/census-r/index.html)
+
+### Want to know how much New Zealand traded in 2018? {.unnumbered}
+
+[New Zealand Trade Intelligence](https://gallery.shinyapps.io/nz-trade-dash/)
+
+### Do you like Business Games? {.unnumbered}
+
+[R&D Business Game](https://psim.shinyapps.io/business_game/)
+
+### Don't know what you want to do? {.unnumbered}
+
+Try the [Career Pathfinder](https://geom.shinyapps.io/careerpathfinder-beta/)
+
+### Check out more examples {.unnumbered}
+
+[Shiny Gallery from RStudio](https://shiny.rstudio.com/gallery/)
 
 ## License {.unnumbered}
 
