@@ -10,6 +10,7 @@ fig:alt-docker
 week-schedule
 hello-world
 visualization
+wrangling-and-tidying-data
 project
 tldr
 may-be-too-long-but-please-do-read
