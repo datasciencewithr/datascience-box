@@ -9,15 +9,7 @@ fig:alt-centralized-server
 fig:alt-docker
 week-schedule
 hello-world
-exploring-data
-slides-videos-and-application-exercises
-visualising-data
-wrangling-and-tidying-data
-importing-and-recoding-data
-communicating-data-science-results-effectively
-web-scraping-and-programming
-labs
-homework-assignments
+visualization
 project
 tldr
 may-be-too-long-but-please-do-read

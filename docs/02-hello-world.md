@@ -70,7 +70,7 @@ Introduction to R, R Markdown, Git, and GitHub
 :::
 
 ::: homework
-**Session 1 - Part 7: HW 1: Pet names**
+**Session 1 - Part 7: Homework 1: Pet names**
 
 Introduction to working with data in R with the tidyverse
 
