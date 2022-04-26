@@ -53,24 +53,19 @@ Plagiarism is frowned upon; don't do it.
 | 5       | 5      | Doing data science                                | Lecture                  |
 | 5       | 6      | Take a sad plot and make it better                | Lab                      |
 | 5       | 7      | Legos                                             | Homework                 |
-| **2**   | **6**  | **Simpson's paradox**                             | **Lecture**              |
-| **2**   | **6**  | **Legos**                                         | **Homework**             |
-| 2       | 7      | Web scraping                                      | Lecture                  |
-| 2       | 7      | Scraping top 250 movies on IMDB                   | Lecture                  |
-| 2       | 7      | Web scraping considerations                       | Lecture                  |
-| 2       | 7      | IMDB + Web scraping                               | Application exercise     |
-| 2       | 7      | Work on projects                                  | Lab                      |
-| 2       | 7      | Work on projects                                  | Homework                 |
-| **2**   | **8**  | **Functions**                                     | **Lecture**              |
-| **2**   | **8**  | **Iteration**                                     | **Lecture**              |
-| **2**   | **8**  | **University of Edinburgh Art Collection**        | **Lab**                  |
-| **2**   | **8**  | **Money in politics**                             | **Homework**             |
-| 3       | 9      | Misrepresentation                                 | Lecture                  |
-| 3       | 9      | Data privacy                                      | Lecture                  |
-| 3       | 9      | Algorithmic bias                                  | Lecture                  |
-| 3       | 9      | Conveying the right message through visualisation | Lab                      |
-| 3       | 9      | Project proposals                                 | Project                  |
-| 3       | 9      | Peer review of project proposals                  | Homework                 |
+| **6**   | **1**  | **Web scraping**                                  | **Lecture**              |
+| **6**   | **2**  | **Scraping top 250 movies on IMDB**               | **Lecture**              |
+| **6**   | **3**  | **Web scraping considerations**                   | **Lecture**              |
+| **6**   | **4**  | **IMDB + Web scraping**                           | **Application exercise** |
+| **6**   | **5**  | **Functions**                                     | **Lecture**              |
+| **6**   | **6**  | **Iteration**                                     | **Lecture**              |
+| **6**   | **7**  | **University of Edinburgh Art Collection**        | **Lab**                  |
+| **6**   | **8**  | **Money in politics**                             | **Homework**             |
+| 7       | 1      | Misrepresentation                                 | Lecture                  |
+| 7       | 2      | Data privacy                                      | Lecture                  |
+| 7       | 3      | Algorithmic bias                                  | Lecture                  |
+| 7       | 4      | Conveying the right message through visualisation | Lab                      |
+| 7       | 5      | Project proposals                                 | Project                  |
 | **4**   | **10** | **Fitting and interpreting models**               | **Lecture**              |
 | **4**   | **10** | **Modelling nonlinear relationships**             | **Lecture**              |
 | **4**   | **10** | **Models with multiple predictors**               | **Lecture**              |

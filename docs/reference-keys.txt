@@ -12,6 +12,7 @@ visualization
 wrangling-and-tidying-data
 importing-and-recoding-data
 effective-communication
+web-scraping-and-programming
 project
 tldr
 may-be-too-long-but-please-do-read
@@ -57,7 +58,7 @@ visualising-data-1
 wrangling-and-tidying-data-1
 importing-and-recoding-data-1
 communicating-data-science-results-effectively
-web-scraping-and-programming
+web-scraping-and-programming-1
 labs
 homework-assignments
 schedule

@@ -15,6 +15,7 @@ rmd_files: [
   "02-tidy-data.Rmd",
   "02-data-types.Rmd",
   "02-tips-effective-comm.Rmd",
+  "02-web-scraping.Rmd",
 #  "02-ethics.Rmd",
 #  "02-making-rigorous-conclusions.Rmd",
 #  "02-looking-further.Rmd",
