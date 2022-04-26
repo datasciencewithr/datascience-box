@@ -1,4 +1,4 @@
-# (PART) Course content {.unnumbered}
+# (PART) **Course content** {.unnumbered}
 
 # Welcome to Data Science! {#hello-world}
 
