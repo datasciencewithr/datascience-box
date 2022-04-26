@@ -10,7 +10,7 @@ fig:alt-docker
 hello-world
 visualization
 wrangling-and-tidying-data
-data-types-and-classes
+importing-and-recoding-data
 project
 tldr
 may-be-too-long-but-please-do-read
@@ -50,6 +50,15 @@ learn-more-2
 pedagogy
 course-design
 teaching-the-tidyverse
+exploring-data
+slides-videos-and-application-exercises
+visualising-data-1
+wrangling-and-tidying-data-1
+importing-and-recoding-data-1
+communicating-data-science-results-effectively
+web-scraping-and-programming
+labs
+homework-assignments
 schedule
 week-schedule
 week-schedule-1
