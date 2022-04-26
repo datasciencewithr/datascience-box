@@ -46,14 +46,14 @@ Plagiarism is frowned upon; don't do it.
 | **4**   | **6**  | **Nobels + Sales + Data import**                  | **Application exercise** |
 | **4**   | **7**  | **La Quinta is Spanish for next to Denny's**      | **Lab**                  |
 | **4**   | **8**  | **College majors**                                | **Homework**             |
-| 2       | 5      | Tips for effective data visualization             | Lecture                  |
-| 2       | 5      | Brexit + Telling stories with dataviz             | Application exercise     |
-| 2       | 5      | Take a sad plot and make it better                | Lab                      |
-| 2       | 5      | La Quinta is Spanish for next to Denny's, Pt. 2   | Homework                 |
-| **2**   | **6**  | **Scientific studies and confounding**            | **Lecture**              |
+| 5       | 1      | Tips for effective data visualization             | Lecture                  |
+| 5       | 2      | Brexit + Telling stories with dataviz             | Application exercise     |
+| 5       | 3      | Scientific studies and confounding                | Lecture                  |
+| 5       | 4      | Simpson's paradox                                 | Lecture                  |
+| 5       | 5      | Doing data science                                | Lecture                  |
+| 5       | 6      | Take a sad plot and make it better                | Lab                      |
+| 5       | 7      | Legos                                             | Homework                 |
 | **2**   | **6**  | **Simpson's paradox**                             | **Lecture**              |
-| **2**   | **6**  | **Doing data science**                            | **Lecture**              |
-| **2**   | **6**  | **Simpson's paradox**                             | **Lab**                  |
 | **2**   | **6**  | **Legos**                                         | **Homework**             |
 | 2       | 7      | Web scraping                                      | Lecture                  |
 | 2       | 7      | Scraping top 250 movies on IMDB                   | Lecture                  |
