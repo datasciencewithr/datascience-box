@@ -1,6 +1,7 @@
 # Course structure {.unnumbered}
 
-This course is broken into 'sessions' A Session is roughly 4 hours of combined lecture and labs, corresponding to 1 day workshop or 1 week of normal class.
+This course is broken into 'Sections'.
+A Section is roughly 4 hours of combined lecture and labs, corresponding to 1 day of a workshop or 1 week of normal class.
 
 In the Type column, you see different Types of material.
 
@@ -8,95 +9,77 @@ In the Type column, you see different Types of material.
 -   Application exercises are done in class, by everyone, and I'll help you if you get stuck, but you don't turn them in to be graded.
 -   Labs are also exercises that are done in class, by everyone, but you will turn them in (I'll show you how) and I'll check them out to make sure you did it right.
 -   Homework is that thing you do outside of class, by everyone, and you turn it in to be graded.
+-   Project is discussion about or presentation of the big end-of-class project.
 
 I encourage together-work, but don't just copy your friend, it does neither you nor them any good.
 Plagiarism is frowned upon; don't do it.
 
 ## Schedule {.unnumbered}
 
-| Session | Part   | Title                                             | Type                     |
-|---------|--------|---------------------------------------------------|--------------------------|
-| 1       | 1      | Welcome to data science!                          | Lecture                  |
-| 1       | 2      | UN Votes                                          | Application exercise     |
-| 1       | 3      | Meet the toolkit: Programming                     | Lecture                  |
-| 1       | 4      | The Bechdel test                                  | Application exercise     |
-| 1       | 5      | Meet the toolkit: Version control & collaboration | Lecture                  |
-| 1       | 6      | Hello R                                           | Lab                      |
-| 1       | 7      | Pet names                                         | Homework                 |
-| **2**   | **1**  | **Data and visualisation**                        | **Lecture**              |
-| **2**   | **2**  | **Visualising data with ggplot2**                 | **Lecture**              |
-| **2**   | **3**  | **Visualising numerical data**                    | **Lecture**              |
-| **2**   | **4**  | **Visualising categorical data**                  | **Lecture**              |
-| **2**   | **5**  | **StarWars + Dataviz**                            | **Application exercise** |
-| **2**   | **6**  | **Plastic waste**                                 | **Lab**                  |
-| **2**   | **7**  | **Airbnb listings in Edinburgh**                  | **Homework**             |
-| 3       | 1      | Tidy data                                         | Lecture                  |
-| 3       | 2      | Grammar of data wrangling                         | Lecture                  |
-| 3       | 3      | Working with a single data frame                  | Lecture                  |
-| 3       | 4      | Working with multiple data frames                 | Lecture                  |
-| 3       | 5      | Tidying data                                      | Lecture                  |
-| 3       | 6      | Hotels + Data wrangling                           | Application exercise     |
-| 3       | 7      | Nobel laureates                                   | Lab                      |
-| 3       | 8      | Road traffic accidents                            | Homework                 |
-| **4**   | **1**  | **Data types**                                    | **Lecture**              |
-| **4**   | **2**  | **Data classes**                                  | **Lecture**              |
-| **4**   | **3**  | **Importing data**                                | **Lecture**              |
-| **4**   | **4**  | **Recoding data**                                 | **Lecture**              |
-| **4**   | **5**  | **Hotels + Data types**                           | **Application exercise** |
-| **4**   | **6**  | **Nobels + Sales + Data import**                  | **Application exercise** |
-| **4**   | **7**  | **La Quinta is Spanish for next to Denny's**      | **Lab**                  |
-| **4**   | **8**  | **College majors**                                | **Homework**             |
-| 5       | 1      | Tips for effective data visualization             | Lecture                  |
-| 5       | 2      | Brexit + Telling stories with dataviz             | Application exercise     |
-| 5       | 3      | Scientific studies and confounding                | Lecture                  |
-| 5       | 4      | Simpson's paradox                                 | Lecture                  |
-| 5       | 5      | Doing data science                                | Lecture                  |
-| 5       | 6      | Take a sad plot and make it better                | Lab                      |
-| 5       | 7      | Legos                                             | Homework                 |
-| **6**   | **1**  | **Web scraping**                                  | **Lecture**              |
-| **6**   | **2**  | **Scraping top 250 movies on IMDB**               | **Lecture**              |
-| **6**   | **3**  | **Web scraping considerations**                   | **Lecture**              |
-| **6**   | **4**  | **IMDB + Web scraping**                           | **Application exercise** |
-| **6**   | **5**  | **Functions**                                     | **Lecture**              |
-| **6**   | **6**  | **Iteration**                                     | **Lecture**              |
-| **6**   | **7**  | **University of Edinburgh Art Collection**        | **Lab**                  |
-| **6**   | **8**  | **Money in politics**                             | **Homework**             |
-| 7       | 1      | Misrepresentation                                 | Lecture                  |
-| 7       | 2      | Data privacy                                      | Lecture                  |
-| 7       | 3      | Algorithmic bias                                  | Lecture                  |
-| 7       | 4      | Conveying the right message through visualisation | Lab                      |
-| 7       | 5      | Project proposals                                 | Project                  |
-| **4**   | **10** | **Fitting and interpreting models**               | **Lecture**              |
-| **4**   | **10** | **Modelling nonlinear relationships**             | **Lecture**              |
-| **4**   | **10** | **Models with multiple predictors**               | **Lecture**              |
-| **4**   | **10** | **More models with multiple predictors**          | **Lecture**              |
-| **4**   | **10** | **Grading the professor, Pt 1**                   | **Lab**                  |
-| **4**   | **10** | **Bike rentals in DC**                            | **Homework**             |
-| 4       | 11     | Logistic regression                               | Lecture                  |
-| 4       | 11     | Prediction and overfitting                        | Lecture                  |
-| 4       | 11     | Feature engineering                               | Lecture                  |
-| 4       | 11     | Grading the professor, Pt. 1                      | Lab                      |
-| 4       | 11     | Exploring the GSS                                 | Homework                 |
-| **4**   | **12** | **Cross validation**                              | **Lecture**              |
-| **4**   | **12** | **The Office, Part 1**                            | **Application exercise** |
-| **4**   | **12** | **The Office, Part 2**                            | **Application exercise** |
-| **4**   | **12** | **Bootstrapping**                                 | **Lecture**              |
-| **4**   | **12** | **Work on projects**                              | **Lab**                  |
-| **4**   | **12** | **Grading the professor, Pt. 2**                  | **Homework**             |
-| 4       | 13     | Quantifying uncertainty                           | Lecture                  |
-| 4       | 13     | Bootstrapping                                     | Lecture                  |
-| 4       | 13     | Hypothesis testing                                | Lecture                  |
-| 4       | 13     | Inference overview                                | Lecture                  |
-| 4       | 13     | Smoking during pregnancy                          | Lab                      |
-| 4       | 13     | Modelling the GSS                                 | Homework                 |
-| **5**   | **14** | **Text analysis**                                 | **Lecture**              |
-| **5**   | **14** | **Comparing texts**                               | **Lecture**              |
-| **5**   | **14** | **Interactive web apps**                          | **Lecture**              |
-| **5**   | **14** | **Machine learning**                              | **Lecture**              |
-| **5**   | **14** | **Collaborating on GitHub**                       | **Lab**                  |
-| **5**   | **14** | **Wrap up**                                       | **Homework**             |
-| 5       | 15     | Bayesian inference                                | Lecture                  |
-| 5       | 15     | Building interactive web apps, Pt. 1              | Lecture                  |
-| 5       | 15     | Building interactive web apps, Pt. 1              | Lecture                  |
-| 5       | 15     | Project presentations                             | Lab                      |
-| 5       | 15     | N/A                                               | Homework                 |
+| Section | Part  | Title                                             | Type                     |
+|---------|-------|---------------------------------------------------|--------------------------|
+| 1       | 1     | Welcome to data science!                          | Lecture                  |
+| 1       | 2     | UN Votes                                          | Application exercise     |
+| 1       | 3     | Meet the toolkit: Programming                     | Lecture                  |
+| 1       | 4     | The Bechdel test                                  | Application exercise     |
+| 1       | 5     | Meet the toolkit: Version control & collaboration | Lecture                  |
+| 1       | 6     | Hello R                                           | Lab                      |
+| 1       | 7     | Pet names                                         | Homework                 |
+|         |       |                                                   |                          |
+| **2**   | **1** | **Data and visualisation**                        | **Lecture**              |
+| **2**   | **2** | **Visualising data with ggplot2**                 | **Lecture**              |
+| **2**   | **3** | **Visualising numerical data**                    | **Lecture**              |
+| **2**   | **4** | **Visualising categorical data**                  | **Lecture**              |
+| **2**   | **5** | **StarWars + Dataviz**                            | **Application exercise** |
+| **2**   | **6** | **Plastic waste**                                 | **Lab**                  |
+| **2**   | **7** | **Airbnb listings in Edinburgh**                  | **Homework**             |
+|         |       |                                                   |                          |
+| 3       | 1     | Tidy data                                         | Lecture                  |
+| 3       | 2     | Grammar of data wrangling                         | Lecture                  |
+| 3       | 3     | Working with a single data frame                  | Lecture                  |
+| 3       | 4     | Working with multiple data frames                 | Lecture                  |
+| 3       | 5     | Tidying data                                      | Lecture                  |
+| 3       | 6     | Hotels + Data wrangling                           | Application exercise     |
+| 3       | 7     | Nobel laureates                                   | Lab                      |
+| 3       | 8     | Road traffic accidents                            | Homework                 |
+|         |       |                                                   |                          |
+| **4**   | **1** | **Data types**                                    | **Lecture**              |
+| **4**   | **2** | **Data classes**                                  | **Lecture**              |
+| **4**   | **3** | **Importing data**                                | **Lecture**              |
+| **4**   | **4** | **Recoding data**                                 | **Lecture**              |
+| **4**   | **5** | **Hotels + Data types**                           | **Application exercise** |
+| **4**   | **6** | **Nobels + Sales + Data import**                  | **Application exercise** |
+| **4**   | **7** | **La Quinta is Spanish for next to Denny's**      | **Lab**                  |
+| **4**   | **8** | **College majors**                                | **Homework**             |
+|         |       |                                                   |                          |
+| 5       | 1     | Interactive web apps                              | Lecture                  |
+| 5       | 2     | Building interactive web apps                     | Lecture                  |
+| 5       | 3     | Google trend index app tour                       | Application exercise     |
+| 5       | 4     | Project proposal/discussion                       | Project                  |
+|         |       |                                                   |                          |
+| **6**   | **1** | **Tips for effective data visualization**         | **Lecture**              |
+| **6**   | **2** | **Brexit + Telling stories with dataviz**         | **Application exercise** |
+| **6**   | **3** | **Scientific studies and confounding**            | **Lecture**              |
+| **6**   | **4** | **Simpson's paradox**                             | **Lecture**              |
+| **6**   | **5** | **Doing data science**                            | **Lecture**              |
+| **6**   | **6** | **Take a sad plot and make it better**            | **Lab**                  |
+| **6**   | **7** | **Legos**                                         | **Homework**             |
+|         |       |                                                   |                          |
+| 7       | 1     | Web scraping                                      | Lecture                  |
+| 7       | 2     | Scraping top 250 movies on IMDB                   | Lecture                  |
+| 7       | 3     | Web scraping considerations                       | Lecture                  |
+| 7       | 4     | IMDB + Web scraping                               | Application exercise     |
+| 7       | 5     | Functions                                         | Lecture                  |
+| 7       | 6     | Iteration                                         | Lecture                  |
+| 7       | 7     | University of Edinburgh Art Collection            | Lab                      |
+| 7       | 8     | Money in politics                                 | Homework                 |
+|         |       |                                                   |                          |
+| **8**   | **1** | **More R language details TBD**                   | **Lecture**              |
+|         |       |                                                   |                          |
+| 9       | 1     | Misrepresentation                                 | Lecture                  |
+| 9       | 2     | Data privacy                                      | Lecture                  |
+| 9       | 3     | Algorithmic bias                                  | Lecture                  |
+| 9       | 4     | Conveying the right message through visualisation | Lab                      |
+| 9       | 5     | Work on Project                                   | Homework                 |
+|         |       |                                                   |                          |
+| **10**  | **1** | **Project Presentations**                         | **Project**              |

@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 9 Accessing R | datascienceandr</title>
+<title>Chapter 12 Accessing R | datascienceandr</title>
 <meta name="author" content="Fritz Ebner">
 <meta name="description" content="One of the design principles of this course is “cherish day one” – get students from nothing to their first meaningful data visualization within the first 10 minutes of the course. Achieving this...">
 <meta name="generator" content="bookdown 0.26 with bs4_book()">
-<meta property="og:title" content="Chapter 9 Accessing R | datascienceandr">
+<meta property="og:title" content="Chapter 12 Accessing R | datascienceandr">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://datasciencewithr.github.io/datascience-box/access-r.html">
 <meta property="og:image" content="https://datasciencewithr.github.io/datascience-box//dsbox2.png">
 <meta property="og:description" content="One of the design principles of this course is “cherish day one” – get students from nothing to their first meaningful data visualization within the first 10 minutes of the course. Achieving this...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 9 Accessing R | datascienceandr">
+<meta name="twitter:title" content="Chapter 12 Accessing R | datascienceandr">
 <meta name="twitter:site" content="@na">
 <meta name="twitter:description" content="One of the design principles of this course is “cherish day one” – get students from nothing to their first meaningful data visualization within the first 10 minutes of the course. Achieving this...">
 <meta name="twitter:image" content="https://datasciencewithr.github.io/datascience-box//dsbox2.png">
@@ -56,20 +56,23 @@
 <li><a class="" href="visualization.html"><span class="header-section-number">2</span> Visualization</a></li>
 <li><a class="" href="wrangling-and-tidying-data.html"><span class="header-section-number">3</span> Wrangling and tidying data</a></li>
 <li><a class="" href="importing-and-recoding-data.html"><span class="header-section-number">4</span> Importing and recoding data</a></li>
-<li><a class="" href="effective-communication.html"><span class="header-section-number">5</span> Effective communication</a></li>
-<li><a class="" href="web-scraping-and-programming.html"><span class="header-section-number">6</span> Web scraping and programming</a></li>
-<li><a class="" href="project.html"><span class="header-section-number">7</span> Project</a></li>
-<li><a class="" href="exams.html"><span class="header-section-number">8</span> Exams</a></li>
+<li><a class="" href="shiny-apps.html"><span class="header-section-number">5</span> Shiny apps</a></li>
+<li><a class="" href="effective-communication.html"><span class="header-section-number">6</span> Effective communication</a></li>
+<li><a class="" href="web-scraping-and-programming.html"><span class="header-section-number">7</span> Web scraping and programming</a></li>
+<li><a class="" href="r-language-details.html"><span class="header-section-number">8</span> R language details</a></li>
+<li><a class="" href="ethics.html"><span class="header-section-number">9</span> Data science ethics</a></li>
+<li><a class="" href="project.html"><span class="header-section-number">10</span> Project</a></li>
+<li><a class="" href="exams.html"><span class="header-section-number">11</span> Exams</a></li>
 <li class="book-part">Infrastructure</li>
-<li><a class="active" href="access-r.html"><span class="header-section-number">9</span> Accessing R</a></li>
-<li><a class="" href="version-control.html"><span class="header-section-number">10</span> Version control</a></li>
-<li><a class="" href="discussion.html"><span class="header-section-number">11</span> Discussion</a></li>
-<li><a class="" href="sharing.html"><span class="header-section-number">12</span> Sharing</a></li>
-<li><a class="" href="alternative-setups.html"><span class="header-section-number">13</span> Alternative setups</a></li>
+<li><a class="active" href="access-r.html"><span class="header-section-number">12</span> Accessing R</a></li>
+<li><a class="" href="version-control.html"><span class="header-section-number">13</span> Version control</a></li>
+<li><a class="" href="discussion.html"><span class="header-section-number">14</span> Discussion</a></li>
+<li><a class="" href="sharing.html"><span class="header-section-number">15</span> Sharing</a></li>
+<li><a class="" href="alternative-setups.html"><span class="header-section-number">16</span> Alternative setups</a></li>
 <li class="book-part">Pedagogy</li>
-<li><a class="" href="pedagogy.html"><span class="header-section-number">14</span> Pedagogy</a></li>
-<li><a class="" href="exploring-data.html"><span class="header-section-number">15</span> Exploring data</a></li>
-<li><a class="" href="schedule.html"><span class="header-section-number">16</span> Schedule</a></li>
+<li><a class="" href="pedagogy.html"><span class="header-section-number">17</span> Pedagogy</a></li>
+<li><a class="" href="exploring-data.html"><span class="header-section-number">18</span> Exploring data</a></li>
+<li><a class="" href="schedule.html"><span class="header-section-number">19</span> Schedule</a></li>
 </ul>
 
         <div class="book-extra">
@@ -77,9 +80,9 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="access-r" class="section level1" number="9">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="access-r" class="section level1" number="12">
 <h1>
-<span class="header-section-number">9</span> Accessing R<a class="anchor" aria-label="anchor" href="#access-r"><i class="fas fa-link"></i></a>
+<span class="header-section-number">12</span> Accessing R<a class="anchor" aria-label="anchor" href="#access-r"><i class="fas fa-link"></i></a>
 </h1>
 <p>One of the design principles of this course is “cherish day one” – get students from nothing to their first meaningful data visualization within the first 10 minutes of the course.
 Achieving this is possible, but requires careful consideration of the computing infrastructure.
@@ -92,7 +95,7 @@ The main reason for this choice is reducing friction at first exposure to R.
 Local installation can be difficult to manage, both for the student and the instructor, and can shift the focus away from data science learning at the beginning of the course.
 We discuss in further detail the reasons for avoiding local installation at the beginning of the course in Section <a href="#design-principles"><strong>??</strong></a>.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;Note that as of August 2020 RStudio Cloud offers paid tiers as well, and you will likely need a paid subscription to teach with RStudio Cloud (unless you’re teaching a short, small course).
 Depending on your institution’s IT infrastructure and your class size, RStudio Cloud may or may not be the most economically feasible solution for your teaching needs.
-See Section &lt;a href="alternative-setups.html#alternative-setups"&gt;13&lt;/a&gt; for suggestions for other setups for providing server access to RStudio for your students.
+See Section &lt;a href="alternative-setups.html#alternative-setups"&gt;16&lt;/a&gt; for suggestions for other setups for providing server access to RStudio for your students.
 Note that these alternatives generally require system infrastructure expertiose or IT professional time.&lt;/p&gt;'><sup>1</sup></a></p>
 <p>When you create an account on RStudio Cloud, you get a workspace of your own, and the projects you create here can be public or private.
 You can also add a new workspace and control its permissions, and the projects you create here can also be public or private.</p>
@@ -108,12 +111,12 @@ Then, each assignment/project in the course maps to an RStudio Cloud project.</p
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:rscloud-bigpicture"></span>
 <img src="images/rscloud-bigpicture.png" alt="RStudio Cloud classroom structure" width="70%"><p class="caption">
-Figure 9.1: RStudio Cloud classroom structure
+Figure 12.1: RStudio Cloud classroom structure
 </p>
 </div>
-<div id="setting-up-your-course-in-rstudio-cloud" class="section level2" number="9.1">
+<div id="setting-up-your-course-in-rstudio-cloud" class="section level2" number="12.1">
 <h2>
-<span class="header-section-number">9.1</span> Setting up your course in RStudio Cloud<a class="anchor" aria-label="anchor" href="#setting-up-your-course-in-rstudio-cloud"><i class="fas fa-link"></i></a>
+<span class="header-section-number">12.1</span> Setting up your course in RStudio Cloud<a class="anchor" aria-label="anchor" href="#setting-up-your-course-in-rstudio-cloud"><i class="fas fa-link"></i></a>
 </h2>
 <p>First, create a new workspace on RStudio Cloud.
 By default, this new workspace will be a private workspace.
@@ -124,7 +127,7 @@ I recommend using something along the lines of Course number - Semester.</p>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:rscloud-new-workspace"></span>
 <img src="images/rscloud-new-workspace.png" alt="Creating a new workspace on RStudio Cloud" width="70%"><p class="caption">
-Figure 9.2: Creating a new workspace on RStudio Cloud
+Figure 12.2: Creating a new workspace on RStudio Cloud
 </p>
 </div>
 <p>Next step is to invite members to the workspace.
@@ -134,7 +137,7 @@ Once all of your students are in the course (or once drop/add period ends) you c
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:rscloud-workspace-permissions"></span>
 <img src="images/rscloud-workspace-permissions.png" alt="Setting workspace permissions" width="70%"><p class="caption">
-Figure 9.3: Setting workspace permissions
+Figure 12.3: Setting workspace permissions
 </p>
 </div>
 <p>As highlighted in the figure above, when a workspace is set to accept members via a shared link, the owner can also set a default permission level for those entering the workspace via the sharing link.
@@ -181,9 +184,9 @@ Students auditing your course or visitors, such as colleagues wanting to view/ex
 Admins and moderators can, by default, see all members of the workspace.
 I prefer to allow contributors (students) to see the list of members and viewers (auditors and visitors) to not since course enrollment information should not be available to non-official members of the course.</p>
 </div>
-<div id="projects" class="section level2" number="9.2">
+<div id="projects" class="section level2" number="12.2">
 <h2>
-<span class="header-section-number">9.2</span> Projects<a class="anchor" aria-label="anchor" href="#projects"><i class="fas fa-link"></i></a>
+<span class="header-section-number">12.2</span> Projects<a class="anchor" aria-label="anchor" href="#projects"><i class="fas fa-link"></i></a>
 </h2>
 <p>A project in RStudio Cloud is equivalent to an RStudio project.
 If you are an RStudio user, but you don’t use projects, I highly recommend considering switching your workflow to include projects.
@@ -191,12 +194,12 @@ You can learn more about them <a href="http://r4ds.had.co.nz/workflow-projects.h
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:rscloud-new-project"></span>
 <img src="images/rscloud-new-project.png" alt="A new project in RStudio Cloud is a new project in the RStudio IDE" width="70%"><p class="caption">
-Figure 9.4: A new project in RStudio Cloud is a new project in the RStudio IDE
+Figure 12.4: A new project in RStudio Cloud is a new project in the RStudio IDE
 </p>
 </div>
-<div id="access" class="section level3" number="9.2.1">
+<div id="access" class="section level3" number="12.2.1">
 <h3>
-<span class="header-section-number">9.2.1</span> Access<a class="anchor" aria-label="anchor" href="#access"><i class="fas fa-link"></i></a>
+<span class="header-section-number">12.2.1</span> Access<a class="anchor" aria-label="anchor" href="#access"><i class="fas fa-link"></i></a>
 </h3>
 <p>When you create a new project in your workspace, it is by default visible only to you plus the admins and moderators of the space.
 This default has two advantages:</p>
@@ -209,14 +212,14 @@ You should also check the “Make this project an assignment” box so that when
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:rscloud-project-permissions"></span>
 <img src="images/rscloud-project-permissions.png" alt="Setting project permissions within a workspace" width="70%"><p class="caption">
-Figure 9.5: Setting project permissions within a workspace
+Figure 12.5: Setting project permissions within a workspace
 </p>
 </div>
 </div>
 </div>
-<div id="base-project-template" class="section level2" number="9.3">
+<div id="base-project-template" class="section level2" number="12.3">
 <h2>
-<span class="header-section-number">9.3</span> Base project template<a class="anchor" aria-label="anchor" href="#base-project-template"><i class="fas fa-link"></i></a>
+<span class="header-section-number">12.3</span> Base project template<a class="anchor" aria-label="anchor" href="#base-project-template"><i class="fas fa-link"></i></a>
 </h2>
 <p>If you consistently use a particular set of packages and/or need a particular set of documents to be included in each project, the base project template functionality will come in very handy.
 You can use this by defining a base project template for the space.
@@ -225,7 +228,7 @@ After creating your project, select it on the Settings page as the base project 
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:rscloud-base-template"></span>
 <img src="images/rscloud-base-template.png" alt="Selecting a base project template" width="70%"><p class="caption">
-Figure 9.6: Selecting a base project template
+Figure 12.6: Selecting a base project template
 </p>
 </div>
 <p>Note that a project must be shared with everyone in the space in order to be used as a template; only projects which are viewable by everyone in the space will appear in the templates list.</p>
@@ -233,23 +236,23 @@ Figure 9.6: Selecting a base project template
 The base template is applied prospectively – it only effects projects created after the template has been set.
 Therefore updating the base project will not break projects already created with the previous version of a base project.</p>
 </div>
-<div id="git-integration" class="section level2" number="9.4">
+<div id="git-integration" class="section level2" number="12.4">
 <h2>
-<span class="header-section-number">9.4</span> Git integration<a class="anchor" aria-label="anchor" href="#git-integration"><i class="fas fa-link"></i></a>
+<span class="header-section-number">12.4</span> Git integration<a class="anchor" aria-label="anchor" href="#git-integration"><i class="fas fa-link"></i></a>
 </h2>
 <p>It is possible to create (clone) a new project in RStudio Cloud from a GitHub repository, just like in the RStudio IDE.</p>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:rscloud-git-project"></span>
 <img src="images/rscloud-git-project.png" alt="Creating a new project from GitHub repository" width="70%"><p class="caption">
-Figure 9.7: Creating a new project from GitHub repository
+Figure 12.7: Creating a new project from GitHub repository
 </p>
 </div>
 <p>If you have a base project template set up for your workspace, this new project created from GitHub will also have the packages installed in the base project template.</p>
-<p>For more on using Git and GitHub in the classroom, see Section <a href="version-control.html#version-control">10</a>.</p>
+<p>For more on using Git and GitHub in the classroom, see Section <a href="version-control.html#version-control">13</a>.</p>
 </div>
-<div id="troubleshooting" class="section level2" number="9.5">
+<div id="troubleshooting" class="section level2" number="12.5">
 <h2>
-<span class="header-section-number">9.5</span> Troubleshooting<a class="anchor" aria-label="anchor" href="#troubleshooting"><i class="fas fa-link"></i></a>
+<span class="header-section-number">12.5</span> Troubleshooting<a class="anchor" aria-label="anchor" href="#troubleshooting"><i class="fas fa-link"></i></a>
 </h2>
 <p>I strongly recommend that you make a second account for themselves on RStudio Cloud and add that user as a contributor to the workspace to be able to see what your students see when they log in.
 It’s a great way to test out functionality and resolve unexpected issues your students might encounter, before they encounter them.
@@ -257,13 +260,13 @@ I recommend using an incognito browser window for the student account so that yo
 <p>One huge advantage of your students working in RStudio Cloud is that you as the instructor, and anyone with an admin and moderator role, can peek into student projects.
 While it is important for your students to learn to ask questions in a way that does not depend on someone else being able to see their work directly (and for this I strongly recommend teaching students to make <a href="https://www.tidyverse.org/help/#reprex">reprexes</a>), it is sometimes, especially early on, nice to be able to peek into a student’s project.</p>
 </div>
-<div id="limits" class="section level2" number="9.6">
+<div id="limits" class="section level2" number="12.6">
 <h2>
-<span class="header-section-number">9.6</span> Limits<a class="anchor" aria-label="anchor" href="#limits"><i class="fas fa-link"></i></a>
+<span class="header-section-number">12.6</span> Limits<a class="anchor" aria-label="anchor" href="#limits"><i class="fas fa-link"></i></a>
 </h2>
-<div id="memory-cpu" class="section level3" number="9.6.1">
+<div id="memory-cpu" class="section level3" number="12.6.1">
 <h3>
-<span class="header-section-number">9.6.1</span> Memory &amp; CPU<a class="anchor" aria-label="anchor" href="#memory-cpu"><i class="fas fa-link"></i></a>
+<span class="header-section-number">12.6.1</span> Memory &amp; CPU<a class="anchor" aria-label="anchor" href="#memory-cpu"><i class="fas fa-link"></i></a>
 </h3>
 <p>Each project on RStudio Cloud is allocated 1 GB of RAM and 1 CPU by default.
 While this is a pretty generous limit, actions like joining very large tables or fitting complicated models could exceed the limit.</p>
@@ -271,17 +274,17 @@ While this is a pretty generous limit, actions like joining very large tables or
 One challenge is that you might have no control over what issues students might run into if they are working on an open ended project using a dataset of their own choice.
 In these circumstances it’s helpful to keep in the back of your mind that one way an out of memory issue can present itself is with the RStudio Cloud project crashing.</p>
 </div>
-<div id="other-limits" class="section level3" number="9.6.2">
+<div id="other-limits" class="section level3" number="12.6.2">
 <h3>
-<span class="header-section-number">9.6.2</span> Other limits<a class="anchor" aria-label="anchor" href="#other-limits"><i class="fas fa-link"></i></a>
+<span class="header-section-number">12.6.2</span> Other limits<a class="anchor" aria-label="anchor" href="#other-limits"><i class="fas fa-link"></i></a>
 </h3>
 <p>For most up to date information on limits on free RStudio Cloud accounts, as well as any other technical details, see the <a href="https://rstudio.cloud/learn/guide#limits">RStudio Cloud Guide</a>.
 This document gets updated as changes are made to the user interface and/or the backend of RStudio Cloud and should be assumed to be more current than the information outlined here.</p>
 </div>
 </div>
-<div id="learn-more" class="section level2" number="9.7">
+<div id="learn-more" class="section level2" number="12.7">
 <h2>
-<span class="header-section-number">9.7</span> Learn more<a class="anchor" aria-label="anchor" href="#learn-more"><i class="fas fa-link"></i></a>
+<span class="header-section-number">12.7</span> Learn more<a class="anchor" aria-label="anchor" href="#learn-more"><i class="fas fa-link"></i></a>
 </h2>
 <p>To see this all in action and learn more, watch the following RStudio Cloud webinars:</p>
 <ul>
@@ -295,26 +298,26 @@ This document gets updated as changes are made to the user interface and/or the 
 </div>
 
   <div class="chapter-nav">
-<div class="prev"><a href="exams.html"><span class="header-section-number">8</span> Exams</a></div>
-<div class="next"><a href="version-control.html"><span class="header-section-number">10</span> Version control</a></div>
+<div class="prev"><a href="exams.html"><span class="header-section-number">11</span> Exams</a></div>
+<div class="next"><a href="version-control.html"><span class="header-section-number">13</span> Version control</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#access-r"><span class="header-section-number">9</span> Accessing R</a></li>
-<li><a class="nav-link" href="#setting-up-your-course-in-rstudio-cloud"><span class="header-section-number">9.1</span> Setting up your course in RStudio Cloud</a></li>
+<li><a class="nav-link" href="#access-r"><span class="header-section-number">12</span> Accessing R</a></li>
+<li><a class="nav-link" href="#setting-up-your-course-in-rstudio-cloud"><span class="header-section-number">12.1</span> Setting up your course in RStudio Cloud</a></li>
 <li>
-<a class="nav-link" href="#projects"><span class="header-section-number">9.2</span> Projects</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#access"><span class="header-section-number">9.2.1</span> Access</a></li></ul>
+<a class="nav-link" href="#projects"><span class="header-section-number">12.2</span> Projects</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#access"><span class="header-section-number">12.2.1</span> Access</a></li></ul>
 </li>
-<li><a class="nav-link" href="#base-project-template"><span class="header-section-number">9.3</span> Base project template</a></li>
-<li><a class="nav-link" href="#git-integration"><span class="header-section-number">9.4</span> Git integration</a></li>
-<li><a class="nav-link" href="#troubleshooting"><span class="header-section-number">9.5</span> Troubleshooting</a></li>
+<li><a class="nav-link" href="#base-project-template"><span class="header-section-number">12.3</span> Base project template</a></li>
+<li><a class="nav-link" href="#git-integration"><span class="header-section-number">12.4</span> Git integration</a></li>
+<li><a class="nav-link" href="#troubleshooting"><span class="header-section-number">12.5</span> Troubleshooting</a></li>
 <li>
-<a class="nav-link" href="#limits"><span class="header-section-number">9.6</span> Limits</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#memory-cpu"><span class="header-section-number">9.6.1</span> Memory &amp; CPU</a></li>
-<li><a class="nav-link" href="#other-limits"><span class="header-section-number">9.6.2</span> Other limits</a></li>
+<a class="nav-link" href="#limits"><span class="header-section-number">12.6</span> Limits</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#memory-cpu"><span class="header-section-number">12.6.1</span> Memory &amp; CPU</a></li>
+<li><a class="nav-link" href="#other-limits"><span class="header-section-number">12.6.2</span> Other limits</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#learn-more"><span class="header-section-number">9.7</span> Learn more</a></li>
+<li><a class="nav-link" href="#learn-more"><span class="header-section-number">12.7</span> Learn more</a></li>
 </ul>
 
       <div class="book-extra">
