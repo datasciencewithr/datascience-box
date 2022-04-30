@@ -74,7 +74,7 @@ Plagiarism is frowned upon; don't do it.
 | 7       | 7     | University of Edinburgh Art Collection            | Lab                      |
 | 7       | 8     | Money in politics                                 | Homework                 |
 |         |       |                                                   |                          |
-| **8**   | **1** | **More R language details TBD**                   | **Lecture**              |
+| **8**   | **1** | **R language concepts**                           | **Lecture**              |
 |         |       |                                                   |                          |
 | 9       | 1     | Misrepresentation                                 | Lecture                  |
 | 9       | 2     | Data privacy                                      | Lecture                  |
