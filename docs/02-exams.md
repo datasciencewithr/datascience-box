@@ -1,9 +1,6 @@
-# Exams {.unnumbered}
+# Takehome exam {.unnumbered}
 
-I don't think the best assessment method for this curriculum is an exam, but sometimes a take home exam can be an incredible motivator for students without stifling their creativity.
-I've provided two sample take home exams.
-You probably wouldn't want to use them verbatim as exams, since they're now publicly available.
-But they might give you some idea about how to structure take home exams, how to write directions to reduce issues around plagiarism while still encouraging students to search for resources, etc.
+We will schedule the exam at the start of class.
 
 ::: exam
 **Exam 1**

@@ -54,7 +54,7 @@ Plagiarism is frowned upon; don't do it.
 |         |       |                                                   |                          |
 | 5       | 1     | Interactive web apps                              | Lecture                  |
 | 5       | 2     | Building interactive web apps                     | Lecture                  |
-| 5       | 3     | Google trend index app tour                       | Application exercise     |
+| 5       | 3     | Movies apps                                       | Application exercise     |
 | 5       | 4     | Project proposal/discussion                       | Project                  |
 |         |       |                                                   |                          |
 | **6**   | **1** | **Tips for effective data visualization**         | **Lecture**              |
