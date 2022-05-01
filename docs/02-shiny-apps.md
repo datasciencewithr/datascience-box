@@ -9,7 +9,7 @@
 :::
 
 ::: slide-deck
-**Section 5 - Part 2: Interactive web apps**
+**Section 5 - Part 2: Anatomy of a shiny app**
 
 ::: slides
 [Slides](https://datascienceandr.netlify.app/course-materials/slides/u5-d05-shiny-1/u5-d05-shiny-1.pdf)
