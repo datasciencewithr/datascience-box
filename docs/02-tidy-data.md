@@ -34,6 +34,14 @@ R4DS :: [Chp 5 - Data transformation](https://r4ds.had.co.nz/transform.html)
 :::
 :::
 
+::: application-exercise
+**Session 3 - Part 6: Hotels + Data wrangling**
+
+> **Application exercise**
+>
+> <https://github.com/datasciencewithr/ae-04-hotels-datawrangling.git>
+:::
+
 ::: slide-deck
 **Session 3 - Part 4: Working with multiple data frames**
 
@@ -56,14 +64,6 @@ R4DS :: [Chp 13 - Relational data](https://r4ds.had.co.nz/relational-data.html)
 ::: reading
 R4DS :: [Chp 12 - Tidy data](https://r4ds.had.co.nz/tidy-data.html)
 :::
-:::
-
-::: application-exercise
-**Session 3 - Part 6: Hotels + Data wrangling**
-
-> **Application exercise**
->
-> <https://github.com/datasciencewithr/ae-04-hotels-datawrangling.git>
 :::
 
 ::: lab

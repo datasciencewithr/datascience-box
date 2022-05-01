@@ -320,7 +320,8 @@ knitr::include_graphics("img/rmd-cheatsheet.png")
 .pull-right[
 .center[
 .midi[Markdown Quick Reference  
-`Help -> Markdown Quick Reference`]
+`Help -> Markdown Quick Reference`
+.tiny[`https://web.mit.edu/r/current/RStudio/resources/markdown_help.html`]]
 ]
 ```{r echo=FALSE, out.width="80%"}
 knitr::include_graphics("img/md-cheatsheet.png")
