@@ -300,7 +300,7 @@ The pipe operator is implemented in the package **magrittr**, though we don't ne
 --
 
 .question[
-Any guesses as to why the package is called magrittr?
+Any guesses as to why the package is called magrittr? see [Magritte](https://en.wikipedia.org/wiki/Ren%C3%A9_Magritte)
 ]
 
 --

@@ -6,17 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 3 Wrangling and tidying data | datascienceandr</title>
 <meta name="author" content="Fritz Ebner">
-<meta name="description" content="Session 3 - Part 1: Tidy data Slides  JSS :: Tidy data  Session 3 - Part 2: Grammar of data wrangling Slides  Session 3 - Part 3: Working with a single data frame Slides  R4DS :: Chp 5 - Data...">
+<meta name="description" content="Data wrangling, sometimes referred to as data munging, is the process of transforming and mapping data from one “raw” data form into another format with the intent of making it more appropriate...">
 <meta name="generator" content="bookdown 0.26 with bs4_book()">
 <meta property="og:title" content="Chapter 3 Wrangling and tidying data | datascienceandr">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://datasciencewithr.github.io/datascience-box/wrangling-and-tidying-data.html">
 <meta property="og:image" content="https://datasciencewithr.github.io/datascience-box//dsbox2.png">
-<meta property="og:description" content="Session 3 - Part 1: Tidy data Slides  JSS :: Tidy data  Session 3 - Part 2: Grammar of data wrangling Slides  Session 3 - Part 3: Working with a single data frame Slides  R4DS :: Chp 5 - Data...">
+<meta property="og:description" content="Data wrangling, sometimes referred to as data munging, is the process of transforming and mapping data from one “raw” data form into another format with the intent of making it more appropriate...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 3 Wrangling and tidying data | datascienceandr">
 <meta name="twitter:site" content="@na">
-<meta name="twitter:description" content="Session 3 - Part 1: Tidy data Slides  JSS :: Tidy data  Session 3 - Part 2: Grammar of data wrangling Slides  Session 3 - Part 3: Working with a single data frame Slides  R4DS :: Chp 5 - Data...">
+<meta name="twitter:description" content="Data wrangling, sometimes referred to as data munging, is the process of transforming and mapping data from one “raw” data form into another format with the intent of making it more appropriate...">
 <meta name="twitter:image" content="https://datasciencewithr.github.io/datascience-box//dsbox2.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -76,6 +76,7 @@
 <h1>
 <span class="header-section-number">3</span> Wrangling and tidying data<a class="anchor" aria-label="anchor" href="#wrangling-and-tidying-data"><i class="fas fa-link"></i></a>
 </h1>
+<p><a href="https://en.wikipedia.org/wiki/Data_wrangling">Data wrangling</a>, sometimes referred to as data munging, is the process of transforming and mapping data from one “raw” data form into another format with the intent of making it more appropriate and valuable for a variety of downstream purposes such as analytics.</p>
 <div class="slide-deck">
 <p><strong>Session 3 - Part 1: Tidy data</strong></p>
 <div class="slides">
