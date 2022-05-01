@@ -33,7 +33,8 @@ class: middle
 
 - Each row is an **observation**
 - Each column is a **variable**
-
+what is a tibble?
+what is a dataframe?
 .small[
 
 ```{r message=FALSE}

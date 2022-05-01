@@ -29,67 +29,1192 @@ order to work through these exercises.
 skim(hotels)
 ```
 
-|                                                  |        |
-|:-------------------------------------------------|:-------|
-| Name                                             | hotels |
-| Number of rows                                   | 119390 |
-| Number of columns                                | 32     |
-| \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_   |        |
-| Column type frequency:                           |        |
-| character                                        | 13     |
-| Date                                             | 1      |
-| numeric                                          | 18     |
-| \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ |        |
-| Group variables                                  | None   |
-
+<table style="width: auto;" class="table table-condensed">
+<caption>
 Data summary
+</caption>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Name
+</td>
+<td style="text-align:left;">
+hotels
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Number of rows
+</td>
+<td style="text-align:left;">
+119390
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Number of columns
+</td>
+<td style="text-align:left;">
+32
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Column type frequency:
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+13
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Date
+</td>
+<td style="text-align:left;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+numeric
+</td>
+<td style="text-align:left;">
+18
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Group variables
+</td>
+<td style="text-align:left;">
+None
+</td>
+</tr>
+</tbody>
+</table>
 
 **Variable type: character**
 
-| skim\_variable        | n\_missing | complete\_rate | min | max | empty | n\_unique | whitespace |
-|:----------------------|-----------:|---------------:|----:|----:|------:|----------:|-----------:|
-| hotel                 |          0 |              1 |  10 |  12 |     0 |         2 |          0 |
-| arrival\_date\_month  |          0 |              1 |   3 |   9 |     0 |        12 |          0 |
-| meal                  |          0 |              1 |   2 |   9 |     0 |         5 |          0 |
-| country               |          0 |              1 |   2 |   4 |     0 |       178 |          0 |
-| market\_segment       |          0 |              1 |   6 |  13 |     0 |         8 |          0 |
-| distribution\_channel |          0 |              1 |   3 |   9 |     0 |         5 |          0 |
-| reserved\_room\_type  |          0 |              1 |   1 |   1 |     0 |        10 |          0 |
-| assigned\_room\_type  |          0 |              1 |   1 |   1 |     0 |        12 |          0 |
-| deposit\_type         |          0 |              1 |  10 |  10 |     0 |         3 |          0 |
-| agent                 |          0 |              1 |   1 |   4 |     0 |       334 |          0 |
-| company               |          0 |              1 |   1 |   4 |     0 |       353 |          0 |
-| customer\_type        |          0 |              1 |   5 |  15 |     0 |         4 |          0 |
-| reservation\_status   |          0 |              1 |   7 |   9 |     0 |         3 |          0 |
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+skim_variable
+</th>
+<th style="text-align:right;">
+n_missing
+</th>
+<th style="text-align:right;">
+complete_rate
+</th>
+<th style="text-align:right;">
+min
+</th>
+<th style="text-align:right;">
+max
+</th>
+<th style="text-align:right;">
+empty
+</th>
+<th style="text-align:right;">
+n_unique
+</th>
+<th style="text-align:right;">
+whitespace
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+hotel
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+arrival_date_month
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+meal
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+country
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+178
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+market_segment
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+distribution_channel
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+reserved_room_type
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+assigned_room_type
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+deposit_type
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+agent
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+334
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+company
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+353
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+customer_type
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+reservation_status
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+</tbody>
+</table>
 
 **Variable type: Date**
 
-| skim\_variable            | n\_missing | complete\_rate | min        | max        | median     | n\_unique |
-|:--------------------------|-----------:|---------------:|:-----------|:-----------|:-----------|----------:|
-| reservation\_status\_date |          0 |              1 | 2014-10-17 | 2017-09-14 | 2016-08-07 |       926 |
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+skim_variable
+</th>
+<th style="text-align:right;">
+n_missing
+</th>
+<th style="text-align:right;">
+complete_rate
+</th>
+<th style="text-align:left;">
+min
+</th>
+<th style="text-align:left;">
+max
+</th>
+<th style="text-align:left;">
+median
+</th>
+<th style="text-align:right;">
+n_unique
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+reservation_status_date
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+2014-10-17
+</td>
+<td style="text-align:left;">
+2017-09-14
+</td>
+<td style="text-align:left;">
+2016-08-07
+</td>
+<td style="text-align:right;">
+926
+</td>
+</tr>
+</tbody>
+</table>
 
 **Variable type: numeric**
 
-| skim\_variable                    | n\_missing | complete\_rate |    mean |     sd |      p0 |     p25 |     p50 |  p75 | p100 | hist  |
-|:----------------------------------|-----------:|---------------:|--------:|-------:|--------:|--------:|--------:|-----:|-----:|:------|
-| is\_canceled                      |          0 |              1 |    0.37 |   0.48 |    0.00 |    0.00 |    0.00 |    1 |    1 | ▇▁▁▁▅ |
-| lead\_time                        |          0 |              1 |  104.01 | 106.86 |    0.00 |   18.00 |   69.00 |  160 |  737 | ▇▂▁▁▁ |
-| arrival\_date\_year               |          0 |              1 | 2016.16 |   0.71 | 2015.00 | 2016.00 | 2016.00 | 2017 | 2017 | ▃▁▇▁▆ |
-| arrival\_date\_week\_number       |          0 |              1 |   27.17 |  13.61 |    1.00 |   16.00 |   28.00 |   38 |   53 | ▅▇▇▇▅ |
-| arrival\_date\_day\_of\_month     |          0 |              1 |   15.80 |   8.78 |    1.00 |    8.00 |   16.00 |   23 |   31 | ▇▇▇▇▆ |
-| stays\_in\_weekend\_nights        |          0 |              1 |    0.93 |   1.00 |    0.00 |    0.00 |    1.00 |    2 |   19 | ▇▁▁▁▁ |
-| stays\_in\_week\_nights           |          0 |              1 |    2.50 |   1.91 |    0.00 |    1.00 |    2.00 |    3 |   50 | ▇▁▁▁▁ |
-| adults                            |          0 |              1 |    1.86 |   0.58 |    0.00 |    2.00 |    2.00 |    2 |   55 | ▇▁▁▁▁ |
-| children                          |          4 |              1 |    0.10 |   0.40 |    0.00 |    0.00 |    0.00 |    0 |   10 | ▇▁▁▁▁ |
-| babies                            |          0 |              1 |    0.01 |   0.10 |    0.00 |    0.00 |    0.00 |    0 |   10 | ▇▁▁▁▁ |
-| is\_repeated\_guest               |          0 |              1 |    0.03 |   0.18 |    0.00 |    0.00 |    0.00 |    0 |    1 | ▇▁▁▁▁ |
-| previous\_cancellations           |          0 |              1 |    0.09 |   0.84 |    0.00 |    0.00 |    0.00 |    0 |   26 | ▇▁▁▁▁ |
-| previous\_bookings\_not\_canceled |          0 |              1 |    0.14 |   1.50 |    0.00 |    0.00 |    0.00 |    0 |   72 | ▇▁▁▁▁ |
-| booking\_changes                  |          0 |              1 |    0.22 |   0.65 |    0.00 |    0.00 |    0.00 |    0 |   21 | ▇▁▁▁▁ |
-| days\_in\_waiting\_list           |          0 |              1 |    2.32 |  17.59 |    0.00 |    0.00 |    0.00 |    0 |  391 | ▇▁▁▁▁ |
-| adr                               |          0 |              1 |  101.83 |  50.54 |   -6.38 |   69.29 |   94.58 |  126 | 5400 | ▇▁▁▁▁ |
-| required\_car\_parking\_spaces    |          0 |              1 |    0.06 |   0.25 |    0.00 |    0.00 |    0.00 |    0 |    8 | ▇▁▁▁▁ |
-| total\_of\_special\_requests      |          0 |              1 |    0.57 |   0.79 |    0.00 |    0.00 |    0.00 |    1 |    5 | ▇▁▁▁▁ |
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+skim_variable
+</th>
+<th style="text-align:right;">
+n_missing
+</th>
+<th style="text-align:right;">
+complete_rate
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:right;">
+sd
+</th>
+<th style="text-align:right;">
+p0
+</th>
+<th style="text-align:right;">
+p25
+</th>
+<th style="text-align:right;">
+p50
+</th>
+<th style="text-align:right;">
+p75
+</th>
+<th style="text-align:right;">
+p100
+</th>
+<th style="text-align:left;">
+hist
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+is_canceled
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.37
+</td>
+<td style="text-align:right;">
+0.48
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+▇▁▁▁▅
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+lead_time
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+104.01
+</td>
+<td style="text-align:right;">
+106.86
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+18.00
+</td>
+<td style="text-align:right;">
+69.00
+</td>
+<td style="text-align:right;">
+160
+</td>
+<td style="text-align:right;">
+737
+</td>
+<td style="text-align:left;">
+▇▂▁▁▁
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+arrival_date_year
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2016.16
+</td>
+<td style="text-align:right;">
+0.71
+</td>
+<td style="text-align:right;">
+2015.00
+</td>
+<td style="text-align:right;">
+2016.00
+</td>
+<td style="text-align:right;">
+2016.00
+</td>
+<td style="text-align:right;">
+2017
+</td>
+<td style="text-align:right;">
+2017
+</td>
+<td style="text-align:left;">
+▃▁▇▁▆
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+arrival_date_week_number
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+27.17
+</td>
+<td style="text-align:right;">
+13.61
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+16.00
+</td>
+<td style="text-align:right;">
+28.00
+</td>
+<td style="text-align:right;">
+38
+</td>
+<td style="text-align:right;">
+53
+</td>
+<td style="text-align:left;">
+▅▇▇▇▅
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+arrival_date_day_of_month
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+15.80
+</td>
+<td style="text-align:right;">
+8.78
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+8.00
+</td>
+<td style="text-align:right;">
+16.00
+</td>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:right;">
+31
+</td>
+<td style="text-align:left;">
+▇▇▇▇▆
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+stays_in_weekend_nights
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.93
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:left;">
+▇▁▁▁▁
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+stays_in_week_nights
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2.50
+</td>
+<td style="text-align:right;">
+1.91
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+2.00
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+50
+</td>
+<td style="text-align:left;">
+▇▁▁▁▁
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+adults
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1.86
+</td>
+<td style="text-align:right;">
+0.58
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+2.00
+</td>
+<td style="text-align:right;">
+2.00
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:left;">
+▇▁▁▁▁
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+children
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.10
+</td>
+<td style="text-align:right;">
+0.40
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:left;">
+▇▁▁▁▁
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+babies
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+<td style="text-align:right;">
+0.10
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:left;">
+▇▁▁▁▁
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+is_repeated_guest
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+<td style="text-align:right;">
+0.18
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+▇▁▁▁▁
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+previous_cancellations
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.09
+</td>
+<td style="text-align:right;">
+0.84
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:left;">
+▇▁▁▁▁
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+previous_bookings_not_canceled
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.14
+</td>
+<td style="text-align:right;">
+1.50
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:left;">
+▇▁▁▁▁
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+booking_changes
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.22
+</td>
+<td style="text-align:right;">
+0.65
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:left;">
+▇▁▁▁▁
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+days_in_waiting_list
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2.32
+</td>
+<td style="text-align:right;">
+17.59
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+391
+</td>
+<td style="text-align:left;">
+▇▁▁▁▁
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+adr
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+101.83
+</td>
+<td style="text-align:right;">
+50.54
+</td>
+<td style="text-align:right;">
+-6.38
+</td>
+<td style="text-align:right;">
+69.29
+</td>
+<td style="text-align:right;">
+94.58
+</td>
+<td style="text-align:right;">
+126
+</td>
+<td style="text-align:right;">
+5400
+</td>
+<td style="text-align:left;">
+▇▁▁▁▁
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+required_car_parking_spaces
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.06
+</td>
+<td style="text-align:right;">
+0.25
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+▇▁▁▁▁
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+total_of_special_requests
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.57
+</td>
+<td style="text-align:right;">
+0.79
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+▇▁▁▁▁
+</td>
+</tr>
+</tbody>
+</table>
 
 ### Exercise 2.
 
@@ -215,37 +1340,37 @@ Below is the full data dictionary. Note that it is long (there are lots
 of variables in the data), but we will be using a limited set of the
 variables for our analysis.
 
-| variable                          | class     | description                                                                                                                                                                                                                                                                                                                                                                                                                         |
-|:----------------------------------|:----------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| hotel                             | character | Hotel (H1 = Resort Hotel or H2 = City Hotel)                                                                                                                                                                                                                                                                                                                                                                                        |
-| is\_canceled                      | double    | Value indicating if the booking was canceled (1) or not (0)                                                                                                                                                                                                                                                                                                                                                                         |
-| lead\_time                        | double    | Number of days that elapsed between the entering date of the booking into the PMS and the arrival date                                                                                                                                                                                                                                                                                                                              |
-| arrival\_date\_year               | double    | Year of arrival date                                                                                                                                                                                                                                                                                                                                                                                                                |
-| arrival\_date\_month              | character | Month of arrival date                                                                                                                                                                                                                                                                                                                                                                                                               |
-| arrival\_date\_week\_number       | double    | Week number of year for arrival date                                                                                                                                                                                                                                                                                                                                                                                                |
-| arrival\_date\_day\_of\_month     | double    | Day of arrival date                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| stays\_in\_weekend\_nights        | double    | Number of weekend nights (Saturday or Sunday) the guest stayed or booked to stay at the hotel                                                                                                                                                                                                                                                                                                                                       |
-| stays\_in\_week\_nights           | double    | Number of week nights (Monday to Friday) the guest stayed or booked to stay at the hotel                                                                                                                                                                                                                                                                                                                                            |
-| adults                            | double    | Number of adults                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| children                          | double    | Number of children                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| babies                            | double    | Number of babies                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| meal                              | character | Type of meal booked. Categories are presented in standard hospitality meal packages: <br> Undefined/SC – no meal package;<br>BB – Bed & Breakfast; <br> HB – Half board (breakfast and one other meal – usually dinner); <br> FB – Full board (breakfast, lunch and dinner)                                                                                                                                                         |
-| country                           | character | Country of origin. Categories are represented in the ISO 3155–3:2013 format                                                                                                                                                                                                                                                                                                                                                         |
-| market\_segment                   | character | Market segment designation. In categories, the term “TA” means “Travel Agents” and “TO” means “Tour Operators”                                                                                                                                                                                                                                                                                                                      |
-| distribution\_channel             | character | Booking distribution channel. The term “TA” means “Travel Agents” and “TO” means “Tour Operators”                                                                                                                                                                                                                                                                                                                                   |
-| is\_repeated\_guest               | double    | Value indicating if the booking name was from a repeated guest (1) or not (0)                                                                                                                                                                                                                                                                                                                                                       |
-| previous\_cancellations           | double    | Number of previous bookings that were cancelled by the customer prior to the current booking                                                                                                                                                                                                                                                                                                                                        |
-| previous\_bookings\_not\_canceled | double    | Number of previous bookings not cancelled by the customer prior to the current booking                                                                                                                                                                                                                                                                                                                                              |
-| reserved\_room\_type              | character | Code of room type reserved. Code is presented instead of designation for anonymity reasons                                                                                                                                                                                                                                                                                                                                          |
-| assigned\_room\_type              | character | Code for the type of room assigned to the booking. Sometimes the assigned room type differs from the reserved room type due to hotel operation reasons (e.g. overbooking) or by customer request. Code is presented instead of designation for anonymity reasons                                                                                                                                                                    |
-| booking\_changes                  | double    | Number of changes/amendments made to the booking from the moment the booking was entered on the PMS until the moment of check-in or cancellation                                                                                                                                                                                                                                                                                    |
-| deposit\_type                     | character | Indication on if the customer made a deposit to guarantee the booking. This variable can assume three categories:<br>No Deposit – no deposit was made;<br>Non Refund – a deposit was made in the value of the total stay cost;<br>Refundable – a deposit was made with a value under the total cost of stay.                                                                                                                        |
-| agent                             | character | ID of the travel agency that made the booking                                                                                                                                                                                                                                                                                                                                                                                       |
-| company                           | character | ID of the company/entity that made the booking or responsible for paying the booking. ID is presented instead of designation for anonymity reasons                                                                                                                                                                                                                                                                                  |
-| days\_in\_waiting\_list           | double    | Number of days the booking was in the waiting list before it was confirmed to the customer                                                                                                                                                                                                                                                                                                                                          |
-| customer\_type                    | character | Type of booking, assuming one of four categories:<br>Contract - when the booking has an allotment or other type of contract associated to it;<br>Group – when the booking is associated to a group;<br>Transient – when the booking is not part of a group or contract, and is not associated to other transient booking;<br>Transient-party – when the booking is transient, but is associated to at least other transient booking |
-| adr                               | double    | Average Daily Rate as defined by dividing the sum of all lodging transactions by the total number of staying nights                                                                                                                                                                                                                                                                                                                 |
-| required\_car\_parking\_spaces    | double    | Number of car parking spaces required by the customer                                                                                                                                                                                                                                                                                                                                                                               |
-| total\_of\_special\_requests      | double    | Number of special requests made by the customer (e.g. twin bed or high floor)                                                                                                                                                                                                                                                                                                                                                       |
-| reservation\_status               | character | Reservation last status, assuming one of three categories:<br>Canceled – booking was canceled by the customer;<br>Check-Out – customer has checked in but already departed;<br>No-Show – customer did not check-in and did inform the hotel of the reason why                                                                                                                                                                       |
-| reservation\_status\_date         | double    | Date at which the last status was set. This variable can be used in conjunction with the ReservationStatus to understand when was the booking canceled or when did the customer checked-out of the hotel                                                                                                                                                                                                                            |
+| variable                       | class     | description                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|:-------------------------------|:----------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| hotel                          | character | Hotel (H1 = Resort Hotel or H2 = City Hotel)                                                                                                                                                                                                                                                                                                                                                                                        |
+| is_canceled                    | double    | Value indicating if the booking was canceled (1) or not (0)                                                                                                                                                                                                                                                                                                                                                                         |
+| lead_time                      | double    | Number of days that elapsed between the entering date of the booking into the PMS and the arrival date                                                                                                                                                                                                                                                                                                                              |
+| arrival_date_year              | double    | Year of arrival date                                                                                                                                                                                                                                                                                                                                                                                                                |
+| arrival_date_month             | character | Month of arrival date                                                                                                                                                                                                                                                                                                                                                                                                               |
+| arrival_date_week_number       | double    | Week number of year for arrival date                                                                                                                                                                                                                                                                                                                                                                                                |
+| arrival_date_day_of_month      | double    | Day of arrival date                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| stays_in_weekend_nights        | double    | Number of weekend nights (Saturday or Sunday) the guest stayed or booked to stay at the hotel                                                                                                                                                                                                                                                                                                                                       |
+| stays_in_week_nights           | double    | Number of week nights (Monday to Friday) the guest stayed or booked to stay at the hotel                                                                                                                                                                                                                                                                                                                                            |
+| adults                         | double    | Number of adults                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| children                       | double    | Number of children                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| babies                         | double    | Number of babies                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| meal                           | character | Type of meal booked. Categories are presented in standard hospitality meal packages: <br> Undefined/SC – no meal package;<br>BB – Bed & Breakfast; <br> HB – Half board (breakfast and one other meal – usually dinner); <br> FB – Full board (breakfast, lunch and dinner)                                                                                                                                                         |
+| country                        | character | Country of origin. Categories are represented in the ISO 3155–3:2013 format                                                                                                                                                                                                                                                                                                                                                         |
+| market_segment                 | character | Market segment designation. In categories, the term “TA” means “Travel Agents” and “TO” means “Tour Operators”                                                                                                                                                                                                                                                                                                                      |
+| distribution_channel           | character | Booking distribution channel. The term “TA” means “Travel Agents” and “TO” means “Tour Operators”                                                                                                                                                                                                                                                                                                                                   |
+| is_repeated_guest              | double    | Value indicating if the booking name was from a repeated guest (1) or not (0)                                                                                                                                                                                                                                                                                                                                                       |
+| previous_cancellations         | double    | Number of previous bookings that were cancelled by the customer prior to the current booking                                                                                                                                                                                                                                                                                                                                        |
+| previous_bookings_not_canceled | double    | Number of previous bookings not cancelled by the customer prior to the current booking                                                                                                                                                                                                                                                                                                                                              |
+| reserved_room_type             | character | Code of room type reserved. Code is presented instead of designation for anonymity reasons                                                                                                                                                                                                                                                                                                                                          |
+| assigned_room_type             | character | Code for the type of room assigned to the booking. Sometimes the assigned room type differs from the reserved room type due to hotel operation reasons (e.g. overbooking) or by customer request. Code is presented instead of designation for anonymity reasons                                                                                                                                                                    |
+| booking_changes                | double    | Number of changes/amendments made to the booking from the moment the booking was entered on the PMS until the moment of check-in or cancellation                                                                                                                                                                                                                                                                                    |
+| deposit_type                   | character | Indication on if the customer made a deposit to guarantee the booking. This variable can assume three categories:<br>No Deposit – no deposit was made;<br>Non Refund – a deposit was made in the value of the total stay cost;<br>Refundable – a deposit was made with a value under the total cost of stay.                                                                                                                        |
+| agent                          | character | ID of the travel agency that made the booking                                                                                                                                                                                                                                                                                                                                                                                       |
+| company                        | character | ID of the company/entity that made the booking or responsible for paying the booking. ID is presented instead of designation for anonymity reasons                                                                                                                                                                                                                                                                                  |
+| days_in_waiting_list           | double    | Number of days the booking was in the waiting list before it was confirmed to the customer                                                                                                                                                                                                                                                                                                                                          |
+| customer_type                  | character | Type of booking, assuming one of four categories:<br>Contract - when the booking has an allotment or other type of contract associated to it;<br>Group – when the booking is associated to a group;<br>Transient – when the booking is not part of a group or contract, and is not associated to other transient booking;<br>Transient-party – when the booking is transient, but is associated to at least other transient booking |
+| adr                            | double    | Average Daily Rate as defined by dividing the sum of all lodging transactions by the total number of staying nights                                                                                                                                                                                                                                                                                                                 |
+| required_car_parking_spaces    | double    | Number of car parking spaces required by the customer                                                                                                                                                                                                                                                                                                                                                                               |
+| total_of_special_requests      | double    | Number of special requests made by the customer (e.g. twin bed or high floor)                                                                                                                                                                                                                                                                                                                                                       |
+| reservation_status             | character | Reservation last status, assuming one of three categories:<br>Canceled – booking was canceled by the customer;<br>Check-Out – customer has checked in but already departed;<br>No-Show – customer did not check-in and did inform the hotel of the reason why                                                                                                                                                                       |
+| reservation_status_date        | double    | Date at which the last status was set. This variable can be used in conjunction with the ReservationStatus to understand when was the booking canceled or when did the customer checked-out of the hotel                                                                                                                                                                                                                            |

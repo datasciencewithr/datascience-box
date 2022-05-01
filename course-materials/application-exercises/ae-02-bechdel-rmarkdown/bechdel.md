@@ -52,7 +52,7 @@ bechdel90_13 %>%
             med_intgross = median(intgross_2013, na.rm = TRUE))
 ```
 
-    ## # A tibble: 2 x 4
+    ## # A tibble: 2 × 4
     ##   binary med_budget med_domgross med_intgross
     ##   <chr>       <dbl>        <dbl>        <dbl>
     ## 1 FAIL    48385984.    57318606.    104475669
@@ -77,7 +77,7 @@ bechdel90_13 %>%
             med_intgross = median(intgross_2013, na.rm = TRUE))
 ```
 
-    ## # A tibble: 1 x 3
+    ## # A tibble: 1 × 3
     ##   med_budget med_domgross med_intgross
     ##        <int>        <dbl>        <dbl>
     ## 1   37878971     52270207     93523336
@@ -99,20 +99,16 @@ bechdel90_13 %>%
   select(title, roi, year)
 ```
 
-    ## # A tibble: 1,615 x 3
-    ##    title                     roi  year
-    ##    <chr>                   <dbl> <int>
-    ##  1 Paranormal Activity      671.  2007
-    ##  2 The Blair Witch Project  648.  1999
-    ##  3 El Mariachi              583.  1992
-    ##  4 Clerks.                  258.  1994
-    ##  5 In the Company of Men    231.  1997
-    ##  6 Napoleon Dynamite        227.  2004
-    ##  7 Once                     190.  2006
-    ##  8 The Devil Inside         155.  2012
-    ##  9 Primer                   142.  2004
-    ## 10 Fireproof                134.  2008
-    ## # … with 1,605 more rows
+    ## # A tibble: 1,615 × 3
+    ##   title                     roi  year
+    ##   <chr>                   <dbl> <int>
+    ## 1 Paranormal Activity      671.  2007
+    ## 2 The Blair Witch Project  648.  1999
+    ## 3 El Mariachi              583.  1992
+    ## 4 Clerks.                  258.  1994
+    ## 5 In the Company of Men    231.  1997
+    ## 6 Napoleon Dynamite        227.  2004
+    ## # … with 1,609 more rows
 
 Below is a visualization of the return on investment by test result,
 however it’s difficult to see the distributions due to a few extreme
@@ -138,7 +134,7 @@ bechdel90_13 %>%
   select(title, budget_2013, domgross_2013, year)
 ```
 
-    ## # A tibble: 3 x 4
+    ## # A tibble: 3 × 4
     ##   title                   budget_2013 domgross_2013  year
     ##   <chr>                         <int>         <dbl> <int>
     ## 1 Paranormal Activity          505595     121251476  2007

@@ -12,7 +12,7 @@ question:
 > -   Wrong to leave  
 > -   Don’t know
 
-The data from the survey are in `data/brexit.csv`.
+The data from the survey is in `data/brexit.csv`.
 
 ``` r
 brexit <- read_csv("data/brexit.csv")
@@ -44,6 +44,9 @@ ggplot(brexit, aes(y = opinion, fill = opinion)) +
   )) +
   theme_minimal()
 ```
+
+    ## Warning: `guides(<scale> = FALSE)` is deprecated. Please use `guides(<scale> =
+    ## "none")` instead.
 
 ![](brexit_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
@@ -77,6 +80,9 @@ ggplot(brexit, aes(y = opinion, fill = opinion)) +
   )) +
   theme_minimal()
 ```
+
+    ## Warning: `guides(<scale> = FALSE)` is deprecated. Please use `guides(<scale> =
+    ## "none")` instead.
 
 ![](brexit_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 

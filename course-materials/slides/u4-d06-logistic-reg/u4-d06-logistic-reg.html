@@ -16,9 +16,15 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Logistic regression
+]
+.subtitle[
 ## <br><br> Data Science in a Box
+]
+.author[
 ### <a href="https://datasciencebox.org/">datasciencebox.org</a>
+]
 
 ---
 
@@ -67,7 +73,7 @@ glimpse(email)
 ## $ from         &lt;fct&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …
 ## $ cc           &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, …
 ## $ sent_email   &lt;fct&gt; 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, …
-## $ time         &lt;dttm&gt; 2012-01-01 06:16:41, 2012-01-01 07:03:59,…
+## $ time         &lt;dttm&gt; 2012-01-01 01:16:41, 2012-01-01 02:03:59,…
 ## $ image        &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, …
 ## $ attach       &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, …
 ## $ dollar       &lt;dbl&gt; 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
@@ -96,12 +102,18 @@ Would you expect longer or shorter emails to be spam?
 --
 
 .pull-left[
+
+```
+## Warning: `guides(&lt;scale&gt; = FALSE)` is deprecated. Please use
+## `guides(&lt;scale&gt; = "none")` instead.
+```
+
 &lt;img src="u4-d06-logistic-reg_files/figure-html/unnamed-chunk-3-1.png" width="100%" style="display: block; margin: auto;" /&gt;
 ]
 .pull-right[
 
 ```
-## # A tibble: 2 x 2
+## # A tibble: 2 × 2
 ##   spam  mean_num_char
 ##   &lt;fct&gt;         &lt;dbl&gt;
 ## 1 0             11.3 
@@ -133,6 +145,12 @@ Would you expect emails that have subjects starting with "Re:", "RE:", "re:", or
 ## Modelling spam
 
 This isn't something we can reasonably fit a linear model to -- we need something different!
+
+
+```
+## Warning: `guides(&lt;scale&gt; = FALSE)` is deprecated. Please use
+## `guides(&lt;scale&gt; = "none")` instead.
+```
 
 &lt;img src="u4-d06-logistic-reg_files/figure-html/unnamed-chunk-6-1.png" width="70%" style="display: block; margin: auto;" /&gt;
 
@@ -257,7 +275,7 @@ tidy(spam_fit)
 ```
 
 ```
-## # A tibble: 2 x 5
+## # A tibble: 2 × 5
 ##   term        estimate std.error statistic   p.value
 ##   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
 ## 1 (Intercept)  -1.80     0.0716     -25.1  2.04e-139
@@ -274,7 +292,7 @@ tidy(spam_fit)
 ```
 
 ```
-## # A tibble: 2 x 5
+## # A tibble: 2 × 5
 ##   term        estimate std.error statistic   p.value
 ##   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
 ## 1 (Intercept)  -1.80     0.0716     -25.1  2.04e-139
@@ -307,6 +325,12 @@ What is the probability that an email with 15000 characters is spam? What about 
 --
 
 .pull-left[
+
+```
+## Warning: `guides(&lt;scale&gt; = FALSE)` is deprecated. Please use
+## `guides(&lt;scale&gt; = "none")` instead.
+```
+
 &lt;img src="u4-d06-logistic-reg_files/figure-html/spam-predict-viz-1.png" width="100%" style="display: block; margin: auto;" /&gt;
 ]
 .pull-right[
@@ -320,6 +344,12 @@ What is the probability that an email with 15000 characters is spam? What about 
 .question[
 Would you prefer an email with 2000 characters to be labelled as spam or not? How about 40,000 characters?
 ]
+
+
+```
+## Warning: `guides(&lt;scale&gt; = FALSE)` is deprecated. Please use
+## `guides(&lt;scale&gt; = "none")` instead.
+```
 
 &lt;img src="u4-d06-logistic-reg_files/figure-html/unnamed-chunk-10-1.png" width="60%" style="display: block; margin: auto;" /&gt;
 
@@ -413,6 +443,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

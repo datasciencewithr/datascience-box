@@ -16,9 +16,15 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Misrepresentation
+]
+.subtitle[
 ## <br><br> Data Science in a Box
+]
+.author[
 ### <a href="https://datasciencebox.org/">datasciencebox.org</a>
+]
 
 ---
 
@@ -215,6 +221,12 @@ País read *"Catalan public opinion swings toward 'no' for independence, says su
 
 
 
+
+```
+## Warning: `guides(&lt;scale&gt; = FALSE)` is deprecated. Please use
+## `guides(&lt;scale&gt; = "none")` instead.
+```
+
 &lt;img src="u3-d01-misrepresentation_files/figure-html/catalan-misleading-1.png" width="60%" style="display: block; margin: auto;" /&gt;
 
 .footnote[
@@ -226,9 +238,21 @@ Alberto Cairo. [The truthful art: Data, charts, and maps for communication](http
 ---
 
 .pull-left-wide[
+
+```
+## Warning: `guides(&lt;scale&gt; = FALSE)` is deprecated. Please use
+## `guides(&lt;scale&gt; = "none")` instead.
+```
+
 &lt;img src="u3-d01-misrepresentation_files/figure-html/unnamed-chunk-15-1.png" width="100%" style="display: block; margin: auto;" /&gt;
 ]
 .pull-right-narrow[
+
+```
+## Warning: `guides(&lt;scale&gt; = FALSE)` is deprecated. Please use
+## `guides(&lt;scale&gt; = "none")` instead.
+```
+
 &lt;img src="u3-d01-misrepresentation_files/figure-html/unnamed-chunk-16-1.png" width="100%" style="display: block; margin: auto;" /&gt;
 ]
 
@@ -316,6 +340,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable
