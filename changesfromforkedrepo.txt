@@ -24,3 +24,23 @@ there is an install failure for stringi in build_book
 
 Plan:
 Sessions are roughly 4 hour chunks, corresponding to 1 day workshop or 1 week of normal class.
+
+When I tried to run course-materials/render-materials.R, 3 failed for reasons I didn't immediately know, and the rest of the time failures happended because of lacking packages.  this is the package list:
+wordcloud
+genius
+ggridges
+devtools::install_github("RamiKrispin/coronavirus")
+devtools::install_github("gadenbuie/xaringanExtra")
+stopwords
+here
+janitor
+kableExtra
+nycsquirrels18
+devtools::install_github("mine-cetinkaya-rundel/nycsquirrels18")
+ggtext
+DAAG
+plotly
+widgetframe
+gghighlight
+
+
