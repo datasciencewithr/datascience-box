@@ -239,31 +239,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_nodes</span>(<span class="st">&quot;.iteminfo&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_node</span>(<span class="st">&quot;h3 a&quot;</span>)</span></code></pre></div>
 <pre><code>## {xml_nodeset (10)}
-##  [1] &lt;a href=&quot;./record/20763?highlight=*:*&quot;&gt;Life Drawing (Male Nude Reclining o ...
-##  [2] &lt;a href=&quot;./record/20690?highlight=*:*&quot;&gt;South Frieze of the Parthenon Friez ...
-##  [3] &lt;a href=&quot;./record/21691?highlight=*:*&quot;&gt;The Strike                          ...
-##  [4] &lt;a href=&quot;./record/21562?highlight=*:*&quot;&gt;Untitled                            ...
-##  [5] &lt;a href=&quot;./record/22005?highlight=*:*&quot;&gt;Untitled                            ...
-##  [6] &lt;a href=&quot;./record/21733?highlight=*:*&quot;&gt;Untitled                            ...
-##  [7] &lt;a href=&quot;./record/22606?highlight=*:*&quot;&gt;Still Life                          ...
-##  [8] &lt;a href=&quot;./record/20740?highlight=*:*&quot;&gt;Self Portrait                       ...
-##  [9] &lt;a href=&quot;./record/20645?highlight=*:*&quot;&gt;Metope 9, south entablature, Parthe ...
-## [10] &lt;a href=&quot;./record/21100?highlight=*:*&quot;&gt;Two Seated Men                      ...</code></pre>
+##  [1] &lt;a href=&quot;./record/21609?highlight=*:*&quot;&gt;Untitled           ...
+##  [2] &lt;a href=&quot;./record/21741?highlight=*:*&quot;&gt;Stately Dance      ...
+##  [3] &lt;a href=&quot;./record/99239?highlight=*:*&quot;&gt;Works of a Strange ...
+##  [4] &lt;a href=&quot;./record/22014?highlight=*:*&quot;&gt;Untitled           ...
+##  [5] &lt;a href=&quot;./record/20584?highlight=*:*&quot;&gt;Parthenon Frieze i ...
+##  [6] &lt;a href=&quot;./record/21723?highlight=*:*&quot;&gt;Untitled           ...
+##  [7] &lt;a href=&quot;./record/53504?highlight=*:*&quot;&gt;Unknown            ...
+##  [8] &lt;a href=&quot;./record/53536?highlight=*:*&quot;&gt;Unknown            ...
+##  [9] &lt;a href=&quot;./record/50483?highlight=*:*&quot;&gt;Unknown            ...
+## [10] &lt;a href=&quot;./record/50463?highlight=*:*&quot;&gt;Unknown            ...</code></pre>
 <p>Then we extract the text with <code>html_text()</code>:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>page <span class="sc">%&gt;%</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_nodes</span>(<span class="st">&quot;.iteminfo&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_node</span>(<span class="st">&quot;h3 a&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>()</span></code></pre></div>
-<pre><code>##  [1] &quot;Life Drawing (Male Nude Reclining on Front)                                                                            (1962)&quot;
-##  [2] &quot;South Frieze of the Parthenon Frieze                                                                            (1836-1837)&quot;  
-##  [3] &quot;The Strike                                                                            (1953)&quot;                                 
-##  [4] &quot;Untitled                                                                            (1989)&quot;                                   
-##  [5] &quot;Untitled                                                                            (1963)&quot;                                   
-##  [6] &quot;Untitled                                                                            (1946)&quot;                                   
-##  [7] &quot;Still Life                                                                            (Circa 1970)&quot;                           
-##  [8] &quot;Self Portrait                                                                            (1965)&quot;                              
-##  [9] &quot;Metope 9, south entablature, Parthenon                                                                            (1837)&quot;     
-## [10] &quot;Two Seated Men                                                                            (1949)&quot;</code></pre>
+<pre><code>##  [1] &quot;Untitled                                                                            (Unknown)&quot;                             
+##  [2] &quot;Stately Dance                                                                            (1947)&quot;                           
+##  [3] &quot;Works of a Strange Device: Drawing Smoke                                                                            (2016)&quot;
+##  [4] &quot;Untitled                                                                            (1963)&quot;                                
+##  [5] &quot;Parthenon Frieze in Miniature                                    &quot;                                                         
+##  [6] &quot;Untitled                                                                            (Unknown)&quot;                             
+##  [7] &quot;Unknown                                    &quot;                                                                               
+##  [8] &quot;Unknown                                    &quot;                                                                               
+##  [9] &quot;Unknown                                                                            (1949)&quot;                                 
+## [10] &quot;Unknown                                                                            (Circa 1890)&quot;</code></pre>
 <p>And get rid of all the spurious white space in the text with <code>str_squish()</code>, which reduces repeated whitespace inside a string.</p>
 <p><label for="tufte-mn-3" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-3" class="margin-toggle"><span class="marginnote"><span style="display: block;">Take a look at the help for <code>str_squish()</code> to find out more about how it works and how it’s different from <code>str_trim()</code>.</span></span></p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>page <span class="sc">%&gt;%</span></span>
@@ -271,16 +271,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_node</span>(<span class="st">&quot;h3 a&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str_squish</span>()</span></code></pre></div>
-<pre><code>##  [1] &quot;Life Drawing (Male Nude Reclining on Front) (1962)&quot;
-##  [2] &quot;South Frieze of the Parthenon Frieze (1836-1837)&quot;  
-##  [3] &quot;The Strike (1953)&quot;                                 
-##  [4] &quot;Untitled (1989)&quot;                                   
-##  [5] &quot;Untitled (1963)&quot;                                   
-##  [6] &quot;Untitled (1946)&quot;                                   
-##  [7] &quot;Still Life (Circa 1970)&quot;                           
-##  [8] &quot;Self Portrait (1965)&quot;                              
-##  [9] &quot;Metope 9, south entablature, Parthenon (1837)&quot;     
-## [10] &quot;Two Seated Men (1949)&quot;</code></pre>
+<pre><code>##  [1] &quot;Untitled (Unknown)&quot;                             
+##  [2] &quot;Stately Dance (1947)&quot;                           
+##  [3] &quot;Works of a Strange Device: Drawing Smoke (2016)&quot;
+##  [4] &quot;Untitled (1963)&quot;                                
+##  [5] &quot;Parthenon Frieze in Miniature&quot;                  
+##  [6] &quot;Untitled (Unknown)&quot;                             
+##  [7] &quot;Unknown&quot;                                        
+##  [8] &quot;Unknown&quot;                                        
+##  [9] &quot;Unknown (1949)&quot;                                 
+## [10] &quot;Unknown (Circa 1890)&quot;</code></pre>
 <p>And finally save the resulting data as a vector of length 10:</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>titles <span class="ot">&lt;-</span> page <span class="sc">%&gt;%</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_nodes</span>(<span class="st">&quot;.iteminfo&quot;</span>) <span class="sc">%&gt;%</span></span>
@@ -300,11 +300,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_nodes</span>(<span class="st">&quot;.iteminfo&quot;</span>) <span class="sc">%&gt;%</span>   <span class="co"># same nodes</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_node</span>(<span class="st">&quot;h3 a&quot;</span>) <span class="sc">%&gt;%</span>         <span class="co"># as before</span></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_attr</span>(<span class="st">&quot;href&quot;</span>)             <span class="co"># but get href attribute instead of text</span></span></code></pre></div>
-<pre><code>##  [1] &quot;./record/20763?highlight=*:*&quot; &quot;./record/20690?highlight=*:*&quot;
-##  [3] &quot;./record/21691?highlight=*:*&quot; &quot;./record/21562?highlight=*:*&quot;
-##  [5] &quot;./record/22005?highlight=*:*&quot; &quot;./record/21733?highlight=*:*&quot;
-##  [7] &quot;./record/22606?highlight=*:*&quot; &quot;./record/20740?highlight=*:*&quot;
-##  [9] &quot;./record/20645?highlight=*:*&quot; &quot;./record/21100?highlight=*:*&quot;</code></pre>
+<pre><code>##  [1] &quot;./record/21609?highlight=*:*&quot;
+##  [2] &quot;./record/21741?highlight=*:*&quot;
+##  [3] &quot;./record/99239?highlight=*:*&quot;
+##  [4] &quot;./record/22014?highlight=*:*&quot;
+##  [5] &quot;./record/20584?highlight=*:*&quot;
+##  [6] &quot;./record/21723?highlight=*:*&quot;
+##  [7] &quot;./record/53504?highlight=*:*&quot;
+##  [8] &quot;./record/53536?highlight=*:*&quot;
+##  [9] &quot;./record/50483?highlight=*:*&quot;
+## [10] &quot;./record/50463?highlight=*:*&quot;</code></pre>
 <p>These don’t really look like URLs as we know then though. They’re relative links.</p>
 <p><label for="tufte-mn-4" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-4" class="margin-toggle"><span class="marginnote"><span style="display: block;">See the help for <code>str_replace()</code> to find out how it works. Remember that the first argument is passed in from the pipeline, so you just need to define the <code>pattern</code> and <code>replacement</code> arguments.</span></span></p>
 <ol style="list-style-type: decimal">

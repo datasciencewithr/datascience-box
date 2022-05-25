@@ -4,10 +4,10 @@ site: bookdown::bookdown_site
 title: "datascienceandr"
 author: "Fritz Ebner"
 description: "Material inspired by Data Science in a Box , all of which are freely-available and open-source."
-date: "2022-05-01"
+date: "2022-05-25"
 github-repo: datasciencewithr/datascience-box
 twitter-handle: na
-cover-image: dsbox2.png
+cover-image: dsbox3.png
 url: 'https\://datasciencewithr.github.io/datascience-box/'
 documentclass: book
 link-citations: yes
@@ -15,7 +15,8 @@ link-citations: yes
 
 # Welcome {.unnumbered}
 
-<img src="dsbox2.png" class="cover" width="240" height="240"/> [datascienceandr](https://datasciencewithr.github.io/datascience-box/index.html) is an introductory course in Data Science, taught using the R language and RStudio.
+<img src="dsbox3.png" class="cover" width="240" height="240"/> Welcome to [YaRDS](https://datasciencewithr.github.io/datascience-box/index.html), Yet another R Data Science Course.
+It is an introductory course in Data Science, taught using the R language and RStudio.
 The core content of the course focuses on [data acquisition](https://wiki.atlan.com/data-acquisition/) and [data wrangling](https://en.wikipedia.org/wiki/Data_wrangling), [exploratory data analysis](https://en.wikipedia.org/wiki/Exploratory_data_analysis), [data visualization](https://en.wikipedia.org/wiki/Data_visualization), and [effective communication](https://en.wikipedia.org/wiki/Communication) of results.
 
 ## Who is this course for? {.unnumbered}

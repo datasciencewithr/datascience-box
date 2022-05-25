@@ -19,12 +19,14 @@ output:
 ```{r packages, echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(emo)
-packageVersion("xaringan")
+#packageVersion("xaringan")
 ```
 
 class: middle
 
 # Hello world!
+
+Dr. Fritz Ebner, blah blah blah
 
 ---
 
@@ -76,18 +78,21 @@ class: middle
 
 ---
 
+Problems with Excel?
 ```{r echo=FALSE, out.width="75%", fig.align="left"}
 knitr::include_graphics("img/excel.png")
 ```
 
 ---
 
+R Console
 ```{r echo=FALSE, out.width="50%", fig.align="left"}
 knitr::include_graphics("img/r.png")
 ```
 
 ---
 
+R Studio!
 ```{r echo=FALSE, out.width="73%", fig.align="left"}
 knitr::include_graphics("img/rstudio.png")
 ```

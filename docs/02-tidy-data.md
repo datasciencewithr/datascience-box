@@ -35,7 +35,7 @@ R4DS :: [Chp 5 - Data transformation](https://r4ds.had.co.nz/transform.html)
 :::
 
 ::: application-exercise
-**Session 3 - Part 6: Hotels + Data wrangling**
+**Session 3 - Part 4: Hotels + Data wrangling**
 
 > **Application exercise**
 >
@@ -43,7 +43,7 @@ R4DS :: [Chp 5 - Data transformation](https://r4ds.had.co.nz/transform.html)
 :::
 
 ::: slide-deck
-**Session 3 - Part 4: Working with multiple data frames**
+**Session 3 - Part 5: Working with multiple data frames**
 
 ::: slides
 [Slides](https://datascienceandr.netlify.app/course-materials/slides/u2-d08-multi-df/u2-d08-multi-df.html#1)
@@ -55,7 +55,7 @@ R4DS :: [Chp 13 - Relational data](https://r4ds.had.co.nz/relational-data.html)
 :::
 
 ::: slide-deck
-**Session 3 - Part 5: Tidying data**
+**Session 3 - Part 6: Tidying data**
 
 ::: slides
 [Slides](https://datascienceandr.netlify.app/course-materials/slides/u2-d09-tidying/u2-d09-tidying.html#1)
