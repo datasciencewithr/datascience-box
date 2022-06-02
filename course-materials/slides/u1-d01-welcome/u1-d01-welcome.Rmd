@@ -26,7 +26,7 @@ class: middle
 
 # Hello world!
 
-Dr. Fritz Ebner, blah blah blah
+Dr. Fritz Ebner, blah blah blah blah
 
 ---
 
