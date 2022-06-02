@@ -4,7 +4,7 @@
 **Section 5 - Part 1: Interactive web apps**
 
 ::: slides
-[Slides](https://datascienceandrhome.netlify.app/course-materials/slides/u5-d03-interactive-web-app/u5-d03-interactive-web-app.html#1)
+[Slides](https://datascienceandr.netlify.app/course-materials/slides/u5-d03-interactive-web-app/u5-d03-interactive-web-app.html#1)
 :::
 :::
 
@@ -12,7 +12,7 @@
 **Section 5 - Part 2: Anatomy of a shiny app**
 
 ::: slides
-[Slides](https://datascienceandrhome.netlify.app/course-materials/slides/u5-d05-shiny-1/u5-d05-shiny-1.pdf)
+[Slides](https://datascienceandr.netlify.app/course-materials/slides/u5-d05-shiny-1/u5-d05-shiny-1.pdf)
 :::
 :::
 

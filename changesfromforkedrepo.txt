@@ -1,6 +1,3 @@
-To build site, knit index.Rmd
-to build course contents, Source render-materials.R
-
 from https://bookdown.org/yihui/bookdown/github.html
 
 in datascience-box
@@ -23,7 +20,7 @@ https://datascienceandr.netlify.app/course-materials/slides/u1-d01-welcome/u1-d0
 https://datascienceandr.netlify.app/course-materials/application-exercises/ae-01a-un-votes/unvotes.html#1
 
 But, there is still a build_pages GitHub action that was running and hosting - i disabled it.
-there is an install failure for stringi in build_book. Fixed that - it was a version mismatch.
+there is an install failure for stringi in build_book
 
 Plan:
 Sessions are roughly 4 hour chunks, corresponding to 1 day workshop or 1 week of normal class.
@@ -45,8 +42,5 @@ DAAG
 plotly
 widgetframe
 gghighlight
-
-
-## changed all references to datascienceandr to datascienceandrhome
 
 

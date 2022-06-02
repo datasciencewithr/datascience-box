@@ -6,7 +6,7 @@
 **Session 3 - Part 1: Tidy data**
 
 ::: slides
-[Slides](https://datascienceandrhome.netlify.app/course-materials/slides/u2-d05-tidy-data/u2-d05-tidy-data.html#1)
+[Slides](https://datascienceandr.netlify.app/course-materials/slides/u2-d05-tidy-data/u2-d05-tidy-data.html#1)
 :::
 
 ::: reading
@@ -18,7 +18,7 @@ JSS :: [Tidy data](https://www.jstatsoft.org/article/view/v059i10)
 **Session 3 - Part 2: Grammar of data wrangling**
 
 ::: slides
-[Slides](https://datascienceandrhome.netlify.app/course-materials/slides/u2-d06-grammar-wrangle/u2-d06-grammar-wrangle.html#1)
+[Slides](https://datascienceandr.netlify.app/course-materials/slides/u2-d06-grammar-wrangle/u2-d06-grammar-wrangle.html#1)
 :::
 :::
 
@@ -26,7 +26,7 @@ JSS :: [Tidy data](https://www.jstatsoft.org/article/view/v059i10)
 **Session 3 - Part 3: Working with a single data frame**
 
 ::: slides
-[Slides](https://datascienceandrhome.netlify.app/course-materials/slides/u2-d07-single-df/u2-d07-single-df.html#1)
+[Slides](https://datascienceandr.netlify.app/course-materials/slides/u2-d07-single-df/u2-d07-single-df.html#1)
 :::
 
 ::: reading
@@ -46,7 +46,7 @@ R4DS :: [Chp 5 - Data transformation](https://r4ds.had.co.nz/transform.html)
 **Session 3 - Part 5: Working with multiple data frames**
 
 ::: slides
-[Slides](https://datascienceandrhome.netlify.app/course-materials/slides/u2-d08-multi-df/u2-d08-multi-df.html#1)
+[Slides](https://datascienceandr.netlify.app/course-materials/slides/u2-d08-multi-df/u2-d08-multi-df.html#1)
 :::
 
 ::: reading
@@ -58,7 +58,7 @@ R4DS :: [Chp 13 - Relational data](https://r4ds.had.co.nz/relational-data.html)
 **Session 3 - Part 6: Tidying data**
 
 ::: slides
-[Slides](https://datascienceandrhome.netlify.app/course-materials/slides/u2-d09-tidying/u2-d09-tidying.html#1)
+[Slides](https://datascienceandr.netlify.app/course-materials/slides/u2-d09-tidying/u2-d09-tidying.html#1)
 :::
 
 ::: reading
@@ -70,7 +70,7 @@ R4DS :: [Chp 12 - Tidy data](https://r4ds.had.co.nz/tidy-data.html)
 **Session 3 - Part 7: Lab 3: Nobel laureates**
 
 ::: instructions
-[Instructions](https://datascienceandrhome.netlify.app/course-materials/lab-instructions/lab-03/lab-03-nobel-laureates.html)
+[Instructions](https://datascienceandr.netlify.app/course-materials/lab-instructions/lab-03/lab-03-nobel-laureates.html)
 :::
 :::
 
@@ -78,6 +78,6 @@ R4DS :: [Chp 12 - Tidy data](https://r4ds.had.co.nz/tidy-data.html)
 **Session 3 - Part 8: Homework 3: Airbnb listings in Edinburgh**
 
 ::: instructions
-[Instructions](https://datascienceandrhome.netlify.app/course-materials/hw-instructions/hw-03/hw-03-accidents.html)
+[Instructions](https://datascienceandr.netlify.app/course-materials/hw-instructions/hw-03/hw-03-accidents.html)
 :::
 :::

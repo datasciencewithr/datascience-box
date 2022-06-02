@@ -9,7 +9,7 @@ Course lectures are supplemented with "guest lectures" from domain experts.
 **Section 9 - Part 1: Misrepresentation**
 
 ::: slides
-[Slides](https://datascienceandrhome.netlify.app/course-materials/course-materials/slides/u3-d01-misrepresentation/u3-d01-misrepresentation.html#1)
+[Slides](https://datascienceandr.netlify.app/course-materials/course-materials/slides/u3-d01-misrepresentation/u3-d01-misrepresentation.html#1)
 :::
 :::
 
@@ -25,7 +25,7 @@ Course lectures are supplemented with "guest lectures" from domain experts.
 **Section 9 - Part 2: Data privacy**
 
 ::: slides
-[Slides](https://datascienceandrhome.netlify.app/course-materials/course-materials/slides/u3-d02-privacy/u3-d02-privacy.html#1)
+[Slides](https://datascienceandr.netlify.app/course-materials/course-materials/slides/u3-d02-privacy/u3-d02-privacy.html#1)
 :::
 :::
 
@@ -41,7 +41,7 @@ Course lectures are supplemented with "guest lectures" from domain experts.
 **Section 9 - Part 3: Algorithmic bias**
 
 ::: slides
-[Slides](https://datascienceandrhome.netlify.app/course-materials/course-materials/slides/u3-d03-algorithmic-bias/u3-d03-algorithmic-bias.html#1)
+[Slides](https://datascienceandr.netlify.app/course-materials/course-materials/slides/u3-d03-algorithmic-bias/u3-d03-algorithmic-bias.html#1)
 :::
 :::
 
@@ -83,6 +83,6 @@ Course lectures are supplemented with "guest lectures" from domain experts.
 Improving data visualisations to better convey the right message
 
 ::: instructions
-[Instructions](https://datascienceandrhome.netlify.app/course-materials/lab-instructions/lab-09/lab-09-better-viz.html)
+[Instructions](https://datascienceandr.netlify.app/course-materials/lab-instructions/lab-09/lab-09-better-viz.html)
 :::
 :::
