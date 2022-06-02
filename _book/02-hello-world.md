@@ -10,7 +10,7 @@ Welcome to the first session.
 **Session 1 - Part 1: Welcome**
 
 ::: slides
-[Slides](https://datascienceandr.netlify.app/course-materials/slides/u1-d01-welcome/u1-d01-welcome.html#1)
+[Slides](https://datascienceandrhome.netlify.app/course-materials/slides/u1-d01-welcome/u1-d01-welcome.html#1)
 :::
 :::
 
@@ -26,7 +26,7 @@ Welcome to the first session.
 **Session 1 - Part 3: Meet the toolkit - Programming**
 
 ::: slides
-[Slides](https://datascienceandr.netlify.app/course-materials/slides/u1-d02-toolkit-r/u1-d02-toolkit-r.html#1)
+[Slides](https://datascienceandrhome.netlify.app/course-materials/slides/u1-d02-toolkit-r/u1-d02-toolkit-r.html#1)
 :::
 
 ::: reading
@@ -47,7 +47,7 @@ Welcome to the first session.
 **Session 1 - Part 5: Meet the toolkit - Version control and collaboration**
 
 ::: slides
-[Slides](https://datascienceandr.netlify.app/course-materials/slides/u1-d03-toolkit-git/u1-d03-toolkit-git.html#1)
+[Slides](https://datascienceandrhome.netlify.app/course-materials/slides/u1-d03-toolkit-git/u1-d03-toolkit-git.html#1)
 :::
 :::
 
@@ -57,7 +57,7 @@ Welcome to the first session.
 Introduction to R, R Markdown, Git, and GitHub
 
 ::: instructions
-[Instructions](https://datascienceandr.netlify.app/course-materials/lab-instructions/lab-01/lab-01-hello-r.html)
+[Instructions](https://datascienceandrhome.netlify.app/course-materials/lab-instructions/lab-01/lab-01-hello-r.html)
 :::
 
 ```{=html}
@@ -75,7 +75,7 @@ Introduction to R, R Markdown, Git, and GitHub
 Introduction to working with data in R with the tidyverse
 
 ::: instructions
-[Instructions](https://datascienceandr.netlify.app/course-materials/hw-instructions/hw-01/hw-01-pet-names.html)
+[Instructions](https://datascienceandrhome.netlify.app/course-materials/hw-instructions/hw-01/hw-01-pet-names.html)
 :::
 
 ```{=html}

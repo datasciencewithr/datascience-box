@@ -4,7 +4,7 @@
 **Session 4 - Part 1: Data types**
 
 ::: slides
-[Slides](https://datascienceandr.netlify.app/course-materials/slides/u2-d10-data-types/u2-d10-data-types.html#1)
+[Slides](https://datascienceandrhome.netlify.app/course-materials/slides/u2-d10-data-types/u2-d10-data-types.html#1)
 :::
 :::
 
@@ -12,7 +12,7 @@
 **Session 4 - Part 2: Data classes**
 
 ::: slides
-[Slides](https://datascienceandr.netlify.app/course-materials/slides/u2-d11-data-classes/u2-d11-data-classes.html#1)
+[Slides](https://datascienceandrhome.netlify.app/course-materials/slides/u2-d11-data-classes/u2-d11-data-classes.html#1)
 :::
 
 ::: reading
@@ -24,7 +24,7 @@ R4DS :: [Chp 15 - Factors](https://r4ds.had.co.nz/factors.html)
 **Session 4 - Part 3: Importing data**
 
 ::: slides
-[Slides](https://datascienceandr.netlify.app/course-materials/slides/u2-d12-data-import/u2-d12-data-import.html#1)
+[Slides](https://datascienceandrhome.netlify.app/course-materials/slides/u2-d12-data-import/u2-d12-data-import.html#1)
 :::
 
 ::: reading
@@ -36,7 +36,7 @@ R4DS :: [Chp 11 - Data import](https://r4ds.had.co.nz/data-import.html)
 **Session 4 - Part 4: Recoding data**
 
 ::: slides
-[Slides](https://datascienceandr.netlify.app/course-materials/slides/u2-d13-data-recode/u2-d13-data-recode.html#1)
+[Slides](https://datascienceandrhome.netlify.app/course-materials/slides/u2-d13-data-recode/u2-d13-data-recode.html#1)
 :::
 
 ::: reading
@@ -64,7 +64,7 @@ R4DS :: [Sec 16.1 - 16.3 - Dates and times](https://r4ds.had.co.nz/dates-and-tim
 **Session 4 - Part 7: Lab 4: La Quinta is Spanish for next to Denny's**
 
 ::: instructions
-[Instructions](https://datascienceandr.netlify.app/course-materials/lab-instructions/lab-04/lab-04-viz-sp-data.html)
+[Instructions](https://datascienceandrhome.netlify.app/course-materials/lab-instructions/lab-04/lab-04-viz-sp-data.html)
 :::
 :::
 
@@ -72,6 +72,6 @@ R4DS :: [Sec 16.1 - 16.3 - Dates and times](https://r4ds.had.co.nz/dates-and-tim
 **Session 4 - Part 8: Homework 4: College majors**
 
 ::: instructions
-[Instructions](https://datascienceandr.netlify.app/course-materials/hw-instructions/hw-04/hw-04-college-majors.html)
+[Instructions](https://datascienceandrhome.netlify.app/course-materials/hw-instructions/hw-04/hw-04-college-majors.html)
 :::
 :::
