@@ -45,7 +45,8 @@ ggplot(brexit, aes(y = opinion, fill = opinion)) +
   theme_minimal()
 ```
 
-    ## Warning: `guides(<scale> = FALSE)` is deprecated. Please use `guides(<scale> = "none")` instead.
+    ## Warning: `guides(<scale> = FALSE)` is deprecated. Please use
+    ## `guides(<scale> = "none")` instead.
 
 ![](brexit_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
@@ -80,7 +81,8 @@ ggplot(brexit, aes(y = opinion, fill = opinion)) +
   theme_minimal()
 ```
 
-    ## Warning: `guides(<scale> = FALSE)` is deprecated. Please use `guides(<scale> = "none")` instead.
+    ## Warning: `guides(<scale> = FALSE)` is deprecated. Please use
+    ## `guides(<scale> = "none")` instead.
 
 ![](brexit_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 

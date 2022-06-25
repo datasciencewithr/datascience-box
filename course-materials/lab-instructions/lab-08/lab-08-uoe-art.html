@@ -656,16 +656,16 @@ identify the tags for the relevant nodes:</p>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_nodes</span>(<span class="st">&quot;.iteminfo&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_node</span>(<span class="st">&quot;h3 a&quot;</span>)</span></code></pre></div>
 <pre><code>## {xml_nodeset (10)}
-##  [1] &lt;a href=&quot;./record/22569?highlight=*:*&quot;&gt;Abstract with Blue Stripes (quadriptych)                    ...
-##  [2] &lt;a href=&quot;./record/21484?highlight=*:*&quot;&gt;Two Figures in a Landscape                                  ...
-##  [3] &lt;a href=&quot;./record/99930?highlight=*:*&quot;&gt;                                                            ...
-##  [4] &lt;a href=&quot;./record/99881?highlight=*:*&quot;&gt;For They Shall See God                                      ...
-##  [5] &lt;a href=&quot;./record/100009?highlight=*:*&quot;&gt;Wall hanging                                               ...
-##  [6] &lt;a href=&quot;./record/20925?highlight=*:*&quot;&gt;Kneeling Female Nude                                        ...
-##  [7] &lt;a href=&quot;./record/21114?highlight=*:*&quot;&gt;Circo Togni, Ravenna                                        ...
-##  [8] &lt;a href=&quot;./record/21174?highlight=*:*&quot;&gt;Kneeling Male Nude                                          ...
-##  [9] &lt;a href=&quot;./record/21976?highlight=*:*&quot;&gt;15th Century Italian                                        ...
-## [10] &lt;a href=&quot;./record/53722?highlight=*:*&quot;&gt;Jug                                    &lt;/a&gt;</code></pre>
+##  [1] &lt;a href=&quot;./record/22569?highlight=*:*&quot;&gt;Abstract with Blue ...
+##  [2] &lt;a href=&quot;./record/21484?highlight=*:*&quot;&gt;Two Figures in a L ...
+##  [3] &lt;a href=&quot;./record/99930?highlight=*:*&quot;&gt;                   ...
+##  [4] &lt;a href=&quot;./record/99881?highlight=*:*&quot;&gt;For They Shall See ...
+##  [5] &lt;a href=&quot;./record/100009?highlight=*:*&quot;&gt;Wall hanging      ...
+##  [6] &lt;a href=&quot;./record/20925?highlight=*:*&quot;&gt;Kneeling Female Nu ...
+##  [7] &lt;a href=&quot;./record/21114?highlight=*:*&quot;&gt;Circo Togni, Raven ...
+##  [8] &lt;a href=&quot;./record/21174?highlight=*:*&quot;&gt;Kneeling Male Nude ...
+##  [9] &lt;a href=&quot;./record/21976?highlight=*:*&quot;&gt;15th Century Itali ...
+## [10] &lt;a href=&quot;./record/53722?highlight=*:*&quot;&gt;Jug                ...</code></pre>
 <p>Then we extract the text with <code>html_text()</code>:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>page <span class="sc">%&gt;%</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_nodes</span>(<span class="st">&quot;.iteminfo&quot;</span>) <span class="sc">%&gt;%</span></span>
@@ -692,11 +692,16 @@ how it’s different from <code>str_trim()</code>.</span></span></p>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_node</span>(<span class="st">&quot;h3 a&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str_squish</span>()</span></code></pre></div>
-<pre><code>##  [1] &quot;Abstract with Blue Stripes (quadriptych) (1969)&quot; &quot;Two Figures in a Landscape&quot;                     
-##  [3] &quot;(2003)&quot;                                          &quot;For They Shall See God (2006)&quot;                  
-##  [5] &quot;Wall hanging (1939)&quot;                             &quot;Kneeling Female Nude (1957)&quot;                    
-##  [7] &quot;Circo Togni, Ravenna (1957)&quot;                     &quot;Kneeling Male Nude (1965-1966)&quot;                 
-##  [9] &quot;15th Century Italian (Feb 1982)&quot;                 &quot;Jug&quot;</code></pre>
+<pre><code>##  [1] &quot;Abstract with Blue Stripes (quadriptych) (1969)&quot;
+##  [2] &quot;Two Figures in a Landscape&quot;                     
+##  [3] &quot;(2003)&quot;                                         
+##  [4] &quot;For They Shall See God (2006)&quot;                  
+##  [5] &quot;Wall hanging (1939)&quot;                            
+##  [6] &quot;Kneeling Female Nude (1957)&quot;                    
+##  [7] &quot;Circo Togni, Ravenna (1957)&quot;                    
+##  [8] &quot;Kneeling Male Nude (1965-1966)&quot;                 
+##  [9] &quot;15th Century Italian (Feb 1982)&quot;                
+## [10] &quot;Jug&quot;</code></pre>
 <p>And finally save the resulting data as a vector of length 10:</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>titles <span class="ot">&lt;-</span> page <span class="sc">%&gt;%</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_nodes</span>(<span class="st">&quot;.iteminfo&quot;</span>) <span class="sc">%&gt;%</span></span>
@@ -724,9 +729,15 @@ if you click on the hyperlinked text:
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_nodes</span>(<span class="st">&quot;.iteminfo&quot;</span>) <span class="sc">%&gt;%</span>   <span class="co"># same nodes</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_node</span>(<span class="st">&quot;h3 a&quot;</span>) <span class="sc">%&gt;%</span>         <span class="co"># as before</span></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_attr</span>(<span class="st">&quot;href&quot;</span>)             <span class="co"># but get href attribute instead of text</span></span></code></pre></div>
-<pre><code>##  [1] &quot;./record/22569?highlight=*:*&quot;  &quot;./record/21484?highlight=*:*&quot;  &quot;./record/99930?highlight=*:*&quot; 
-##  [4] &quot;./record/99881?highlight=*:*&quot;  &quot;./record/100009?highlight=*:*&quot; &quot;./record/20925?highlight=*:*&quot; 
-##  [7] &quot;./record/21114?highlight=*:*&quot;  &quot;./record/21174?highlight=*:*&quot;  &quot;./record/21976?highlight=*:*&quot; 
+<pre><code>##  [1] &quot;./record/22569?highlight=*:*&quot; 
+##  [2] &quot;./record/21484?highlight=*:*&quot; 
+##  [3] &quot;./record/99930?highlight=*:*&quot; 
+##  [4] &quot;./record/99881?highlight=*:*&quot; 
+##  [5] &quot;./record/100009?highlight=*:*&quot;
+##  [6] &quot;./record/20925?highlight=*:*&quot; 
+##  [7] &quot;./record/21114?highlight=*:*&quot; 
+##  [8] &quot;./record/21174?highlight=*:*&quot; 
+##  [9] &quot;./record/21976?highlight=*:*&quot; 
 ## [10] &quot;./record/53722?highlight=*:*&quot;</code></pre>
 <p>These don’t really look like URLs as we know then though. They’re
 relative links.</p>
