@@ -19,18 +19,18 @@ glimpse(theoffice)
 
     ## Rows: 55,130
     ## Columns: 12
-    ## $ index            <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,…
-    ## $ season           <int> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…
-    ## $ episode          <int> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…
-    ## $ episode_name     <chr> "Pilot", "Pilot", "Pilot", "Pilot", "P…
-    ## $ director         <chr> "Ken Kwapis", "Ken Kwapis", "Ken Kwapi…
-    ## $ writer           <chr> "Ricky Gervais;Stephen Merchant;Greg D…
-    ## $ character        <chr> "Michael", "Jim", "Michael", "Jim", "M…
-    ## $ text             <chr> "All right Jim. Your quarterlies look …
-    ## $ text_w_direction <chr> "All right Jim. Your quarterlies look …
-    ## $ imdb_rating      <dbl> 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6…
-    ## $ total_votes      <int> 3706, 3706, 3706, 3706, 3706, 3706, 37…
-    ## $ air_date         <fct> 2005-03-24, 2005-03-24, 2005-03-24, 20…
+    ## $ index            <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, …
+    ## $ season           <int> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
+    ## $ episode          <int> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
+    ## $ episode_name     <chr> "Pilot", "Pilot", "Pilot", "Pilot", "Pilot", "Pilot", "Pilot", "Pilot", "Pilot"…
+    ## $ director         <chr> "Ken Kwapis", "Ken Kwapis", "Ken Kwapis", "Ken Kwapis", "Ken Kwapis", "Ken Kwap…
+    ## $ writer           <chr> "Ricky Gervais;Stephen Merchant;Greg Daniels", "Ricky Gervais;Stephen Merchant;…
+    ## $ character        <chr> "Michael", "Jim", "Michael", "Jim", "Michael", "Michael", "Michael", "Pam", "Mi…
+    ## $ text             <chr> "All right Jim. Your quarterlies look very good. How are things at the library?…
+    ## $ text_w_direction <chr> "All right Jim. Your quarterlies look very good. How are things at the library?…
+    ## $ imdb_rating      <dbl> 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6,…
+    ## $ total_votes      <int> 3706, 3706, 3706, 3706, 3706, 3706, 3706, 3706, 3706, 3706, 3706, 3706, 3706, 3…
+    ## $ air_date         <fct> 2005-03-24, 2005-03-24, 2005-03-24, 2005-03-24, 2005-03-24, 2005-03-24, 2005-03…
 
 Fix `air_date` for later use.
 
@@ -56,15 +56,19 @@ theoffice %>%
 ```
 
     ## # A tibble: 186 × 2
-    ##   season episode
-    ##    <int>   <int>
-    ## 1      1       1
-    ## 2      1       2
-    ## 3      1       3
-    ## 4      1       4
-    ## 5      1       5
-    ## 6      1       6
-    ## # … with 180 more rows
+    ##    season episode
+    ##     <int>   <int>
+    ##  1      1       1
+    ##  2      1       2
+    ##  3      1       3
+    ##  4      1       4
+    ##  5      1       5
+    ##  6      1       6
+    ##  7      2       1
+    ##  8      2       2
+    ##  9      2       3
+    ## 10      2       4
+    ## # … with 176 more rows
 
 ### Exercise 1 - Calculate the percentage of lines spoken by Jim, Pam, Michael, and Dwight for each episode of The Office.
 
@@ -170,15 +174,20 @@ tidy(office_fit)
 ```
 
     ## # A tibble: 12 × 5
-    ##   term        estimate std.error statistic  p.value
-    ##   <chr>          <dbl>     <dbl>     <dbl>    <dbl>
-    ## 1 (Intercept) 6.34     0.298       21.2    1.24e-43
-    ## 2 season      0.0542   0.0224       2.42   1.68e- 2
-    ## 3 episode     0.0125   0.00439      2.85   5.05e- 3
-    ## 4 total_votes 0.000372 0.0000390    9.55   1.25e-16
-    ## 5 lines_jim   0.653    0.679        0.962  3.38e- 1
-    ## 6 lines_pam   0.0329   0.696        0.0473 9.62e- 1
-    ## # … with 6 more rows
+    ##    term           estimate std.error statistic  p.value
+    ##    <chr>             <dbl>     <dbl>     <dbl>    <dbl>
+    ##  1 (Intercept)    6.34     0.298       21.2    1.24e-43
+    ##  2 season         0.0542   0.0224       2.42   1.68e- 2
+    ##  3 episode        0.0125   0.00439      2.85   5.05e- 3
+    ##  4 total_votes    0.000372 0.0000390    9.55   1.25e-16
+    ##  5 lines_jim      0.653    0.679        0.962  3.38e- 1
+    ##  6 lines_pam      0.0329   0.696        0.0473 9.62e- 1
+    ##  7 lines_michael  0.111    0.544        0.204  8.39e- 1
+    ##  8 lines_dwight   0.806    0.522        1.54   1.25e- 1
+    ##  9 halloween_X1  -0.00340  0.181       -0.0188 9.85e- 1
+    ## 10 valentine_X1  -0.0573   0.180       -0.318  7.51e- 1
+    ## 11 christmas_X1   0.285    0.129        2.22   2.82e- 2
+    ## 12 michael_X1     0.585    0.141        4.15   6.01e- 5
 
 ### Exercise 9 - Perform 5-fold cross validation and view model performance metrics.
 
@@ -254,15 +263,20 @@ tidy(office_fit_old)
 ```
 
     ## # A tibble: 12 × 5
-    ##   term                estimate std.error statistic  p.value
-    ##   <chr>                  <dbl>     <dbl>     <dbl>    <dbl>
-    ## 1 (Intercept)         7.20     0.188         38.4  9.92e-72
-    ## 2 season             -0.0501   0.0140        -3.57 5.04e- 4
-    ## 3 episode             0.0449   0.00877        5.11 1.13e- 6
-    ## 4 total_votes         0.000360 0.0000404      8.89 4.99e-15
-    ## 5 air_date_month_Feb -0.145    0.139         -1.04 2.99e- 1
-    ## 6 air_date_month_Mar -0.376    0.134         -2.81 5.69e- 3
-    ## # … with 6 more rows
+    ##    term                estimate std.error statistic  p.value
+    ##    <chr>                  <dbl>     <dbl>     <dbl>    <dbl>
+    ##  1 (Intercept)         7.20     0.188        38.4   9.92e-72
+    ##  2 season             -0.0501   0.0140       -3.57  5.04e- 4
+    ##  3 episode             0.0449   0.00877       5.11  1.13e- 6
+    ##  4 total_votes         0.000360 0.0000404     8.89  4.99e-15
+    ##  5 air_date_month_Feb -0.145    0.139        -1.04  2.99e- 1
+    ##  6 air_date_month_Mar -0.376    0.134        -2.81  5.69e- 3
+    ##  7 air_date_month_Apr -0.309    0.131        -2.36  1.96e- 2
+    ##  8 air_date_month_May -0.128    0.162        -0.791 4.30e- 1
+    ##  9 air_date_month_Sep  0.512    0.178         2.88  4.63e- 3
+    ## 10 air_date_month_Oct  0.270    0.139         1.95  5.38e- 2
+    ## 11 air_date_month_Nov  0.116    0.126         0.924 3.57e- 1
+    ## 12 air_date_month_Dec  0.407    0.165         2.47  1.49e- 2
 
 ``` r
 office_test_pred_old <- predict(office_fit_old, new_data = office_test) %>%

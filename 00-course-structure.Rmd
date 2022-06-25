@@ -2,6 +2,7 @@
 
 This course is broken into 'Sections'.
 A Section is roughly 4 hours of combined lecture and labs, corresponding to 1 day of a workshop or 1 week of normal class.
+We will try this and adjust as we go.
 
 In the Type column, you see different Types of material.
 
