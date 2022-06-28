@@ -30,8 +30,8 @@ library(lubridate)
 .pull-left[
 ### .gray[Course operation]
 .gray[
-- https://datascienceandrhome.netlify.app/index.html
-- Google Meet
+- https://datascienceandrhome.netlify.app
+- Teams
 - Sundry Emails
 ]
 ]
