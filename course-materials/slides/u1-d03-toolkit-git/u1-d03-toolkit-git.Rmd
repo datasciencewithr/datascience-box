@@ -28,8 +28,8 @@ Last time, We were introduced to R, RStudio, and R Markdown
 <br>
 ### .gray[Today we will]
 - do the bechdel application exercise (where we left off last time)
-- Talk about version control
-- Then we will all sign up and share github usernames
+- Introduce version control
+  - Then we will all sign up and share github usernames
 - break
 - start into lab 1
 
