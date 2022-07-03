@@ -75,7 +75,7 @@ R4DS :: [Chp 12 - Tidy data](https://r4ds.had.co.nz/tidy-data.html)
 :::
 
 ::: homework
-**Session 3 - Part 8: Homework 3: Airbnb listings in Edinburgh**
+**Session 3 - Part 8: Homework 3: Automobile Accidents**
 
 ::: instructions
 [Instructions](https://datascienceandr.netlify.app/course-materials/hw-instructions/hw-03/hw-03-accidents.html)
