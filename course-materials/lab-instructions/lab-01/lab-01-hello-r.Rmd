@@ -144,7 +144,16 @@ So that others can see your changes.
 And by others, we mean the course teaching team (your repos in this course are private to you and us, only).
 
 In order to push your changes to GitHub, click on **Push**.
-This will prompt a dialogue box where you first need to enter your user name, and then your password.
+This will prompt a dialogue box where you first need to enter your user name, and then your PERSONAL ACCESS TOKEN. This is a new requirement from Github - you will have to create a personal access token in order to Push your commits.
+To do this, log in to Github.com, and click on your user icon on the top right.
+Then click Settings.
+Then scroll to the bottom of the page, and select Developer settings on the left navgation panel.
+Click Personal Access Tokens and Generate new token.
+Add a note such as 'data science intro course' so you know what this token will be used for.
+Under 'expiration', select 90 days, so you don't have to do this again during the course.
+Under 'select scopes', click 'repo', then go to bottom of page and generate token.
+Copy this token to a safe place, and then you can use it in place of password to push your changes to Github.
+
 This might feel cumbersome.
 Bear with me... We *will* teach you how to save your password so you don't have to enter it every time.
 But for this one assignment you'll have to manually enter each time you push in order to gain some experience with it.
