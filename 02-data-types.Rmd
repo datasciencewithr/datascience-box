@@ -20,8 +20,16 @@ R4DS :: [Chp 15 - Factors](https://r4ds.had.co.nz/factors.html)
 :::
 :::
 
+::: application-exercise
+**Session 4 - Part 3: Hotels + Data types**
+
+> **Application exercise**
+>
+> <https://github.com/datasciencewithr/ae-05-hotels-datatypes.git>
+:::
+
 ::: slide-deck
-**Session 4 - Part 3: Importing data**
+**Session 4 - Part 4: Importing data**
 
 ::: slides
 [Slides](https://datascienceandr.netlify.app/course-materials/slides/u2-d12-data-import/u2-d12-data-import.html#1)
@@ -33,7 +41,7 @@ R4DS :: [Chp 11 - Data import](https://r4ds.had.co.nz/data-import.html)
 :::
 
 ::: slide-deck
-**Session 4 - Part 4: Recoding data**
+**Session 4 - Part 5: Recoding data**
 
 ::: slides
 [Slides](https://datascienceandr.netlify.app/course-materials/slides/u2-d13-data-recode/u2-d13-data-recode.html#1)
@@ -42,14 +50,6 @@ R4DS :: [Chp 11 - Data import](https://r4ds.had.co.nz/data-import.html)
 ::: reading
 R4DS :: [Sec 16.1 - 16.3 - Dates and times](https://r4ds.had.co.nz/dates-and-times.html)
 :::
-:::
-
-::: application-exercise
-**Session 4 - Part 5: Hotels + Data types**
-
-> **Application exercise**
->
-> <https://github.com/datasciencewithr/ae-05-hotels-datatypes.git>
 :::
 
 ::: application-exercise
