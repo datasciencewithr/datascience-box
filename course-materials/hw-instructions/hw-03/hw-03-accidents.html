@@ -524,9 +524,16 @@ repo.</span></span></p>
 <p>Go to the course GitHub organization and locate your homework repo,
 which should be named <code>hw-03-accidents-YOUR_GITHUB_USERNAME</code>.
 Grab the URL of the repo, and clone it in RStudio. First, open the R
-Markdown document <code>hw-03.Rmd</code> and Knit it. Make sure it
-compiles without errors. The output will be in the file markdown
-<code>.md</code> file with the same name.</p>
+Markdown document <code>hw-03-accidents.Rmd</code> and install
+packages.</p>
+<p>It will fail when it tries to install the dsbox package. This is
+because dsbox is not yet on CRAN. To install dsbox, copy and paste the
+following into the Console.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;devtools&quot;</span>) </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;rstudio-education/dsbox&quot;</span>)</span></code></pre></div>
+<p>Now, you can knit. Make sure it compiles without errors. The output
+will be in the file markdown <code>.md</code> file with the same
+name.</p>
 <div id="warm-up" class="section level2">
 <h2>Warm up</h2>
 <p>Before we introduce the data, let’s warm up with some simple
@@ -547,8 +554,8 @@ commit and push again.</li>
 wrangling and visualisation and the data lives in the
 <strong>dsbox</strong> package. These packages are already installed for
 you. You can load them by running the following in your Console:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dsbox)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dsbox)</span></code></pre></div>
 </div>
 <div id="data" class="section level2">
 <h2>Data</h2>

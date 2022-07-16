@@ -34,7 +34,18 @@ It covers all recorded accidents in Edinburgh in 2018 and some of the variables 
 
 Go to the course GitHub organization and locate your homework repo, which should be named `hw-03-accidents-YOUR_GITHUB_USERNAME`.
 Grab the URL of the repo, and clone it in RStudio.
-First, open the R Markdown document `hw-03.Rmd` and Knit it.
+First, open the R Markdown document `hw-03-accidents.Rmd` and install packages.
+
+It will fail when it tries to install the dsbox package.
+This is because dsbox is not yet on CRAN.
+To install dsbox, copy and paste the following into the Console.
+
+```{r}
+install.packages("devtools") 
+devtools::install_github("rstudio-education/dsbox")
+```
+
+Now, you can knit.
 Make sure it compiles without errors.
 The output will be in the file markdown `.md` file with the same name.
 
