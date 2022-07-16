@@ -35,10 +35,13 @@ Go to the course GitHub organization and locate your homework repo, which should
 Grab the URL of the repo, and clone it in RStudio.
 First, open the R Markdown document `hw-02.Rmd` and install the packages.
 It will fail when it tries to install the dsbox package.
-This is because it is not yet on CRAN.
+This is because dsbox is not yet on CRAN.
 To install dsbox, copy and paste the following into the Console.
 
-install.packages("devtools") devtools::install_github("rstudio-education/dsbox")
+```{r}
+install.packages("devtools") 
+devtools::install_github("rstudio-education/dsbox")
+```
 
 Now, you can knit.
 Make sure it compiles without errors.
