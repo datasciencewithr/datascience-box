@@ -526,160 +526,16 @@ questions.</p>
 <div id="learning-goals" class="section level1">
 <h1>Learning goals</h1>
 <ul>
-<li>Collaborating on GitHub and resolving merge conflicts</li>
 <li>Replicating published results</li>
 <li>Data wrangling and visualisation</li>
 </ul>
 </div>
 <div id="lab-prep" class="section level1">
 <h1>Lab prep</h1>
-<p>You have two tasks you should complete before the lab:</p>
-<ul>
-<li><strong>Task 1:</strong> Read the Buzzfeed article titled <a href="https://www.buzzfeednews.com/article/peteraldhous/immigration-and-science"><em>These
+<p>Before the lab, read the Buzzfeed article titled <a href="https://www.buzzfeednews.com/article/peteraldhous/immigration-and-science"><em>These
 Nobel Prize Winners Show Why Immigration Is So Important For American
 Science</em></a><em>.</em> We will replicate this analysis in the
-workshop so it’s crucial that you’re familiar with it ahead of
-time.</li>
-<li><strong>Task 2:</strong> Read about merge conflicts below. The merge
-conflict exercise we’ll start with during the lab will assume that you
-have this background information.</li>
-</ul>
-<div id="merges-and-merge-conflicts" class="section level2">
-<h2>Merges and merge conflicts</h2>
-<p>This is the second week you’re working in teams, so we’re going to
-make things a little more interesting and let all of you make changes
-and push those changes to your team repository. Sometimes things will go
-swimmingly, and sometimes you’ll run into merge conflicts. So our first
-task today is to walk you through a merge conflict!</p>
-<ul>
-<li>Pushing to a repo replaces the code on GitHub with the code you have
-on your computer.</li>
-<li>If a collaborator has made a change to your repo on GitHub that you
-haven’t incorporated into your local work, GitHub will stop you from
-pushing to the repo because this could overwrite your collaborator’s
-work!</li>
-<li>So you need to explicitly “merge” your collaborator’s work before
-you can push.</li>
-<li>If your and your collaborator’s changes are in different files or in
-different parts of the same file, git merges the work for you
-automatically when you *pull*.</li>
-<li>If you both changed the same part of a file, git will produce a
-**merge conflict** because it doesn’t know how which change you want to
-keep and which change you want to overwrite.</li>
-</ul>
-<p>Git will put conflict markers in your code that look like:</p>
-<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD 
-
-See also: [dplyr documentation](https://dplyr.tidyverse.org/)   
-
-======= 
-
-See also [ggplot2 documentation](https://ggplot2.tidyverse.org/)  
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; some1alpha2numeric3string4</code></pre>
-<p>The <code>===</code>s separate <em>your</em> changes (top) from
-<em>their</em> changes (bottom).</p>
-<p>Note that on top you see the word <code>HEAD</code>, which indicates
-that these are your changes.</p>
-<p>And at the bottom you see <code>some1alpha2numeric3string4</code>
-(well, it probably looks more like
-<code>28e7b2ceb39972085a0860892062810fb812a08f</code>).</p>
-<p>This is the <strong>hash</strong> (a unique identifier) of the commit
-your collaborator made with the conflicting change.</p>
-<p>Your job is to <em>reconcile</em> the changes: edit the file so that
-it incorporates the best of both versions and delete the
-<code>&lt;&lt;&lt;</code>, <code>===</code>, and
-<code>&gt;&gt;&gt;</code> lines. Then you can stage and commit the
-result.</p>
-</div>
-</div>
-<div id="merge-conflict-activity" class="section level1">
-<h1>Merge conflict activity</h1>
-<div id="setup" class="section level2">
-<h2>Setup</h2>
-<ul>
-<li>Clone the repo and open the .Rmd file.</li>
-<li>Assign the numbers 1, 2, 3, and 4 to each of the team members. If
-your team has fewer than 4 people, some people will need to have
-multiple numbers. If your team has more than 4 people, some people will
-need to share some numbers.</li>
-</ul>
-</div>
-<div id="lets-cause-a-merge-conflict" class="section level2">
-<h2>Let’s cause a merge conflict!</h2>
-<p>Our goal is to see two different types of merges: first we’ll see a
-type of merge that git can’t figure out on its own how to do on its own
-(a <strong>merge conflict</strong>) and requires human intervention,
-then another type of where that git can figure out how to do without
-human intervention.</p>
-<p>Doing this will require some tight choreography, so pay
-attention!</p>
-<p>Take turns in completing the exercise, only one member at a time.
-<strong>Others should just watch, not doing anything on their own
-projects (this includes not even pulling changes!)</strong> until they
-are instructed to. If you feel like you won’t be able to resist the urge
-to touch your computer when it’s not your turn, we recommend putting
-your hands in your pockets or sitting on them!</p>
-<p><strong>Before starting</strong>: everyone should have the repo
-cloned and know which role number(s) they are.</p>
-<p><strong>Role 1:</strong></p>
-<ul>
-<li>Change the team name to your actual team name.</li>
-<li>Knit, commit, push.</li>
-</ul>
-<p>🛑 Make sure the previous role has finished before moving on to the
-next step.</p>
-<p><strong>Role 2:</strong></p>
-<ul>
-<li>Change the team name to some other word.</li>
-<li>Knit, commit, push. You should get an error.</li>
-<li>Pull. Take a look at the document with the merge conflict.</li>
-<li>Clear the merge conflict by editing the document to choose the
-correct/preferred change.</li>
-<li>Knit.</li>
-<li><strong>Click the Stage checkbox</strong> for all files in your Git
-tab. Make sure they all have check marks, not filled-in boxes.</li>
-<li>Commit and push.</li>
-</ul>
-<p>🛑 Make sure the previous role has finished before moving on to the
-next step.</p>
-<p><strong>Role 3:</strong></p>
-<ul>
-<li>Change the a label of the first code chunk</li>
-<li>Knit, commit, push. You should get an error.</li>
-<li>Pull. No merge conflicts should occur, but you should see a message
-about merging.</li>
-<li>Now push.</li>
-</ul>
-<p>🛑 Make sure the previous role has finished before moving on to the
-next step.</p>
-<p><strong>Role 4:</strong></p>
-<ul>
-<li>Change the label of the first code chunk to something other than
-previous role did.</li>
-<li>Knit, commit, push. You should get an error.</li>
-<li>Pull. Take a look at the document with the merge conflict. Clear the
-merge conflict by choosing the correct/preferred change. Commit, and
-push.</li>
-</ul>
-<p>🛑 Make sure the previous role has finished before moving on to the
-next step.</p>
-<p><strong>Everyone:</strong> Pull, and observe the changes in your
-document.</p>
-</div>
-<div id="tips-for-collaborating-via-github" class="section level2">
-<h2>Tips for collaborating via GitHub</h2>
-<ul>
-<li>Always pull first before you start working.</li>
-<li>Resolve a merge conflict (commit and push) <em>before</em>
-continuing your work. Never do new work while resolving a merge
-conflict.</li>
-<li>Knit, commit, and push often to minimize merge conflicts and/or to
-make merge conflicts easier to resolve.</li>
-<li>If you find yourself in a situation that is difficult to resolve,
-ask questions ASAP. Don’t let it linger and get bigger.</li>
-</ul>
-</div>
+workshop so it’s crucial that you’re familiar with it ahead of time.</p>
 </div>
 <div id="getting-started" class="section level1">
 <h1>Getting started</h1>
@@ -709,14 +565,14 @@ commit and push again.</li>
 <p>We’ll use the <strong>tidyverse</strong> package for much of the data
 wrangling. This package is already installed for you. You can load them
 by running the following in your Console:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
 </div>
 <div id="data" class="section level2">
 <h2>Data</h2>
 <p>The dataset for this assignment can be found as a CSv (comma
 separated values) file in the <code>data</code> folder of your
 repository. You can read it in using the following.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>nobel <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/nobel.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>nobel <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/nobel.csv&quot;</span>)</span></code></pre></div>
 <p>The variable descriptions are as follows:</p>
 <ul>
 <li><code>id</code>: ID number</li>
@@ -767,11 +623,6 @@ at the time of winning the award</li>
 </div>
 <div id="exercises" class="section level1">
 <h1>Exercises</h1>
-<p>Take turns answering the exercises. Make sure each team member gets
-to commit to the repo by the time you submit your work. And make sure
-that the person taking the lead for an exercise is sharing their screen.
-You don’t have to switch at each exercise, you can find your a cadence
-that works for your team and stick to it.</p>
 <div id="get-to-know-your-data" class="section level2">
 <h2>Get to know your data</h2>
 <ol style="list-style-type: decimal">
@@ -817,14 +668,14 @@ achieve the same result using the <code>fct_other()</code> function
 we’ve seen before (i.e. with <code>country_us = fct_other(country,
 “USA”)</code>). We decided to use the <code>if_else()</code> here to
 show you one example of an if statement in R.</span></span></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>nobel_living <span class="ot">&lt;-</span> nobel_living <span class="sc">%&gt;%</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">country_us =</span> <span class="fu">if_else</span>(country <span class="sc">==</span> <span class="st">&quot;USA&quot;</span>, <span class="st">&quot;USA&quot;</span>, <span class="st">&quot;Other&quot;</span>)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>nobel_living <span class="ot">&lt;-</span> nobel_living <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">country_us =</span> <span class="fu">if_else</span>(country <span class="sc">==</span> <span class="st">&quot;USA&quot;</span>, <span class="st">&quot;USA&quot;</span>, <span class="st">&quot;Other&quot;</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
 <p>Next, we will limit our analysis to only the following categories:
 Physics, Medicine, Chemistry, and Economics.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>nobel_living_science <span class="ot">&lt;-</span> nobel_living <span class="sc">%&gt;%</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(category <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Physics&quot;</span>, <span class="st">&quot;Medicine&quot;</span>, <span class="st">&quot;Chemistry&quot;</span>, <span class="st">&quot;Economics&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>nobel_living_science <span class="ot">&lt;-</span> nobel_living <span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(category <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Physics&quot;</span>, <span class="st">&quot;Medicine&quot;</span>, <span class="st">&quot;Chemistry&quot;</span>, <span class="st">&quot;Economics&quot;</span>))</span></code></pre></div>
 <p>For the next exercise work with the <code>nobel_living_science</code>
 data frame you created above. This means you’ll need to define this data
 frame in your R Markdown document, even though the next exercise doesn’t
