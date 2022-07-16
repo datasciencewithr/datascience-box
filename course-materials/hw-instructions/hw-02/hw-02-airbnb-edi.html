@@ -527,9 +527,15 @@ repo.</span></span></p>
 which should be named
 <code>hw-02-airbnb-edi-YOUR_GITHUB_USERNAME</code>. Grab the URL of the
 repo, and clone it in RStudio. First, open the R Markdown document
-<code>hw-02.Rmd</code> and Knit it. Make sure it compiles without
-errors. The output will be in the file markdown <code>.md</code> file
-with the same name.</p>
+<code>hw-02.Rmd</code> and install the packages. It will fail when it
+tries to install the dsbox package. This is because it is not yet on
+CRAN. To install dsbox, copy and paste the following into the
+Console.</p>
+<p>install.packages(“devtools”)
+devtools::install_github(“rstudio-education/dsbox”)</p>
+<p>Now, you can knit. Make sure it compiles without errors. The output
+will be in the file markdown <code>.md</code> file with the same
+name.</p>
 <div id="warm-up" class="section level2">
 <h2>Warm up</h2>
 <p>Before we introduce the data, let’s warm up with some simple

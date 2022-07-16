@@ -33,7 +33,14 @@ Using data provided by Airbnb, we can explore how Airbnb availability and prices
 
 Go to the course GitHub organization and locate your homework repo, which should be named `hw-02-airbnb-edi-YOUR_GITHUB_USERNAME`.
 Grab the URL of the repo, and clone it in RStudio.
-First, open the R Markdown document `hw-02.Rmd` and Knit it.
+First, open the R Markdown document `hw-02.Rmd` and install the packages.
+It will fail when it tries to install the dsbox package.
+This is because it is not yet on CRAN.
+To install dsbox, copy and paste the following into the Console.
+
+install.packages("devtools") devtools::install_github("rstudio-education/dsbox")
+
+Now, you can knit.
 Make sure it compiles without errors.
 The output will be in the file markdown `.md` file with the same name.
 
