@@ -106,7 +106,7 @@ hotels %>%
 - `matches()`: Matches a regular expression (a sequence of symbols/characters expressing a string/pattern to be searched for within text)
 
 .footnote[
-See help for any of these functions for more info, e.g. `?everything`.
+See help for more info, e.g. `?tidyselect::language`.
 ]
 
 ---
