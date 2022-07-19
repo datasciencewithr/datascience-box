@@ -61,7 +61,7 @@ class: middle
 
 
 ```r
-hotels &lt;- read_csv("data/hotels.csv")
+hotels_df &lt;- read_csv("data/hotels.csv")
 ```
 
 ---
@@ -76,7 +76,7 @@ class: middle
 
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
 * select(hotel, lead_time)
 ```
 
@@ -100,7 +100,7 @@ hotels %&gt;%
 .small[
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
 * select(-agent)
 ```
 
@@ -130,7 +130,7 @@ hotels %&gt;%
 
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
 * select(hotel:arrival_date_month)
 ```
 
@@ -153,7 +153,7 @@ hotels %&gt;%
 
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
 * select(starts_with("arrival"))
 ```
 
@@ -177,7 +177,7 @@ hotels %&gt;%
 
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
 * select(ends_with("type"))
 ```
 
@@ -218,7 +218,7 @@ See help for more info, e.g. `?tidyselect::language`.
 .pull-left[
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
   select(adults, children, babies) %&gt;%
 * arrange(babies)
 ```
@@ -239,7 +239,7 @@ hotels %&gt;%
 .pull-right[
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
   select(adults, children, babies) %&gt;%
 * arrange(desc(babies))
 ```
@@ -266,7 +266,7 @@ hotels %&gt;%
 
 ```r
 # first five
-hotels %&gt;%
+hotels_df %&gt;%
 * slice(1:5)
 ```
 
@@ -301,7 +301,7 @@ certain lines of code while debugging.
 .small[
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
   # slice the first five rows  # this line is a comment
   #select(hotel) %&gt;%           # this one doesn't run
   slice(1:5)                   # this line runs
@@ -336,7 +336,7 @@ class: middle
 
 ```r
 # bookings in City Hotels
-hotels %&gt;%
+hotels_df %&gt;%
 * filter(hotel == "City Hotel")
 ```
 
@@ -366,7 +366,7 @@ hotels %&gt;%
 
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
   filter( 
 *   adults == 0,
 *   children &gt;= 1
@@ -394,7 +394,7 @@ hotels %&gt;%
 
 ```r
 # bookings with no adults and some children or babies in the room
-hotels %&gt;%
+hotels_df %&gt;%
   filter( 
     adults == 0,     
 *   children &gt;= 1 | babies &gt;= 1     # | means or
@@ -461,7 +461,7 @@ class: middle
 .pull-left[
 
 ```r
-hotels %&gt;% 
+hotels_df %&gt;% 
 * distinct(market_segment) %&gt;%
   arrange(market_segment)
 ```
@@ -483,7 +483,7 @@ hotels %&gt;%
 .pull-right[
 
 ```r
-hotels %&gt;% 
+hotels_df %&gt;% 
 * distinct(hotel, market_segment) %&gt;%
   arrange(hotel, market_segment)
 ```
@@ -515,7 +515,7 @@ hotels %&gt;%
 
 ```r
 # alphabetical order by default
-hotels %&gt;%
+hotels_df %&gt;%
 * count(market_segment)
 ```
 
@@ -538,7 +538,7 @@ hotels %&gt;%
 
 ```r
 # descending frequency order
-hotels %&gt;%
+hotels_df %&gt;%
 * count(market_segment, sort = TRUE)
 ```
 
@@ -565,7 +565,7 @@ hotels %&gt;%
 
 ```r
 # ascending frequency order
-hotels %&gt;%
+hotels_df %&gt;%
   count(market_segment) %&gt;%
 * arrange(n)
 ```
@@ -589,7 +589,7 @@ hotels %&gt;%
 ```r
 # descending frequency order
 # just like adding sort = TRUE
-hotels %&gt;%
+hotels_df %&gt;%
   count(market_segment) %&gt;%
 * arrange(desc(n))
 ```
@@ -615,7 +615,7 @@ hotels %&gt;%
 
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
 * count(hotel, market_segment)
 ```
 
@@ -648,7 +648,7 @@ hotels %&gt;%
 
 ```r
 # hotel type first
-hotels %&gt;%
+hotels_df %&gt;%
 * count(hotel, market_segment)
 ```
 
@@ -676,7 +676,7 @@ hotels %&gt;%
 
 ```r
 # market segment first
-hotels %&gt;%
+hotels_df %&gt;%
 * count(market_segment, hotel)
 ```
 
@@ -723,7 +723,7 @@ class: middle
 
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
 * mutate(little_ones = children + babies) %&gt;%
   select(children, babies, little_ones) %&gt;%
   arrange(desc(little_ones))
@@ -751,7 +751,7 @@ hotels %&gt;%
 
 ```r
 # Resort Hotel
-hotels %&gt;%
+hotels_df %&gt;%
   mutate(little_ones = children + babies) %&gt;%
   filter(
     little_ones &gt;= 1,
@@ -777,7 +777,7 @@ hotels %&gt;%
 
 ```r
 # City Hotel
-hotels %&gt;%
+hotels_df %&gt;%
   mutate(little_ones = children + babies) %&gt;%
   filter(
     little_ones &gt;= 1,
@@ -810,7 +810,7 @@ What is happening in the following chunk?
 .midi[
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
   mutate(little_ones = children + babies) %&gt;%
   count(hotel, little_ones) %&gt;%
   mutate(prop = n / sum(n))
@@ -848,7 +848,7 @@ class: middle
 
 ```r
 # mean average daily rate for all bookings
-hotels %&gt;%
+hotels_df %&gt;%
 * summarise(mean_adr = mean(adr))
 ```
 
@@ -880,7 +880,7 @@ column, but that's not recommended!
 
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
   summarise(mean(adr))
 ```
 
@@ -896,7 +896,7 @@ hotels %&gt;%
 
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
   summarise(mean_adr = mean(adr))
 ```
 
@@ -915,7 +915,7 @@ hotels %&gt;%
 
 ```r
 # mean average daily rate for all booking at city and resort hotels
-hotels %&gt;%
+hotels_df %&gt;%
 * group_by(hotel) %&gt;%
   summarise(mean_adr = mean(adr))
 ```
@@ -937,7 +937,7 @@ The following two give the same result, so `count` is simply short for `group_by
 .pull-left[
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
   group_by(hotel) %&gt;%
   summarise(n = n())
 ```
@@ -953,7 +953,7 @@ hotels %&gt;%
 .pull-right[
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
   count(hotel)
 ```
 
@@ -974,7 +974,7 @@ hotels %&gt;%
 
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
   summarise(
     min_adr = min(adr),
     mean_adr = mean(adr),

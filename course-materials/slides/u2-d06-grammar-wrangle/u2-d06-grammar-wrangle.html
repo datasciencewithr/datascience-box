@@ -90,7 +90,7 @@ class: middle
 
 
 ```r
-hotels &lt;- read_csv("data/hotels.csv")
+hotels_df &lt;- read_csv("data/hotels.csv")
 ```
 
 .footnote[
@@ -103,7 +103,7 @@ Source: [TidyTuesday](https://github.com/rfordatascience/tidytuesday/blob/master
 
 
 ```r
-names(hotels)
+names(hotels_df)
 ```
 
 ```
@@ -134,7 +134,7 @@ names(hotels)
 
 
 ```r
-glimpse(hotels)
+glimpse(hotels_df)
 ```
 
 ```
@@ -167,7 +167,7 @@ View only `lead_time` (number of days between booking and arrival date):
 
 
 ```r
-select(hotels, lead_time)
+select(hotels_df, lead_time)
 ```
 
 ```
@@ -191,7 +191,7 @@ select(hotels, lead_time)
 
 ```r
 *select(
-  hotels, 
+  hotels_df, 
   lead_time
   )
 ```
@@ -208,14 +208,14 @@ select(hotels, lead_time)
 
 ```r
 select( 
-* hotels,
+* hotels_df,
   lead_time
   )
 ```
 ]
 .pull-right[
 - Start with the function (a verb): `select()`
-- First argument: data frame we're working with , `hotels`
+- First argument: data frame we're working with , `hotels_df`
 ]
 
 ---
@@ -226,14 +226,14 @@ select(
 
 ```r
 select( 
-  hotels, 
+  hotels_df, 
 * lead_time
   )
 ```
 ]
 .pull-right[
 - Start with the function (a verb): `select()`
-- First argument: data frame we're working with , `hotels`
+- First argument: data frame we're working with , `hotels_df`
 - Second argument: variable we want to select, `lead_time`
 ]
 
@@ -245,7 +245,7 @@ select(
 
 ```r
 select( 
-  hotels, 
+  hotels_df, 
   lead_time
   )
 ```
@@ -265,7 +265,7 @@ select(
 ]
 .pull-right[
 - Start with the function (a verb): `select()`
-- First argument: data frame we're working with , `hotels`
+- First argument: data frame we're working with , `hotels_df`
 - Second argument: variable we want to select, `lead_time`
 - Result: data frame with 119390 rows and 1 column
 ]
@@ -278,7 +278,7 @@ dplyr functions always expect a data frame and always yield a data frame.
 
 
 ```r
-select(hotels, lead_time)
+select(hotels_df, lead_time)
 ```
 
 ```
@@ -306,7 +306,7 @@ View only the `hotel` type and `lead_time`:
 .pull-left[
 
 ```r
-select(hotels, hotel, lead_time)
+select(hotels_df, hotel, lead_time)
 ```
 
 ```
@@ -337,7 +337,7 @@ What if we wanted to select these columns, and then arrange the data in descendi
 Select:
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
   select(hotel, lead_time)
 ```
 
@@ -360,7 +360,7 @@ hotels %&gt;%
 Select, then arrange:
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
   select(hotel, lead_time) %&gt;%
   arrange(desc(lead_time))
 ```
@@ -394,13 +394,13 @@ In programming, a pipe is a technique for passing information from one process t
 --
 
 .pull-left[
-- Start with the data frame `hotels`, and pass it to the `select()` function,
+- Start with the data frame `hotels_df`, and pass it to the `select()` function,
 ]
 .pull-right[
 .small[
 
 ```r
-*hotels %&gt;%
+*hotels_df %&gt;%
   select(hotel, lead_time) %&gt;%
   arrange(desc(lead_time))
 ```
@@ -427,14 +427,14 @@ In programming, a pipe is a technique for passing information from one process t
 In programming, a pipe is a technique for passing information from one process to another.
 
 .pull-left[
-- Start with the data frame `hotels`, and pass it to the `select()` function,
+- Start with the data frame `hotels_df`, and pass it to the `select()` function,
 - then we select the variables `hotel` and `lead_time`,
 ]
 .pull-right[
 .small[
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
 * select(hotel, lead_time) %&gt;%
   arrange(desc(lead_time))
 ```
@@ -461,7 +461,7 @@ hotels %&gt;%
 In programming, a pipe is a technique for passing information from one process to another.
 
 .pull-left[
-- Start with the data frame `hotels`, and pass it to the `select()` function,
+- Start with the data frame `hotels_df`, and pass it to the `select()` function,
 - then we select the variables `hotel` and `lead_time`,
 - and then we arrange the data frame by `lead_time` in descending order.
 ]
@@ -469,7 +469,7 @@ In programming, a pipe is a technique for passing information from one process t
 .small[
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
   select(hotel, lead_time) %&gt;% 
 * arrange(desc(lead_time))
 ```
@@ -553,7 +553,7 @@ find("keys") %&gt;%
 
 
 ```r
-hotels +
+hotels_df +
   select(hotel, lead_time)
 ```
 
@@ -565,7 +565,7 @@ hotels +
 
 
 ```r
-hotels %&gt;%
+hotels_df %&gt;%
   select(hotel, lead_time)
 ```
 
@@ -590,7 +590,7 @@ hotels %&gt;%
 
 
 ```r
-ggplot(hotels, aes(x = hotel, fill = deposit_type)) %&gt;%
+ggplot(hotels_df, aes(x = hotel, fill = deposit_type)) %&gt;%
   geom_bar()
 ```
 
@@ -604,7 +604,7 @@ ggplot(hotels, aes(x = hotel, fill = deposit_type)) %&gt;%
 
 
 ```r
-ggplot(hotels, aes(x = hotel, fill = deposit_type)) +
+ggplot(hotels_df, aes(x = hotel, fill = deposit_type)) +
   geom_bar()
 ```
 
@@ -624,14 +624,14 @@ Many of the styling principles are consistent across `%&gt;%` and `+`:
 
 
 ```r
-ggplot(hotels,aes(x=hotel,y=deposit_type))+geom_bar()
+ggplot(hotels_df,aes(x=hotel,y=deposit_type))+geom_bar()
 ```
 
 ✅
 
 
 ```r
-ggplot(hotels, aes(x = hotel, y = deposit_type)) + 
+ggplot(hotels_df, aes(x = hotel, y = deposit_type)) + 
   geom_bar()
 ```
     </textarea>
