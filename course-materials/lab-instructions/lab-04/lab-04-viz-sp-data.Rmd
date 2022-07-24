@@ -46,6 +46,15 @@ Knit the document to make sure it compiles without errors.
 
 Before we introduce the data, let's warm up with some simple exercises.
 
+Package Install will fail when it tries to install the dsbox package.
+This is because dsbox is not yet on CRAN.
+To install dsbox, copy and paste the following into the Console.
+
+```{r}
+install.packages("devtools") 
+devtools::install_github("rstudio-education/dsbox")
+```
+
 -   Update the YAML, changing the author name to your name, and **knit** the document.
 -   Commit your changes with a meaningful commit message.
 -   Push your changes to GitHub.
