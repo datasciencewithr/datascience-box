@@ -1,5 +1,5 @@
 ---
-title: "Hotel bookings - factors"
+title: "Hotel bookings - factors - solutions"
 author: "Mine Çetinkaya-Rundel"
 output: github_document
 ---
