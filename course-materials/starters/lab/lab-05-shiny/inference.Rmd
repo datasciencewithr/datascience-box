@@ -26,7 +26,7 @@ Variables of interest: Model: What model and size of model was used gpu: Was com
 
 First, we read in the data and look at it.
 
-```{r cars}
+```{r readdata}
 # remove rows where model is NA.
 inference <- read_csv(file = "data/neuralnetworkspeed.csv", skip_empty_rows = TRUE) %>%
   filter(!is.na(model)) %>%
@@ -41,7 +41,7 @@ inference <- read_csv(file = "data/neuralnetworkspeed.csv", skip_empty_rows = TR
 We are interested to understand how different variables affect speed.
 Let's look at fps vs. model and gpu
 
-```{r pressure, echo=FALSE}
+```{r boxplot1, echo=FALSE}
 
 inference %>%
   ggplot(aes(x = model, y = fps, color = gpu)) +
@@ -54,7 +54,7 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 
 Let's also look at fps vs. model and network settings
 
-```{r pressure, echo=FALSE}
+```{r boxplot2, echo=FALSE}
 
 inference %>%
   ggplot(aes(x = model, y = fps, color = network)) +
