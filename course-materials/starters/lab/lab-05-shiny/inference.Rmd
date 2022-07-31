@@ -76,7 +76,8 @@ inference %>%
          network %in% theNetworkFilter) %>%
   ggplot(aes(x = model, y = fps, fill = network)) +
   geom_col(position="dodge") +
-  labs(title = theGPUfilter)
+  labs(title = theGPUfilter) +
+      ylim(0,45)
 
 
 ```
