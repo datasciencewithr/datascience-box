@@ -1,0 +1,141 @@
+---
+title: "Lab 05 - Make a Shiny app from a Rmd file"
+subtitle: "interactive graphs"
+output: 
+  tufte::tufte_html:
+    css: ../lab.css
+    tufte_variant: "envisioned"
+    highlight: pygments
+link-citations: yes
+---
+
+In this lab we will create a simple Shiny app from an R markdown document in order to create interactive plots.
+
+# Learning goals
+
+-   Practice making Shiny apps
+-   Understand the value of interactive plots
+
+# Getting started
+
+Go to the course GitHub organization and locate your lab repo, clone it in RStudio and open the R Markdown document.
+Knit the document to make sure it compiles without errors.
+
+## Warm up
+
+Before we introduce the data, let's warm up with some simple exercises.
+Update the YAML of your R Markdown file with your information, knit, commit, and push your changes.
+Make sure to commit with a meaningful commit message.
+Then, go to your repo on GitHub and confirm that your changes are visible in your Rmd **and** md files.
+If anything is missing, commit and push again.
+
+## Packages
+
+We'll use the **tidyverse** package for data wrangling and visualisation.
+These packages are already installed for you.
+You can load them by running the following in your Console:
+
+```{r message = FALSE}
+library(tidyverse) 
+```
+
+## Rmd R markdown file
+
+The R Markdown file describes an experiment where some data was collected for running neural networks under different conditions.
+In the last bar chart you can see the FPS (Frames Per Second) or running the neural network for different sized models (YOLO X Large through YOLO X Tiny).
+
+We want to make an Shiny app that allows you to investigate the data interactively.
+
+🧶 ✅ ⬆️ Knit, *commit, and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.* \# Exercises
+
+## Exercises
+
+### Exercise 1.
+
+To start with your Shiny app, open the file called inferenceApp.R.
+Rstudio cloud will ask you to load the necessary packages - go ahead and do that, then click 'Run App'.
+You should see a mostly empty app appear in a separate window.
+
+### Exercise 2.
+
+At the start of your server code add your code that reads in the data.
+You can copy / paste the code right out of your Rmd file.
+You'll also have to include the 'janitor' package at the top of the file (again can get this from the Rmd file).
+
+Now add your plot
+
+-   add the line in the ui portion in the mainPanel. the output is plotOutput(outputId = "theplot")
+
+```{r, eval=FALSE}
+    mainPanel(
+      # add your plot here
+      )
+```
+
+-   Copy the plot from the Rmd file and put it into the renderPlot expression
+
+```{r, eval=FALSE}
+  output$theplot <- renderPlot({
+  # add your plot here.  Make sure to reference your input variables
+  })
+```
+
+Now run the App, and you should see the plot appear.
+But there aren't any controls yet to select different parameters.
+
+### Exercise 3.
+
+Let's add a sidebar selection to select between CPU and GPU.
+Under sidebarLayout, add an input selection,
+
+```{r, eval=FALSE}
+selectInput(inputId = "GPU", 
+            label = "GPU selection", 
+            choices = c("GPU","CPU"), 
+            selected = "CPU")
+```
+
+Next, the inputId of your selectInput needs to be mapped to your plot.
+In order to do that, in your plot code, you have to reference the inputId - replace theGPUfilter in the filter statement with input\$GPU.
+
+Now, when you run the App, you should be able to update the plot to see data for just CPU or just GPU.
+But notice that the title doesn't update.
+Update the labs() section to reflect the selected input.
+
+```{r, eval=FALSE}
+      labs(title = input$GPU)
+```
+
+### Exercise 4.
+
+Add a selection for network to your graph so you can slice by this variable.
+Add another selectInput to select network factors.
+Add the below code to the sidebarPanel in your ui section of your app.
+Make sure you correct for any syntax errors.
+
+```{r, eval=FALSE}
+      selectInput(inputId = "network", label = "network type",
+                  choices = c("none","wired","wireless"),
+                  selected = "none")
+```
+
+Once you have the selectInput implemented, you have to update your graph code to use the input.
+
+```{r, eval=FALSE}
+# Replace theNetworkFilter with input$network in the filter statement
+
+```
+
+Re-run your app.
+You should now have a functional app that you can select different plotting variables with.
+
+### Exercise 5.
+
+One last thing you can do is to allow multiselection of the network variable - to do this add multiple = TRUE to the selectInput statement for the inputId = "network"
+
+Re-run the app.
+
+### Exercise 6.
+
+You can publish your app to shiny.io so that the world can see your work.
+We will go over how to do this in class.
