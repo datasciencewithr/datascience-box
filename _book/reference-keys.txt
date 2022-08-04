@@ -3,8 +3,8 @@ visualization
 wrangling-and-tidying-data
 importing-and-recoding-data
 shiny-apps
-effective-communication
 web-scraping-and-programming
+effective-communication
 choropleths
 ethics
 slides-videos-and-application-exercises
