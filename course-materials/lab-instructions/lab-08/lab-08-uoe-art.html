@@ -12,7 +12,7 @@
 
 
 
-<title>Lab 08 - University of Edinburgh Art Collection</title>
+<title>Lab 06 - University of Edinburgh Art Collection</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -510,7 +510,7 @@ text-align: center;
 
 
 
-<h1 class="title toc-ignore">Lab 08 - University of Edinburgh Art
+<h1 class="title toc-ignore">Lab 06 - University of Edinburgh Art
 Collection</h1>
 
 
@@ -656,31 +656,31 @@ identify the tags for the relevant nodes:</p>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_nodes</span>(<span class="st">&quot;.iteminfo&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_node</span>(<span class="st">&quot;h3 a&quot;</span>)</span></code></pre></div>
 <pre><code>## {xml_nodeset (10)}
-##  [1] &lt;a href=&quot;./record/21181?highlight=*:*&quot;&gt;Portrait of a Man                                          ...
-##  [2] &lt;a href=&quot;./record/21022?highlight=*:*&quot;&gt;Portrait of a Man                                          ...
-##  [3] &lt;a href=&quot;./record/21257?highlight=*:*&quot;&gt;Portrait of a Woman                                        ...
-##  [4] &lt;a href=&quot;./record/20891?highlight=*:*&quot;&gt;Portrait of a Man in Spectacles                            ...
-##  [5] &lt;a href=&quot;./record/20680?highlight=*:*&quot;&gt;Elders from South Frieze of the Parthenon                  ...
-##  [6] &lt;a href=&quot;./record/20600?highlight=*:*&quot;&gt;Smugglerius                                                ...
-##  [7] &lt;a href=&quot;./record/53671?highlight=*:*&quot;&gt;Plate                                    &lt;/a&gt;
-##  [8] &lt;a href=&quot;./record/100011?highlight=*:*&quot;&gt;Jacobean fragment                                         ...
-##  [9] &lt;a href=&quot;./record/99426?highlight=*:*&quot;&gt;Untitled - Woman in Hat with Ribbon                        ...
-## [10] &lt;a href=&quot;./record/20761?highlight=*:*&quot;&gt;Abstract Still Life                                        ...</code></pre>
+##  [1] &lt;a href=&quot;./record/20809?highlight=*:*&quot;&gt;Standing Male Nude ...
+##  [2] &lt;a href=&quot;./record/99801?highlight=*:*&quot;&gt;Untitled           ...
+##  [3] &lt;a href=&quot;./record/21659?highlight=*:*&quot;&gt;Untitled           ...
+##  [4] &lt;a href=&quot;./record/21296?highlight=*:*&quot;&gt;Seated Male Nude w ...
+##  [5] &lt;a href=&quot;./record/22658?highlight=*:*&quot;&gt;Summer Fayre       ...
+##  [6] &lt;a href=&quot;./record/21146?highlight=*:*&quot;&gt;Seated Male Nude   ...
+##  [7] &lt;a href=&quot;./record/21193?highlight=*:*&quot;&gt;Seated Male Nude   ...
+##  [8] &lt;a href=&quot;./record/20914?highlight=*:*&quot;&gt;Portrait of a Man  ...
+##  [9] &lt;a href=&quot;./record/22606?highlight=*:*&quot;&gt;Still Life         ...
+## [10] &lt;a href=&quot;./record/20740?highlight=*:*&quot;&gt;Self Portrait      ...</code></pre>
 <p>Then we extract the text with <code>html_text()</code>:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>page <span class="sc">%&gt;%</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_nodes</span>(<span class="st">&quot;.iteminfo&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_node</span>(<span class="st">&quot;h3 a&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>()</span></code></pre></div>
-<pre><code>##  [1] &quot;Portrait of a Man                                                                            (1956)&quot;                             
-##  [2] &quot;Portrait of a Man                                                                            (1957)&quot;                             
-##  [3] &quot;Portrait of a Woman                                                                            (1957)&quot;                           
-##  [4] &quot;Portrait of a Man in Spectacles                                                                            (1958)&quot;               
-##  [5] &quot;Elders from South Frieze of the Parthenon                                                                            (1836-1837)&quot;
-##  [6] &quot;Smugglerius                                                                            (1854)&quot;                                   
-##  [7] &quot;Plate                                    &quot;                                                                                       
-##  [8] &quot;Jacobean fragment                                                                            (Jacobean?)&quot;                        
-##  [9] &quot;Untitled - Woman in Hat with Ribbon                                                                            (1980)&quot;           
-## [10] &quot;Abstract Still Life                                                                            (Circa 1975)&quot;</code></pre>
+<pre><code>##  [1] &quot;Standing Male Nude                                                                            (1952)&quot;                         
+##  [2] &quot;Untitled                                                                            (1983)&quot;                                   
+##  [3] &quot;Untitled                                                                            (Unknown)&quot;                                
+##  [4] &quot;Seated Male Nude with Foot Resting on Stool                                                                            (1961)&quot;
+##  [5] &quot;Summer Fayre                                    &quot;                                                                             
+##  [6] &quot;Seated Male Nude                                                                            (1959)&quot;                           
+##  [7] &quot;Seated Male Nude                                                                            (1955)&quot;                           
+##  [8] &quot;Portrait of a Man Seated                                                                            (1959)&quot;                   
+##  [9] &quot;Still Life                                                                            (Circa 1970)&quot;                           
+## [10] &quot;Self Portrait                                                                            (1965)&quot;</code></pre>
 <p>And get rid of all the spurious white space in the text with
 <code>str_squish()</code>, which reduces repeated whitespace inside a
 string.</p>
@@ -692,16 +692,16 @@ how it’s different from <code>str_trim()</code>.</span></span></p>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_node</span>(<span class="st">&quot;h3 a&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str_squish</span>()</span></code></pre></div>
-<pre><code>##  [1] &quot;Portrait of a Man (1956)&quot;                             
-##  [2] &quot;Portrait of a Man (1957)&quot;                             
-##  [3] &quot;Portrait of a Woman (1957)&quot;                           
-##  [4] &quot;Portrait of a Man in Spectacles (1958)&quot;               
-##  [5] &quot;Elders from South Frieze of the Parthenon (1836-1837)&quot;
-##  [6] &quot;Smugglerius (1854)&quot;                                   
-##  [7] &quot;Plate&quot;                                                
-##  [8] &quot;Jacobean fragment (Jacobean?)&quot;                        
-##  [9] &quot;Untitled - Woman in Hat with Ribbon (1980)&quot;           
-## [10] &quot;Abstract Still Life (Circa 1975)&quot;</code></pre>
+<pre><code>##  [1] &quot;Standing Male Nude (1952)&quot;                         
+##  [2] &quot;Untitled (1983)&quot;                                   
+##  [3] &quot;Untitled (Unknown)&quot;                                
+##  [4] &quot;Seated Male Nude with Foot Resting on Stool (1961)&quot;
+##  [5] &quot;Summer Fayre&quot;                                      
+##  [6] &quot;Seated Male Nude (1959)&quot;                           
+##  [7] &quot;Seated Male Nude (1955)&quot;                           
+##  [8] &quot;Portrait of a Man Seated (1959)&quot;                   
+##  [9] &quot;Still Life (Circa 1970)&quot;                           
+## [10] &quot;Self Portrait (1965)&quot;</code></pre>
 <p>And finally save the resulting data as a vector of length 10:</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>titles <span class="ot">&lt;-</span> page <span class="sc">%&gt;%</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_nodes</span>(<span class="st">&quot;.iteminfo&quot;</span>) <span class="sc">%&gt;%</span></span>
@@ -729,10 +729,16 @@ if you click on the hyperlinked text:
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_nodes</span>(<span class="st">&quot;.iteminfo&quot;</span>) <span class="sc">%&gt;%</span>   <span class="co"># same nodes</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_node</span>(<span class="st">&quot;h3 a&quot;</span>) <span class="sc">%&gt;%</span>         <span class="co"># as before</span></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_attr</span>(<span class="st">&quot;href&quot;</span>)             <span class="co"># but get href attribute instead of text</span></span></code></pre></div>
-<pre><code>##  [1] &quot;./record/21181?highlight=*:*&quot;  &quot;./record/21022?highlight=*:*&quot;  &quot;./record/21257?highlight=*:*&quot; 
-##  [4] &quot;./record/20891?highlight=*:*&quot;  &quot;./record/20680?highlight=*:*&quot;  &quot;./record/20600?highlight=*:*&quot; 
-##  [7] &quot;./record/53671?highlight=*:*&quot;  &quot;./record/100011?highlight=*:*&quot; &quot;./record/99426?highlight=*:*&quot; 
-## [10] &quot;./record/20761?highlight=*:*&quot;</code></pre>
+<pre><code>##  [1] &quot;./record/20809?highlight=*:*&quot;
+##  [2] &quot;./record/99801?highlight=*:*&quot;
+##  [3] &quot;./record/21659?highlight=*:*&quot;
+##  [4] &quot;./record/21296?highlight=*:*&quot;
+##  [5] &quot;./record/22658?highlight=*:*&quot;
+##  [6] &quot;./record/21146?highlight=*:*&quot;
+##  [7] &quot;./record/21193?highlight=*:*&quot;
+##  [8] &quot;./record/20914?highlight=*:*&quot;
+##  [9] &quot;./record/22606?highlight=*:*&quot;
+## [10] &quot;./record/20740?highlight=*:*&quot;</code></pre>
 <p>These don’t really look like URLs as we know then though. They’re
 relative links.</p>
 <p><label for="tufte-mn-4" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-4" class="margin-toggle"><span class="marginnote"><span style="display: block;">See the help for
