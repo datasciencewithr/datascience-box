@@ -57,20 +57,24 @@ scrape_speech <- function(url) {
   speech_page <- read_html(url)
 
   title <- speech_page %>%
-    html_node(".article-header__title") %>%
+    #html_node(".article-header__title") %>%
+    html_node(".ds_page-header__title") %>%
     html_text()
-
+  
   date <- speech_page %>%
-    html_node(".content-data__list:nth-child(1) strong") %>%
+    #html_node(".content-data__list:nth-child(1) strong") %>%
+    html_node("#sg-meta__publication-date") %>%
     html_text() %>%
     dmy()
-
+  
   location <- speech_page %>%
-    html_node(".content-data__list+ .content-data__list strong") %>%
+    #html_node(".content-data__list+ .content-data__list strong") %>%
+    html_node(".ds_metadata__item:nth-child(5) strong") %>%
     html_text()
-
+  
   abstract <- speech_page %>%
-    html_node(".leader--first-para p") %>%
+    #html_node(".leader--first-para p") %>%
+    html_node(".ds_no-margin--bottom") %>%
     html_text()
 
   text <- speech_page %>%
