@@ -452,24 +452,25 @@ Assuming that the page structure is the same for each speech page, how many "thi
 .xsmall[
 
 ```r
-url_23_oct &lt;- "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-speech-23-october/"
+url_23_oct &lt;-
+  "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-speech-23-october/"
 speech_page &lt;- read_html(url_23_oct)
 
 title &lt;- speech_page %&gt;%
-  html_node(".article-header__title") %&gt;%
+  html_node(".ds_page-header__title") %&gt;%
   html_text()
 
 date &lt;- speech_page %&gt;%
-  html_node(".content-data__list:nth-child(1) strong") %&gt;%
+  html_node("#sg-meta__publication-date") %&gt;%
   html_text() %&gt;%
   dmy()
 
 location &lt;- speech_page %&gt;%
-  html_node(".content-data__list+ .content-data__list strong") %&gt;%
+  html_node(".ds_metadata__item:nth-child(5) strong") %&gt;%
   html_text()
 
 abstract &lt;- speech_page %&gt;%
-  html_node(".leader--first-para p") %&gt;%
+  html_node(".ds_no-margin--bottom") %&gt;%
   html_text()
 
 text &lt;- speech_page %&gt;%
@@ -478,8 +479,12 @@ text &lt;- speech_page %&gt;%
   list()
 
 tibble(
-  title = title, date = date, location = location,
-  abstract = abstract, text = text, url= url
+  title = title,
+  date = date,
+  location = location,
+  abstract = abstract,
+  text = text,
+  url = url
 )
 ```
 ]
@@ -534,7 +539,7 @@ scrape_speech &lt;- function(x){
 scrape_speech &lt;- function(url){
 
   # code we developed earlier to scrape info 
-  # on single art piece goes here
+  # on single covid speech goes here
   
 }
 ```
@@ -552,20 +557,24 @@ scrape_speech &lt;- function(url) {
   speech_page &lt;- read_html(url)
 
   title &lt;- speech_page %&gt;%
-    html_node(".article-header__title") %&gt;%
+    #html_node(".article-header__title") %&gt;%
+    html_node(".ds_page-header__title") %&gt;%
     html_text()
-
+  
   date &lt;- speech_page %&gt;%
-    html_node(".content-data__list:nth-child(1) strong") %&gt;%
+    #html_node(".content-data__list:nth-child(1) strong") %&gt;%
+    html_node("#sg-meta__publication-date") %&gt;%
     html_text() %&gt;%
     dmy()
-
+  
   location &lt;- speech_page %&gt;%
-    html_node(".content-data__list+ .content-data__list strong") %&gt;%
+    #html_node(".content-data__list+ .content-data__list strong") %&gt;%
+    html_node(".ds_metadata__item:nth-child(5) strong") %&gt;%
     html_text()
-
+  
   abstract &lt;- speech_page %&gt;%
-    html_node(".leader--first-para p") %&gt;%
+    #html_node(".leader--first-para p") %&gt;%
+    html_node(".ds_no-margin--bottom") %&gt;%
     html_text()
 
   text &lt;- speech_page %&gt;%
@@ -595,12 +604,12 @@ scrape_speech(url = "https://www.gov.scot/publications/coronavirus-covid-19-upda
 ```
 ## Rows: 1
 ## Columns: 6
-## $ title    &lt;chr&gt; NA
-## $ date     &lt;date&gt; NA
-## $ location &lt;chr&gt; NA
-## $ abstract &lt;chr&gt; NA
+## $ title    &lt;chr&gt; "Coronavirus (COVID-19) update: First Minister…
+## $ date     &lt;date&gt; 2020-10-26
+## $ location &lt;chr&gt; "St Andrew's House, Edinburgh"
+## $ abstract &lt;chr&gt; "Statement given by First Minister Nicola Stu…
 ## $ text     &lt;list&gt; &lt;"\nGood afternoon, and thanks for joining us.…
-## $ url      &lt;chr&gt; "https://www.gov.scot/publications/coronaviru…
+## $ url      &lt;chr&gt; "https://www.gov.scot/publications/coronavirus…
 ```
 
 ---
@@ -616,12 +625,12 @@ scrape_speech(url = "https://www.gov.scot/publications/coronavirus-covid-19-upda
 ```
 ## Rows: 1
 ## Columns: 6
-## $ title    &lt;chr&gt; NA
-## $ date     &lt;date&gt; NA
-## $ location &lt;chr&gt; NA
-## $ abstract &lt;chr&gt; NA
+## $ title    &lt;chr&gt; "Coronavirus (COVID-19) update: First Minister…
+## $ date     &lt;date&gt; 2020-10-23
+## $ location &lt;chr&gt; "St Andrew's House, Edinburgh"
+## $ abstract &lt;chr&gt; "Statement given by First Minister Nicola Stu…
 ## $ text     &lt;list&gt; &lt;"\nGood afternoon everyone. Thank you very mu…
-## $ url      &lt;chr&gt; "https://www.gov.scot/publications/coronaviru…
+## $ url      &lt;chr&gt; "https://www.gov.scot/publications/coronavirus…
 ```
 
 ---
@@ -637,12 +646,12 @@ scrape_speech(url = "https://www.gov.scot/publications/coronavirus-covid-19-upda
 ```
 ## Rows: 1
 ## Columns: 6
-## $ title    &lt;chr&gt; NA
-## $ date     &lt;date&gt; NA
-## $ location &lt;chr&gt; NA
-## $ abstract &lt;chr&gt; NA
+## $ title    &lt;chr&gt; "Coronavirus (COVID-19) update: First Minister…
+## $ date     &lt;date&gt; 2020-10-22
+## $ location &lt;chr&gt; "St Andrew's House, Edinburgh"
+## $ abstract &lt;chr&gt; "Statement given by First Minister Nicola Stu…
 ## $ text     &lt;list&gt; &lt;"\nGood afternoon, let me start as usual with…
-## $ url      &lt;chr&gt; "https://www.gov.scot/publications/coronaviru…
+## $ url      &lt;chr&gt; "https://www.gov.scot/publications/coronavirus…
 ```
 
 ---

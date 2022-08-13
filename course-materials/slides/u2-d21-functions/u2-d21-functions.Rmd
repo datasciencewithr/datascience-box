@@ -366,24 +366,25 @@ Assuming that the page structure is the same for each speech page, how many "thi
 .pull-left-wide[
 .xsmall[
 ```{r eval=FALSE}
-url_23_oct <- "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-speech-23-october/"
+url_23_oct <-
+  "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-speech-23-october/"
 speech_page <- read_html(url_23_oct)
 
 title <- speech_page %>%
-  html_node(".article-header__title") %>%
+  html_node(".ds_page-header__title") %>%
   html_text()
 
 date <- speech_page %>%
-  html_node(".content-data__list:nth-child(1) strong") %>%
+  html_node("#sg-meta__publication-date") %>%
   html_text() %>%
   dmy()
 
 location <- speech_page %>%
-  html_node(".content-data__list+ .content-data__list strong") %>%
+  html_node(".ds_metadata__item:nth-child(5) strong") %>%
   html_text()
 
 abstract <- speech_page %>%
-  html_node(".leader--first-para p") %>%
+  html_node(".ds_no-margin--bottom") %>%
   html_text()
 
 text <- speech_page %>%
@@ -392,8 +393,12 @@ text <- speech_page %>%
   list()
 
 tibble(
-  title = title, date = date, location = location,
-  abstract = abstract, text = text, url= url
+  title = title,
+  date = date,
+  location = location,
+  abstract = abstract,
+  text = text,
+  url = url
 )
 ```
 ]
@@ -451,7 +456,7 @@ scrape_speech <- function(x){
 scrape_speech <- function(url){
 
   # code we developed earlier to scrape info 
-  # on single art piece goes here
+  # on single covid speech goes here
   
 }
 ```
@@ -468,20 +473,24 @@ scrape_speech <- function(url) {
   speech_page <- read_html(url)
 
   title <- speech_page %>%
-    html_node(".article-header__title") %>%
+    #html_node(".article-header__title") %>%
+    html_node(".ds_page-header__title") %>%
     html_text()
-
+  
   date <- speech_page %>%
-    html_node(".content-data__list:nth-child(1) strong") %>%
+    #html_node(".content-data__list:nth-child(1) strong") %>%
+    html_node("#sg-meta__publication-date") %>%
     html_text() %>%
     dmy()
-
+  
   location <- speech_page %>%
-    html_node(".content-data__list+ .content-data__list strong") %>%
+    #html_node(".content-data__list+ .content-data__list strong") %>%
+    html_node(".ds_metadata__item:nth-child(5) strong") %>%
     html_text()
-
+  
   abstract <- speech_page %>%
-    html_node(".leader--first-para p") %>%
+    #html_node(".leader--first-para p") %>%
+    html_node(".ds_no-margin--bottom") %>%
     html_text()
 
   text <- speech_page %>%
