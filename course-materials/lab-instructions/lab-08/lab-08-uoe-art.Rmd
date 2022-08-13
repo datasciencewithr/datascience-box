@@ -1,5 +1,5 @@
 ---
-title: "Lab 08 - University of Edinburgh Art Collection"
+title: "Lab 06 - University of Edinburgh Art Collection"
 output: 
   tufte::tufte_html:
     css: ../lab.css
@@ -113,7 +113,7 @@ paths_allowed("https://collections.ed.ac.uk/art)")
 **Tip:** To run the code you can highlight or put your cursor next to the lines of code you want to run and hit Command+Enter.
 ```
 
-::: {.box}
+::: box
 Work in `scripts/01-scrape-page-one.R`.
 :::
 
@@ -229,7 +229,7 @@ See the help for `str_replace()` to find out how it works. Remember that the fir
 
 ## Functions
 
-::: {.box}
+::: box
 Work in `scripts/02-scrape-page-function.R`.
 :::
 
@@ -289,7 +289,7 @@ scrape_page(second_url)
 
 ## Iteration
 
-::: {.box}
+::: box
 Work in `scripts/03-scrape-page-many.R`.
 :::
 
@@ -339,7 +339,7 @@ map_dfr(urls, scrape_page)
 
 8.  Finally write out the data frame you constructed into the `data` folder so that you can use it in the analysis section.
 
-::: {.marker}
+::: marker
 Aim to make it to this point during the workshop.
 :::
 
@@ -347,7 +347,7 @@ Aim to make it to this point during the workshop.
 
 ## Analysis
 
-::: {.box}
+::: box
 Work in `lab-08.Rmd` for the rest of the lab.
 :::
 
