@@ -62,8 +62,8 @@ Here is the organization of your repo, and the corresponding section in the lab 
 ```{plain}
 |-data
 |  |- README.md
-|-lab-06-uoe-art.Rmd              # analysis
-|-lab-06-uoe-art.Rproj
+|-lab-06.Rmd              # analysis
+|-project.Rproj
 |-README.md
 |-scripts                         # webscraping
 |  |- 01-scrape-page-one.R        # scraping a single page
@@ -73,27 +73,26 @@ Here is the organization of your repo, and the corresponding section in the lab 
 
 # Getting started
 
-Go to the course GitHub organization and locate your homework repo, clone it in RStudio and open the R Markdown document.
-Knit the document to make sure it compiles without errors.
-
-## Warm up
-
-Let's warm up with some simple exercises.
-Update the YAML of your R Markdown file with your information, knit, commit, and push your changes.
-Make sure to commit with a meaningful commit message.
-Then, go to your repo on GitHub and confirm that your changes are visible in your Rmd **and** md files.
-If anything is missing, commit and push again.
+Go to the course GitHub organization and locate your lab6 repo, clone it in RStudio and open the R Markdown document.
 
 ## Packages
 
 We'll use the **tidyverse** package for much of the data wrangling and visualisation, the **robotstxt** package to check if we're allowed to scrape the data, the **rvest** package for data scraping.
-These packages are already installed for you.
-You can load them by running the following in your Console:
+First, install the packages, then load them with the library function.
+You can do this by **running the following in your Console:**
 
-```{r eval = TRUE, message = FALSE}
+```{r eval = FALSE, message = FALSE}
+install.packages("tidyverse")
+install.packages("robotstxt")
+install.packages("rvest")
+install.packages("skimr")
+```
+
+```{r eval = TRUE}
 library(tidyverse) 
 library(robotstxt)
 library(rvest)
+library(skimr)
 ```
 
 ## Data
@@ -101,6 +100,7 @@ library(rvest)
 This assignment does not come with any prepared datasets.
 Instead you'll be scraping the data!
 But before doing so, let's check that a bot has permissions to access pages on this domain.
+**Copy and paste the following into the Console:**
 
 ```{r paths-allowed, warning=FALSE}
 paths_allowed("https://collections.ed.ac.uk/art)")
@@ -190,11 +190,11 @@ We can extract this information using a new function from the rvest package, `ht
 A mini HTML lesson!
 The following is how we define hyperlinked text in HTML:
 
-    <a href="https://www.google.com">Seach on Google</a>
+    <a href="https://www.google.com">Search on Google</a>
 
-And this is how the text would look like on a webpage: [Seach on Google](https://www.google.com).
+And this is how the text would look like on a webpage: [Search on Google](https://www.google.com).
 
-Here the text is `Seach on Google` and the `href` attribute contains the url of the website you'd go to if you click on the hyperlinked text: `https://www.google.com`.
+Here the text is `Search on Google` and the `href` attribute contains the url of the website you'd go to if you click on the hyperlinked text: `https://www.google.com`.
 
 The moral of the story is: the link is stored in the `href` attribute.
 
@@ -279,14 +279,14 @@ function_name <- function(url){
 
 Test out your new function by running the following in the console.
 Does the output look right?
-Discuss with teammates whether you're getting the same results as before.
+Make sure you're getting the same results as before.
 
 ```{r eval=FALSE}
 scrape_page(first_url)
 scrape_page(second_url)
 ```
 
-✅ ⬆️ If you haven't done so recently, c*ommit and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
+✅ ⬆️ If you haven't done so recently, *c ommit and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
 ## Iteration
 
@@ -301,7 +301,7 @@ Next, we will work on making our workflow a little more efficient by using R to 
 **Reminder:** The collection has 2970 pieces in total.
 ```
 
-That means we give develop a list of URLs (of pages that each have 10 art pieces), and write some code that applies the `scrape_page()` function to each page, and combines the resulting data frames from each page into a single data frame with 2970 rows and 3 columns.
+That means we must develop a list of URLs (of pages that each have 10 art pieces), and write some code that applies the `scrape_page()` function to each page, and combines the resulting data frames from each page into a single data frame with 2970 rows and 3 columns.
 
 ### List of URLs
 
