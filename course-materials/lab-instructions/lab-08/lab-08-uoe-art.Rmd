@@ -49,17 +49,17 @@ knitr::include_graphics("img/selectorgadget.png")
 
 Today we will be using both R scripts and R Markdown documents:
 
--   `.R`: R scripts are plain text files containing **only** code and brief comments,
+-   `.R`: R scripts are plain text files containing **only** code and brief comments
 
     -   We'll use R scripts in the web scraping stage and ultimately save the scraped data as a csv.
 
--   `.Rmd`: R Markdown documents are plain text files containing.
+-   `.Rmd`: R Markdown documents are plain text files containing **narrative** and supporting **code**
 
     -   We'll use an R Markdown document in the web analysis stage, where we start off by reading in the csv file we wrote out in the scraping stage.
 
 Here is the organization of your repo, and the corresponding section in the lab that each file will be used for:
 
-```{=plain}
+```{plain}
 |-data
 |  |- README.md
 |-lab-06-uoe-art.Rmd              # analysis
@@ -70,6 +70,7 @@ Here is the organization of your repo, and the corresponding section in the lab 
 |  |- 02-scrape-page-function.R   # functions
 |  |- 03-scrape-page-many.R       # iteration
 ```
+
 # Getting started
 
 Go to the course GitHub organization and locate your homework repo, clone it in RStudio and open the R Markdown document.
