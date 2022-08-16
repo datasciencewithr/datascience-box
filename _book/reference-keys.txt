@@ -4,10 +4,8 @@ wrangling-and-tidying-data
 importing-and-recoding-data
 shiny-apps
 web-scraping-and-programming
-effective-communication
 choropleths
-ethics
-slides-videos-and-application-exercises
+effective-communication
 tldr
 may-be-too-long-but-please-do-read
 data
