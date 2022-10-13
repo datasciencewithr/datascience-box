@@ -48,7 +48,7 @@ jobs:
          install.packages("bslib")
          install.packages("xml2")
          install.packages("downlit")
-         bookdown::render_book("index.Rmd", quiet = TRUE)
+         bookdown::render_book("index.Rmd"), quiet = FALSE)
         shell: Rscript {0}
         
       - name: Install npm
