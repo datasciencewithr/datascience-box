@@ -4,6 +4,7 @@ on:
       - main
     paths-ignore: 
     - 'course-materials/**'  
+  workflow_dispatch:
 
 
 name: Build book
