@@ -4,7 +4,7 @@ site: bookdown::bookdown_site
 title: "datascienceandr"
 author: "Fritz Ebner"
 description: "Material inspired by Data Science in a Box , all of which are freely-available and open-source."
-date: "2022-08-15"
+date: "2022-10-13"
 github-repo: datasciencewithr/datascience-box
 twitter-handle: na
 cover-image: dsbox3.png

@@ -1,3 +1,3 @@
-# Choropleths
+# Spatial Data and Maps
 
-Choropleths are colored maps
+Spatial Data in R includes maps, and ways to use maps to convey information.

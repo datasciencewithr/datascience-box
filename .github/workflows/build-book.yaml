@@ -51,8 +51,16 @@ jobs:
          bookdown::render_book("index.Rmd", quiet = TRUE)
         shell: Rscript {0}
         
-      - name: Install npm
-        uses: actions/setup-node@v1
+      - name: Commit results
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add .
+          git commit -m 'Re-render website(book)' || echo "No changes to commit"
+          git push origin || echo "No changes to commit"
+
+      # - name: Install npm
+      #   uses: actions/setup-node@v1
 
      # - name: Deploy to Netlify
         # NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID added in the repo's secrets
