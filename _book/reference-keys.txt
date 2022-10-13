@@ -4,7 +4,7 @@ wrangling-and-tidying-data
 importing-and-recoding-data
 shiny-apps
 web-scraping-and-programming
-choropleths
+spatial-data-and-maps
 effective-communication
 tldr
 may-be-too-long-but-please-do-read
