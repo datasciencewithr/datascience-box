@@ -3,6 +3,7 @@ on:
     branches: main
     paths: 
     - 'course-materials/**'
+  workflow_dispatch:
 
 name: Render course materials
 
