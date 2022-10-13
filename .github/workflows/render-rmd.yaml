@@ -26,7 +26,7 @@ jobs:
       - name: Install packages
         run: |
          #install.packages(c("rmarkdown", "tidyverse", "renv", "remotes"))
-         install.packages(c("rmarkdown", "remotes", "usethis", "tufte", "schrute", "unvotes", "coronavirus", "ggrepel", "skimr"))
+         install.packages(c("rmarkdown", "remotes", "usethis", "openintro", "tufte", "schrute", "unvotes", "coronavirus", "ggrepel", "skimr"))
          remotes::install_github(c("rundel/checklist", "rstudio-education/dsbox", "hadley/emo", "yihui/xaringan", "gadenbuie/xaringanExtra"))
         shell: Rscript {0}
     
