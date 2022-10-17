@@ -1,6 +1,6 @@
 ---
 title: "Welcome!"
-subtitle: "<br><br> Data Science introduction with R and R markdown"
+subtitle: "<br><br> Data Science introduction with R <br> and R markdown"
 author: "[datasciencebox.org](https://datasciencebox.org/)"
 output:
   xaringan::moon_reader:
