@@ -44,4 +44,6 @@ hotels %>%
        color = "Hotel type")
 ```
 
+    ## `summarise()` has grouped output by 'hotel'. You can override using the `.groups` argument.
+
 ![](hotels-forcats_files/figure-gfm/plot-1.png)<!-- -->
